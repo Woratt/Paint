@@ -7,15 +7,11 @@ Canvas::Canvas(const QImage& image, QWidget* parent) : QWidget(parent) {
     pixMap = QPixmap::fromImage(image);
     QSize imageSize = image.size();
 
-    if(imageSize.width() < 1280 || imageSize.height() < 720){
-        QSize targetSize(1280, 720);
+    QSize targetSize_(1280, 720);
 
-        QSize scaledSize = imageSize.scaled(targetSize, Qt::KeepAspectRatio);
+    QSize scaledSize_ = imageSize.scaled(targetSize_, Qt::KeepAspectRatio);
 
-        setFixedSize(scaledSize);
-    }else{
-        setFixedSize(imageSize);
-    }
+    setFixedSize(scaledSize_);
 
     QSize scaledSize = pixMap.size() * zoom;
 

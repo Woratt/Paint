@@ -57,6 +57,7 @@ ToolBar::ToolBar(PaintWindow* paintWindow, QWidget* parent) : QToolBar(parent) {
     spin->setSingleStep(1);
     spin->setValue(3);
 
+    qDebug() << basePath << "\n";
 
     paletteBt->setIcon(QIcon(basePath + "palette.png"));
     bucketBt->setIcon(QIcon(basePath + "bucket.png"));
