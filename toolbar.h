@@ -30,6 +30,10 @@ class ToolBar : public QToolBar
 public:
     ToolBar(PaintWindow*, QWidget* parent = nullptr);
 private:
+    QPushButton* createButton(const QString&);
+    QPushButton* createFlippedButton(const QString&);
+    QWidget* createSpacer(int);
+    QWidget* createExpandingSpacer();
 signals:
     void toolSelected(Tool tool);
     void changedWidth(int Width);

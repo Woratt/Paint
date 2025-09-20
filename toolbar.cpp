@@ -15,23 +15,11 @@ ToolBar::ToolBar(PaintWindow* paintWindow, QWidget* parent) : QToolBar(parent) {
 
     label->setFont(font);
 
-    QWidget* spacer_left_margin = new QWidget();
-    spacer_left_margin->setFixedWidth(20);
-
-    QWidget* spacer_right_margin = new QWidget();
-    spacer_right_margin->setFixedWidth(20);
-
-    QWidget* spacerLeft = new QWidget();
-    spacerLeft->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-
-    QWidget* spacerRight = new QWidget();
-    spacerRight->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-
-    addWidget(spacer_left_margin);
+    addWidget(createSpacer(20));
 
     addWidget(label);
 
-    addWidget(spacerLeft);
+    addWidget(createExpandingSpacer());
 
     setMinimumHeight(50);
 
@@ -39,15 +27,6 @@ ToolBar::ToolBar(PaintWindow* paintWindow, QWidget* parent) : QToolBar(parent) {
     basePath += "/../../../icons/";
 
     qDebug() << basePath << "\n";
-
-    QPushButton* paintBt = new QPushButton();
-    QPushButton* rectangleBt = new QPushButton();
-    QPushButton* circleBt = new QPushButton();
-    QPushButton* eraserBt = new QPushButton();
-    QPushButton* paletteBt = new QPushButton();
-    QPushButton* bucketBt = new QPushButton();
-    QPushButton* lineBt = new QPushButton();
-    QPushButton* brokenLine = new QPushButton();
 
     QLabel* widthLabel = new QLabel("Width:");
 
@@ -59,15 +38,14 @@ ToolBar::ToolBar(PaintWindow* paintWindow, QWidget* parent) : QToolBar(parent) {
 
     qDebug() << basePath << "\n";
 
-    paletteBt->setIcon(QIcon(basePath + "palette.png"));
-    bucketBt->setIcon(QIcon(basePath + "bucket.png"));
-    paintBt->setIcon(QIcon(basePath + "paint.png"));
-    lineBt->setIcon(QIcon(basePath + "line.png"));
-    brokenLine->setIcon(QIcon(basePath + "brokenLine.png"));
-    rectangleBt->setIcon(QIcon(basePath + "rectangle.png"));
-    circleBt->setIcon(QIcon(basePath + "circle.png"));
-    eraserBt->setIcon(QIcon(basePath + "eraser.png"));
-
+    QPushButton* paletteBt = createButton(basePath + "palette.png");
+    QPushButton* bucketBt = createButton(basePath + "bucket.png");
+    QPushButton* paintBt = createButton(basePath + "paint.png");
+    QPushButton* lineBt = createButton(basePath + "line.png");
+    QPushButton* brokenLine = createButton(basePath + "brokenLine.png");
+    QPushButton* rectangleBt = createButton(basePath + "rectangle.png");
+    QPushButton* circleBt = createButton(basePath + "circle.png");
+    QPushButton* eraserBt = createButton(basePath + "eraser.png");
 
     addWidget(paletteBt);
     addWidget(bucketBt);
@@ -80,23 +58,12 @@ ToolBar::ToolBar(PaintWindow* paintWindow, QWidget* parent) : QToolBar(parent) {
     addWidget(widthLabel);
     addWidget(spin);
 
-    addWidget(spacerRight);
+    addWidget(createExpandingSpacer());
 
-    QPushButton* returntBt = new QPushButton();
-    QPushButton* nextBt = new QPushButton();
-    QPushButton* increaseZoomBt = new QPushButton();
-    QPushButton* reduceZoomBt = new QPushButton();
-
-    QPixmap pix(basePath + "arrow.png");
-
-    nextBt->setIcon(pix);
-
-    pix = pix.transformed(QTransform().scale(-1, 1));
-
-    returntBt->setIcon((QIcon(pix)));
-
-    increaseZoomBt->setIcon(QIcon(basePath + "increaseZoom.png"));
-    reduceZoomBt->setIcon(QIcon(basePath + "reduceZoom.png"));
+    QPushButton* returntBt = createFlippedButton(basePath + "arrow.png");
+    QPushButton* nextBt = createButton(basePath + "arrow.png");
+    QPushButton* increaseZoomBt = createButton(basePath + "increaseZoom.png");
+    QPushButton* reduceZoomBt = createButton(basePath + "reduceZoom.png");
 
     addWidget(increaseZoomBt);
     addWidget(reduceZoomBt);
@@ -104,7 +71,7 @@ ToolBar::ToolBar(PaintWindow* paintWindow, QWidget* parent) : QToolBar(parent) {
     addWidget(returntBt);
     addWidget(nextBt);
 
-    addWidget(spacer_right_margin);
+    addWidget(createSpacer(20));
 
     connect(paintBt, &QPushButton::clicked, this, [=](){emit toolSelected(Tool::Brush);});
     connect(rectangleBt, &QPushButton::clicked, this, [=](){emit toolSelected(Tool::Rectangle);});
@@ -121,4 +88,39 @@ ToolBar::ToolBar(PaintWindow* paintWindow, QWidget* parent) : QToolBar(parent) {
     connect(nextBt, &QPushButton::clicked, this, [=](){
         fileSystem->redo(paintWindow->takeCanvas());
     });
+
+    connect(increaseZoomBt, &QPushButton::clicked, this, [=](){
+        paintWindow->takeCanvas()->increaseZoom();
+        paintWindow->takeCanvas()->changeOffset(false, QPointF(0, 0));
+    });
+    connect(reduceZoomBt, &QPushButton::clicked, this, [=](){
+        paintWindow->takeCanvas()->reduceZoom();
+        paintWindow->takeCanvas()->changeOffset(false, QPointF(0, 0));
+    });
+}
+
+QPushButton* ToolBar::createButton(const QString& path){
+    QPushButton* bt = new QPushButton();
+    bt->setIcon(QIcon(path));
+    return bt;
+}
+
+QPushButton* ToolBar::createFlippedButton(const QString& path){
+    QPixmap pix(path);
+    pix = pix.transformed(QTransform().scale(-1, 1));
+    QPushButton* bt = new QPushButton();
+    bt->setIcon(QIcon(pix));
+    return bt;
+}
+
+QWidget* ToolBar::createSpacer(int width){
+    QWidget* spacer = new QWidget();
+    spacer->setFixedWidth(width);
+    return spacer;
+}
+
+QWidget* ToolBar::createExpandingSpacer(){
+    QWidget* spacer = new QWidget();
+    spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    return spacer;
 }

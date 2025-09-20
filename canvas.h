@@ -21,6 +21,7 @@ class Canvas : public QWidget
 public:
     Canvas(const QImage&, QWidget* parent = nullptr);
     QPixmap& takePixmap();
+    void changeOffset(bool, const QPointF&);
 private:
     QPixmap pixMap;
     bool draw = false;
@@ -36,6 +37,7 @@ private:
     int widthLine = 3;
     void addImageInHistory(const QImage&);
     int numOfHistory = 0;
+    QPen pen;
 protected:
     void paintEvent(QPaintEvent *event) override;
     void mouseMoveEvent(QMouseEvent*) override;
@@ -44,6 +46,8 @@ protected:
     void wheelEvent(QWheelEvent*) override;
     bool event(QEvent*) override;
 public slots:
+    void increaseZoom();
+    void reduceZoom();
     void setTool(Tool);
     void changedWidth(int);
     void takeImageWithHistory(bool);

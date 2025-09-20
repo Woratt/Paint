@@ -25,12 +25,19 @@ Canvas::Canvas(const QImage& image, QWidget* parent) : QWidget(parent) {
 
     painter.drawPixmap(target, pixMap);
 
+    pen.setColor(Qt::black);
+    pen.setWidth(3);
+    pen.setCapStyle(Qt::RoundCap);
+    pen.setJoinStyle(Qt::RoundJoin);
 
     grabGesture(Qt::PinchGesture);
 }
 
 void Canvas::paintEvent(QPaintEvent* event){
     QPainter painter(this);
+
+    painter.setRenderHint(QPainter::Antialiasing, true);
+
     QSize scaledSize = pixMap.size() * zoom;
 
     QRect target(offset.x(), offset.y(), scaledSize.width(), scaledSize.height());
@@ -38,7 +45,7 @@ void Canvas::paintEvent(QPaintEvent* event){
     painter.drawPixmap(target, pixMap);
 
     if(draw && (tool == Tool::Rectangle || tool == Tool::Circle || tool == Tool::Line)){
-        painter.setPen(QPen(Qt::black, widthLine));
+        painter.setPen(pen);
         QPoint p1(qRound(lastPoint.x() * zoom) + offset.x(), qRound(lastPoint.y() * zoom) + offset.y());
         QPoint p2(qRound(secondPoint.x() * zoom) + offset.x(), qRound(secondPoint.y() * zoom) + offset.y());
         QRect rect(p1, p2);
@@ -61,15 +68,16 @@ void Canvas::paintEvent(QPaintEvent* event){
 void Canvas::mouseMoveEvent(QMouseEvent* event){
     if(!draw) return;
     QPainter painter(&pixMap);
+    painter.setRenderHint(QPainter::Antialiasing, true);
 
     QPoint imgPoint = eventPosToImagePoint(event->pos());
 
     if(tool == Tool::Brush){
-        painter.setPen(QPen(Qt::black, widthLine));
+        painter.setPen(pen);
         painter.drawLine(lastPoint, imgPoint);
         lastPoint = imgPoint;
     }else if(tool == Tool::Eraser){
-        painter.setPen(QPen(Qt::white, widthLine));
+        painter.setPen(pen);
         painter.drawLine(lastPoint, imgPoint);
         lastPoint = imgPoint;
     }else{
@@ -87,13 +95,15 @@ void Canvas::mousePressEvent(QMouseEvent* event){
 
         if(tool == Tool::Brush){
             QPainter painter(&pixMap);
-            painter.setPen(QPen(Qt::black, widthLine));
+            painter.setPen(pen);
+            painter.setRenderHint(QPainter::Antialiasing, true);
 
             painter.drawPoint(lastPoint);
             update();
         }else if(tool == Tool::Eraser){
             QPainter painter(&pixMap);
-            painter.setPen(QPen(Qt::white, widthLine));
+            painter.setPen(pen);
+            painter.setRenderHint(QPainter::Antialiasing, true);
 
             painter.drawPoint(lastPoint);
             update();
@@ -109,7 +119,8 @@ void Canvas::mouseReleaseEvent(QMouseEvent* event){
     draw = false;
 
     QPainter painter(&pixMap);
-    painter.setPen(QPen(Qt::black, widthLine));
+    painter.setPen(pen);
+    painter.setRenderHint(QPainter::Antialiasing, true);
 
     QRect rect(lastPoint, secondPoint);
     rect = rect.normalized();
@@ -192,25 +203,14 @@ bool Canvas::gestureEvent(QGestureEvent* event){
 void Canvas::pinchTriggered(QPinchGesture* pinch){
     qreal factor = pinch->scaleFactor();
 
-    QSize scaledSize = pixMap.size() * zoom;
-    QPointF cursorPos = pinch->centerPoint();
-    QPointF imgCoordBefore = (cursorPos - offset) / zoom;
-
     if(factor > 1){
-        zoom *= 1.1;
+        increaseZoom();
     }else if(factor < 1){
-
-        zoom *= 0.9;
+        reduceZoom();
     }
     zoom = qBound(0.1, zoom, 10.0);
 
-    if(zoom > 1){
-
-        offset = cursorPos - imgCoordBefore * zoom;
-    }else{
-        offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
-    }
-
+    changeOffset(true, pinch->centerPoint());
     clampOffset();
 
     updateGeometry();
@@ -238,22 +238,21 @@ void Canvas::clampOffset(){
 }
 
 void Canvas::addImageInHistory(const QImage& image) {
-    // якщо ми зробили undo і почали малювати далі — видаляємо всі "майбутні" стани
     if (numOfHistory + 1 < history.size()) {
         history.resize(numOfHistory + 1);
     }
 
     history.push_back(image);
-    numOfHistory = history.size() - 1; // тепер вказуємо на останній елемент
+    numOfHistory = history.size() - 1;
 }
 
 void Canvas::takeImageWithHistory(bool forward) {
-    if (forward) { // redo
+    if (forward) {
         if (numOfHistory + 1 < history.size()) {
             ++numOfHistory;
             pixMap = QPixmap::fromImage(history[numOfHistory]);
         }
-    } else { // undo
+    } else {
         if (numOfHistory > 0) {
             --numOfHistory;
             pixMap = QPixmap::fromImage(history[numOfHistory]);
@@ -263,8 +262,31 @@ void Canvas::takeImageWithHistory(bool forward) {
     update();
 }
 
+void Canvas::increaseZoom(){
+    zoom *= 1.1;
+    zoom = qBound(0.1, zoom, 10.0);
+}
+
+void Canvas::reduceZoom(){
+    zoom *= 0.9;
+    zoom = qBound(0.1, zoom, 10.0);
+}
+
+void Canvas::changeOffset(bool isFromButton, const QPointF& point){
+    QPointF imgCoordBefore = (point - offset) / zoom;
+    QSize scaledSize = pixMap.size() * zoom;
+
+    if(zoom > 1 && isFromButton){
+
+        offset = point - imgCoordBefore * zoom;
+    }else{
+        offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
+    }
+    update();
+}
+
 void Canvas::changedWidth(int width){
-    widthLine = width;
+    pen.setWidth(width);
 }
 
 QPixmap& Canvas::takePixmap(){
