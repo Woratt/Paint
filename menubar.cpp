@@ -1,8 +1,9 @@
 #include "menubar.h"
 #include "paintwindow.h"
 
-MenuBar::MenuBar(const QString& nameImage, PaintWindow* paintWindow, QWidget* parent) :
-                                                QMenuBar(parent), nameImage(nameImage), paintWindow(paintWindow) {
+MenuBar::MenuBar(const QString &nameImage, PaintWindow *paintWindow, QWidget *parent)
+    : QMenuBar(parent), nameImage(nameImage), paintWindow(paintWindow)
+{
     saveAct = new QAction(tr("&Save"), this);
     newAct = new QAction(tr("&New file"), this);
     openAct = new QAction(tr("&Open file"), this);
@@ -31,39 +32,28 @@ MenuBar::MenuBar(const QString& nameImage, PaintWindow* paintWindow, QWidget* pa
 
     fileSystem = new FileSystem();
 
-    connect(saveAct, &QAction::triggered, this, [=](){
-        fileSystem->saveImage(&(paintWindow->takeCanvas()->takePixmap()), nameImage);
-    });
-    connect(newAct, &QAction::triggered, this, [=](){
-        createFileWindow* window = new createFileWindow(this);
-        window->exec();
-    });
+    connect(saveAct, &QAction::triggered, this,
+            [=]() { fileSystem->saveImage(&(paintWindow->takeCanvas()->takePixmap()), nameImage); });
+    connect(newAct, &QAction::triggered, this,
+            [=]()
+            {
+                createFileWindow *window = new createFileWindow(this);
+                window->exec();
+            });
     connect(openAct, &QAction::triggered, this, &MenuBar::open);
     connect(closeAct, &QAction::triggered, this, &MenuBar::close);
 
-    connect(undoAct, &QAction::triggered, this, [=](){
-        fileSystem->undo(paintWindow->takeCanvas());
-    });
+    connect(undoAct, &QAction::triggered, this, [=]() { fileSystem->undo(paintWindow->takeCanvas()); });
 
-    connect(redoAct, &QAction::triggered, this, [=](){
-        fileSystem->redo(paintWindow->takeCanvas());
-    });
+    connect(redoAct, &QAction::triggered, this, [=]() { fileSystem->redo(paintWindow->takeCanvas()); });
 }
 
-//MenuBar::MenuBar(QWidget* parent) : QMenuBar(parent){}
+// MenuBar::MenuBar(QWidget* parent) : QMenuBar(parent){}
 
-void MenuBar::close(){
+void MenuBar::close() {}
 
-}
+void MenuBar::newFile() {}
 
-void MenuBar::newFile(){
+void MenuBar::open() {}
 
-}
-
-void MenuBar::open(){
-
-}
-
-void MenuBar::save(){
-
-}
+void MenuBar::save() {}

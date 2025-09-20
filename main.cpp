@@ -1,5 +1,5 @@
-#include "paintwindow.h"
 #include "homepage.h"
+#include "paintwindow.h"
 
 #include <QApplication>
 

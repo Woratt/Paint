@@ -1,15 +1,22 @@
 #include "filesmodel.h"
 
-filesModel::filesModel(QWidget* parent) : QWidget(parent) {
+filesModel::filesModel(QWidget *parent) : QWidget(parent)
+{
     QString folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
     QDir dir(folderPath);
-    if (!dir.exists()) {
-        if (dir.mkpath(".")) {
+    if (!dir.exists())
+    {
+        if (dir.mkpath("."))
+        {
             qDebug() << "Директорію створено:" << folderPath;
-        } else {
+        }
+        else
+        {
             qDebug() << "Не вдалося створити директорію:" << folderPath;
         }
-    } else {
+    }
+    else
+    {
         qDebug() << "Директорія вже існує:" << folderPath;
     }
 
@@ -22,10 +29,6 @@ filesModel::filesModel(QWidget* parent) : QWidget(parent) {
     view->setRootIndex(model->index(folderPath));
 }
 
-QListView* filesModel::takeView(){
-    return view;
-}
+QListView *filesModel::takeView() { return view; }
 
-QFileSystemModel* filesModel::takeModel(){
-    return model;
-}
+QFileSystemModel *filesModel::takeModel() { return model; }

@@ -1,29 +1,29 @@
 #ifndef CREATEFILEWINDOW_H
 #define CREATEFILEWINDOW_H
 
-#include <QWidget>
-#include <QDialog>
-#include <QObject>
-#include <QMainWindow>
-#include <QPushButton>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QFileSystemModel>
-#include <QListView>
-#include <QLabel>
 #include <QApplication>
+#include <QDialog>
+#include <QFileSystemModel>
+#include <QHBoxLayout>
+#include <QLabel>
 #include <QLineEdit>
+#include <QListView>
+#include <QMainWindow>
 #include <QMenuBar>
 #include <QMessageBox>
+#include <QObject>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QWidget>
 
-#include "numberLine.h"
 #include "filesystem.h"
+#include "numberLine.h"
 
 class createFileWindow : public QDialog
 {
     Q_OBJECT
-public:
-    createFileWindow(QWidget* parent = nullptr);
+  public:
+    createFileWindow(QWidget *parent = nullptr);
 };
 
 #endif // CREATEFILEWINDOW_H

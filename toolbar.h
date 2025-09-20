@@ -1,20 +1,21 @@
 #ifndef TOOLBAR_H
 #define TOOLBAR_H
 
-#include <QToolBar>
-#include <QLabel>
-#include <QFile>
-#include <QDir>
 #include <QApplication>
+#include <QDir>
+#include <QFile>
+#include <QLabel>
 #include <QPushButton>
 #include <QSpinBox>
+#include <QToolBar>
 
 #include "filesystem.h"
 #include "paintwindow.h"
 
 class PaintWindow;
 
-enum class Tool{
+enum class Tool
+{
     Brush,
     Rectangle,
     Circle,
@@ -27,14 +28,15 @@ enum class Tool{
 class ToolBar : public QToolBar
 {
     Q_OBJECT
-public:
-    ToolBar(PaintWindow*, QWidget* parent = nullptr);
-private:
-    QPushButton* createButton(const QString&);
-    QPushButton* createFlippedButton(const QString&);
-    QWidget* createSpacer(int);
-    QWidget* createExpandingSpacer();
-signals:
+  public:
+    ToolBar(PaintWindow *, QWidget *parent = nullptr);
+
+  private:
+    QPushButton *createButton(const QString &);
+    QPushButton *createFlippedButton(const QString &);
+    QWidget *createSpacer(int);
+    QWidget *createExpandingSpacer();
+  signals:
     void toolSelected(Tool tool);
     void changedWidth(int Width);
 };
