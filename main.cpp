@@ -3,13 +3,13 @@
 
 #include <QApplication>
 
-int main(int argc, char *argv[])
+auto main(int argc, char *argv[]) -> int
 {
-    QApplication a(argc, argv);
+    QApplication const app(argc, argv);
 
     HomePage homePage;
 
     homePage.show();
 
-    return a.exec();
+    return QApplication::exec();
 }

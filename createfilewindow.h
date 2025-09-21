@@ -16,14 +16,14 @@
 #include <QVBoxLayout>
 #include <QWidget>
 
-#include "filesystem.h"
-#include "numberLine.h"
+class numberLine;
+class FileSystem;
 
 class createFileWindow : public QDialog
 {
     Q_OBJECT
   public:
-    createFileWindow(QWidget *parent = nullptr);
+    explicit createFileWindow(QWidget *parent = nullptr);
 };
 
-#endif // CREATEFILEWINDOW_H
+#endif //CREATEFILEWINDOW_H

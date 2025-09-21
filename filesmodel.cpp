@@ -2,8 +2,8 @@
 
 filesModel::filesModel(QWidget *parent) : QWidget(parent)
 {
-    QString folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
-    QDir dir(folderPath);
+    QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
+    QDir const dir(folderPath);
     if (!dir.exists())
     {
         if (dir.mkpath("."))
@@ -29,6 +29,6 @@ filesModel::filesModel(QWidget *parent) : QWidget(parent)
     view->setRootIndex(model->index(folderPath));
 }
 
-QListView *filesModel::takeView() { return view; }
+auto filesModel::takeView() -> QListView * { return view; }
 
-QFileSystemModel *filesModel::takeModel() { return model; }
+auto filesModel::takeModel() -> QFileSystemModel * { return model; }

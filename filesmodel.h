@@ -11,9 +11,9 @@ class filesModel : public QWidget
 {
     Q_OBJECT
   public:
-    filesModel(QWidget *parent = nullptr);
-    QListView *takeView();
-    QFileSystemModel *takeModel();
+    explicit filesModel(QWidget *parent = nullptr);
+    auto takeView() -> QListView *;
+    auto takeModel() -> QFileSystemModel *;
 
   private:
     QFileSystemModel *model;

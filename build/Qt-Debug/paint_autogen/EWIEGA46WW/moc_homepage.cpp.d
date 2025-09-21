@@ -704,24 +704,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_time.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
-  /Users/admin/Downloads/education/Paint/canvas.h \
-  /Users/admin/Downloads/education/Paint/createfilewindow.h \
-  /Users/admin/Downloads/education/Paint/filesmodel.h \
-  /Users/admin/Downloads/education/Paint/filesystem.h \
-  /Users/admin/Downloads/education/Paint/menubar.h \
-  /Users/admin/Downloads/education/Paint/numberline.h \
-  /Users/admin/Downloads/education/Paint/paintwindow.h \
-  /Users/admin/Downloads/education/Paint/toolbar.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QDebug \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QDir \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QFile \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QList \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QObject \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QRect \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QSize \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QSizeF \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QStandardPaths \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QtGlobal \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/q20algorithm.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -835,7 +818,6 @@
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qsize.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qspan.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qstandardpaths.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qstdlibdetection.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qstring.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qstringalgorithms.h \
@@ -882,25 +864,13 @@
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QAction \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QColor \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QFileSystemModel \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QImage \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QImageReader \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QIntValidator \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QMouseEvent \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QPainter \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QPixmap \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QRegularExpressionValidator \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QTransform \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QWheelEvent \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qaction.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qbrush.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qcolor.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qcursor.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qevent.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qeventpoint.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qfilesystemmodel.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qfont.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qfontinfo.h \
@@ -912,51 +882,32 @@
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qimage.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qimageiohandler.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qimagereader.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qinputdevice.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qinputmethod.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpainter.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpen.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpolygon.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qregion.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qscreen.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qscreen_platform.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtextcursor.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtextformat.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtextoption.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qvector2d.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qvectornd.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QApplication \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QDialog \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QFileDialog \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QGestureEvent \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QHBoxLayout \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QListView \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMenuBar \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QPinchGesture \
+  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMenu \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QScrollArea \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QSpinBox \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QToolBar \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
@@ -968,31 +919,23 @@
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qapplication.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qdialogbuttonbox.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qfiledialog.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qgesture.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qlineedit.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qlistview.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qmenu.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qmenubar.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qmessagebox.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qscrollarea.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qspinbox.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
-  /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qtoolbar.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \

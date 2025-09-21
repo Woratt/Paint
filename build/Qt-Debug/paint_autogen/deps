@@ -727,23 +727,81 @@ paint_autogen/timestamp: \
 	/Users/admin/Downloads/education/Paint/paintwindow.h \
 	/Users/admin/Downloads/education/Paint/toolbar.cpp \
 	/Users/admin/Downloads/education/Paint/toolbar.h \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeCXXCompiler.cmake.in \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeCXXInformation.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeCompilerIdDetection.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeDetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeDetermineCompilerABI.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeDetermineCompilerId.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeDetermineSystem.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeFindBinUtils.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeFindDependencyMacro.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeGenericSystem.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeInitializeConfigs.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeLanguageInformation.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeSystem.cmake.in \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeTestCXXCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeTestCompilerCommon.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeUnixFindMake.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CheckCXXCompilerFlag.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CheckCXXSourceCompiles.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CheckIncludeFileCXX.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CheckLibraryExists.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Clang.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/GNU.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/FindOpenGL.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/FindPackageMessage.cmake \
@@ -752,15 +810,19 @@ paint_autogen/timestamp: \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/GNUInstallDirs.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/CheckSourceCompiles.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Internal/FeatureTesting.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Linker/AppleClang-CXX.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Linker/AppleClang.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/MacroAddFileDependencies.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Platform/Apple-Clang.cmake \
+	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Platform/Darwin.cmake \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake \
@@ -775,7 +837,6 @@ paint_autogen/timestamp: \
 	/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QSize \
 	/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QSizeF \
 	/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QStandardPaths \
-	/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/QtGlobal \
 	/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/q20algorithm.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -944,10 +1005,8 @@ paint_autogen/timestamp: \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QIntValidator \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QMouseEvent \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QPainter \
-	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QPixmap \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QRegularExpressionValidator \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QTransform \
-	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/QWheelEvent \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qaction.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qbrush.h \
@@ -998,15 +1057,14 @@ paint_autogen/timestamp: \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QApplication \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QDialog \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QFileDialog \
-	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QGestureEvent \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QHBoxLayout \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QListView \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
+	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMenu \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMenuBar \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
-	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QPinchGesture \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QScrollArea \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/QSpinBox \
@@ -1025,7 +1083,6 @@ paint_autogen/timestamp: \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qdialogbuttonbox.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qfiledialog.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
-	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qgesture.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
 	/usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \

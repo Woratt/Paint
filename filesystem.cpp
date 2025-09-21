@@ -1,10 +1,11 @@
 #include "filesystem.h"
+#include "canvas.h"
 
 FileSystem::FileSystem(QWidget *parent) : QWidget(parent) {}
 
-void FileSystem::create(QString name, int width, int height)
+void FileSystem::create(const QString& name, int width, int height)
 {
-    QString folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
+    QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
 
     QImage image(width, height, QImage::Format_RGB32);
     image.fill(Qt::white);
@@ -13,7 +14,7 @@ void FileSystem::create(QString name, int width, int height)
 
 void FileSystem::clearDirectory()
 {
-    QString folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
+    QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
     QDir dir(folderPath);
 
     if (!dir.exists())
@@ -22,7 +23,7 @@ void FileSystem::clearDirectory()
         return;
     }
 
-    QStringList files = dir.entryList(QDir::Files);
+    QStringList const files = dir.entryList(QDir::Files);
 
     for (const QString &file : files)
     {

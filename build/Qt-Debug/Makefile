@@ -175,6 +175,19 @@ format/fast:
 .PHONY : format/fast
 
 #=============================================================================
+# Target rules for targets named tidy
+
+# Build rule for target.
+tidy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidy
+.PHONY : tidy
+
+# fast build rule for target.
+tidy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/build
+.PHONY : tidy/fast
+
+#=============================================================================
 # Target rules for targets named paint
 
 # Build rule for target.
@@ -492,6 +505,7 @@ help:
 	@echo "... format"
 	@echo "... paint_autogen"
 	@echo "... paint_autogen_timestamp_deps"
+	@echo "... tidy"
 	@echo "... paint"
 	@echo "... canvas.o"
 	@echo "... canvas.i"

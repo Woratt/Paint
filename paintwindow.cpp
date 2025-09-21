@@ -1,8 +1,12 @@
 #include "paintwindow.h"
+#include "menubar.h"
+#include "toolbar.h"
+#include "canvas.h"
+#include "createfilewindow.h"
 
-PaintWindow::PaintWindow(QImage image, const QString &name, QWidget *parent) : QMainWindow(parent)
+PaintWindow::PaintWindow(const QImage& image, const QString &name, QWidget *parent) : QMainWindow(parent), toolBar(new ToolBar(this)), menu(new MenuBar(name, this)), canvas(new Canvas(image))
 {
-    QWidget *central = new QWidget(this);
+    auto *central = new QWidget(this);
 
     setCentralWidget(central);
 
@@ -10,23 +14,23 @@ PaintWindow::PaintWindow(QImage image, const QString &name, QWidget *parent) : Q
 
     showFullScreen();
 
-    QVBoxLayout *VCentralLayout = new QVBoxLayout(central);
+    auto *VCentralLayout = new QVBoxLayout(central);
 
     VCentralLayout->setContentsMargins(0, 0, 0, 0);
 
-    toolBar = new ToolBar(this);
+    
     addToolBar(toolBar);
 
-    menu = new MenuBar(name, this);
+    
 
-    canvas = new Canvas(image);
-    QScrollArea *scrollArea = new QScrollArea;
+    
+    auto *scrollArea = new QScrollArea;
     scrollArea->setWidget(canvas);
     scrollArea->setAlignment(Qt::AlignCenter);
 
     VCentralLayout->addWidget(scrollArea);
 
-    connect(toolBar, &ToolBar::toolSelected, this, [=](Tool tool) { canvas->setTool(tool); });
+    connect(toolBar, &ToolBar::toolSelected, this, [this](Tool tool) -> void { canvas->setTool(tool); });
 
     connect(toolBar, &ToolBar::changedWidth, canvas, &Canvas::changedWidth);
 }
@@ -51,6 +55,6 @@ void PaintWindow::mouseMoveEvent(QMouseEvent *event) {}
 
 void PaintWindow::mouseReleaseEvent(QMouseEvent *event) {}
 
-Canvas *PaintWindow::takeCanvas() { return canvas; };
+auto PaintWindow::takeCanvas() -> Canvas * { return canvas; };
 
 PaintWindow::~PaintWindow() { delete menu; }

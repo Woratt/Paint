@@ -1,8 +1,12 @@
 #include "menubar.h"
 #include "paintwindow.h"
+#include "toolbar.h"
+#include "filesystem.h"
+#include "canvas.h"
+#include "createfilewindow.h"
 
 MenuBar::MenuBar(const QString &nameImage, PaintWindow *paintWindow, QWidget *parent)
-    : QMenuBar(parent), nameImage(nameImage), paintWindow(paintWindow)
+    : QMenuBar(parent), nameImage(nameImage), fileSystem(new FileSystem()), paintWindow(paintWindow)
 {
     saveAct = new QAction(tr("&Save"), this);
     newAct = new QAction(tr("&New file"), this);
@@ -30,25 +34,21 @@ MenuBar::MenuBar(const QString &nameImage, PaintWindow *paintWindow, QWidget *pa
     undoAct->setShortcut(QKeySequence::Undo);
     redoAct->setShortcut(QKeySequence::Redo);
 
-    fileSystem = new FileSystem();
-
     connect(saveAct, &QAction::triggered, this,
-            [=]() { fileSystem->saveImage(&(paintWindow->takeCanvas()->takePixmap()), nameImage); });
+            [this, paintWindow, nameImage]() -> void { FileSystem::saveImage(&(paintWindow->takeCanvas()->takePixmap()), nameImage); });
     connect(newAct, &QAction::triggered, this,
-            [=]()
-            {
-                createFileWindow *window = new createFileWindow(this);
+            [this]()
+            -> void {
+                auto *window = new createFileWindow(this);
                 window->exec();
             });
     connect(openAct, &QAction::triggered, this, &MenuBar::open);
     connect(closeAct, &QAction::triggered, this, &MenuBar::close);
 
-    connect(undoAct, &QAction::triggered, this, [=]() { fileSystem->undo(paintWindow->takeCanvas()); });
+    connect(undoAct, &QAction::triggered, this, [this, paintWindow]() -> void { FileSystem::undo(paintWindow->takeCanvas()); });
 
-    connect(redoAct, &QAction::triggered, this, [=]() { fileSystem->redo(paintWindow->takeCanvas()); });
+    connect(redoAct, &QAction::triggered, this, [this, paintWindow]() -> void { FileSystem::redo(paintWindow->takeCanvas()); });
 }
-
-// MenuBar::MenuBar(QWidget* parent) : QMenuBar(parent){}
 
 void MenuBar::close() {}
 

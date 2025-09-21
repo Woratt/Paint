@@ -1,24 +1,25 @@
 #include "canvas.h"
+#include "toolbar.h"
 
-QVector<QImage> history;
+static QVector<QImage> history;
 
 Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
 {
     history.push_back(image);
     pixMap = QPixmap::fromImage(image);
-    QSize imageSize = image.size();
+    QSize const imageSize = image.size();
 
-    QSize targetSize_(1280, 720);
+    QSize const targetSize_(1280, 720);
 
-    QSize scaledSize_ = imageSize.scaled(targetSize_, Qt::KeepAspectRatio);
+    QSize const scaledSize_ = imageSize.scaled(targetSize_, Qt::KeepAspectRatio);
 
     setFixedSize(scaledSize_);
 
-    QSize scaledSize = pixMap.size() * zoom;
+    QSize const scaledSize = pixMap.size() * zoom;
 
     offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
 
-    QRect target(offset.x(), offset.y(), scaledSize.width(), scaledSize.height());
+    QRect const target(offset.x(), offset.y(), scaledSize.width(), scaledSize.height());
 
     setAttribute(Qt::WA_AcceptTouchEvents);
 
@@ -34,23 +35,23 @@ Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
     grabGesture(Qt::PinchGesture);
 }
 
-void Canvas::paintEvent(QPaintEvent *event)
+void Canvas::paintEvent(QPaintEvent * /*event*/)
 {
     QPainter painter(this);
 
     painter.setRenderHint(QPainter::Antialiasing, true);
 
-    QSize scaledSize = pixMap.size() * zoom;
+    QSize const scaledSize = pixMap.size() * zoom;
 
-    QRect target(offset.x(), offset.y(), scaledSize.width(), scaledSize.height());
+    QRect const target(offset.x(), offset.y(), scaledSize.width(), scaledSize.height());
 
     painter.drawPixmap(target, pixMap);
 
     if (draw && (tool == Tool::Rectangle || tool == Tool::Circle || tool == Tool::Line))
     {
         painter.setPen(pen);
-        QPoint p1(qRound(lastPoint.x() * zoom) + offset.x(), qRound(lastPoint.y() * zoom) + offset.y());
-        QPoint p2(qRound(secondPoint.x() * zoom) + offset.x(), qRound(secondPoint.y() * zoom) + offset.y());
+        QPoint const p1(qRound(lastPoint.x() * zoom) + offset.x(), qRound(lastPoint.y() * zoom) + offset.y());
+        QPoint const p2(qRound(secondPoint.x() * zoom) + offset.x(), qRound(secondPoint.y() * zoom) + offset.y());
         QRect rect(p1, p2);
         rect = rect.normalized();
 
@@ -77,12 +78,13 @@ void Canvas::paintEvent(QPaintEvent *event)
 
 void Canvas::mouseMoveEvent(QMouseEvent *event)
 {
-    if (!draw)
+    if (!draw) {
         return;
+}
     QPainter painter(&pixMap);
     painter.setRenderHint(QPainter::Antialiasing, true);
 
-    QPoint imgPoint = eventPosToImagePoint(event->pos());
+    QPoint const imgPoint = eventPosToImagePoint(event->pos());
 
     if (tool == Tool::Brush)
     {
@@ -136,8 +138,9 @@ void Canvas::mousePressEvent(QMouseEvent *event)
 void Canvas::mouseReleaseEvent(QMouseEvent *event)
 {
 
-    if (!draw || event->button() != Qt::LeftButton)
+    if (!draw || event->button() != Qt::LeftButton) {
         return;
+}
 
     draw = false;
 
@@ -173,11 +176,11 @@ void Canvas::setTool(Tool tool) { this->tool = tool; }
 
 void Canvas::wheelEvent(QWheelEvent *event)
 {
-    int numDegreesY = event->angleDelta().y() / 8;
-    int numStepsY = numDegreesY / 15;
+    int const numDegreesY = event->angleDelta().y() / 8;
+    int const numStepsY = numDegreesY / 15;
 
-    int numDegreesX = event->angleDelta().x() / 8;
-    int numStepsX = numDegreesX / 15;
+    int const numDegreesX = event->angleDelta().x() / 8;
+    int const numStepsX = numDegreesX / 15;
 
     if (zoom > 1)
     {
@@ -205,34 +208,34 @@ void Canvas::wheelEvent(QWheelEvent *event)
     update();
 }
 
-QPoint Canvas::eventPosToImagePoint(const QPoint &point) const
+auto Canvas::eventPosToImagePoint(const QPoint &point) const -> QPoint
 {
 
-    QPoint rel = point - QPoint(offset.x(), offset.y());
+    QPoint const rel = point - QPoint(offset.x(), offset.y());
 
-    double imgX = double(rel.x()) / zoom;
-    double imgY = double(rel.y()) / zoom;
+    double const imgX = static_cast<double>(rel.x()) / zoom;
+    double const imgY = static_cast<double>(rel.y()) / zoom;
 
-    int ix = qBound(0, qRound(imgX), pixMap.width() - 1);
-    int iy = qBound(0, qRound(imgY), pixMap.height() - 1);
+    int const ix = qBound(0, qRound(imgX), pixMap.width() - 1);
+    int const iy = qBound(0, qRound(imgY), pixMap.height() - 1);
 
-    return QPoint(ix, iy);
+    return {ix, iy};
 }
 
-bool Canvas::event(QEvent *e)
+auto Canvas::event(QEvent *e) -> bool
 {
     if (e->type() == QEvent::Gesture)
     {
-        return gestureEvent(static_cast<QGestureEvent *>(e));
+        return gestureEvent(dynamic_cast<QGestureEvent *>(e));
     }
     return QWidget::event(e);
 }
 
-bool Canvas::gestureEvent(QGestureEvent *event)
+auto Canvas::gestureEvent(QGestureEvent *event) -> bool
 {
     if (QGesture *g = event->gesture(Qt::PinchGesture))
     {
-        QPinchGesture *pinch = static_cast<QPinchGesture *>(g);
+        auto *pinch = dynamic_cast<QPinchGesture *>(g);
         pinchTriggered(pinch);
 
         event->accept(g);
@@ -243,7 +246,7 @@ bool Canvas::gestureEvent(QGestureEvent *event)
 
 void Canvas::pinchTriggered(QPinchGesture *pinch)
 {
-    qreal factor = pinch->scaleFactor();
+    qreal const factor = pinch->scaleFactor();
 
     if (factor > 1)
     {
@@ -264,7 +267,7 @@ void Canvas::pinchTriggered(QPinchGesture *pinch)
 
 void Canvas::clampOffset()
 {
-    QSize scaledSize = pixMap.size() * zoom;
+    QSize const scaledSize = pixMap.size() * zoom;
 
     if (scaledSize.width() <= width())
     {
@@ -272,9 +275,9 @@ void Canvas::clampOffset()
     }
     else
     {
-        int minX = width() - scaledSize.width();
-        int maxX = 0;
-        offset.setX(qBound(minX, int(offset.x()), maxX));
+        int const minX = width() - scaledSize.width();
+        int const maxX = 0;
+        offset.setX(qBound(minX, static_cast<int>(offset.x()), maxX));
     }
 
     if (scaledSize.height() <= height())
@@ -283,9 +286,9 @@ void Canvas::clampOffset()
     }
     else
     {
-        int minY = height() - scaledSize.height();
-        int maxY = 0;
-        offset.setY(qBound(minY, int(offset.y()), maxY));
+        int const minY = height() - scaledSize.height();
+        int const maxY = 0;
+        offset.setY(qBound(minY, static_cast<int>(offset.y()), maxY));
     }
 }
 
@@ -336,8 +339,8 @@ void Canvas::reduceZoom()
 
 void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 {
-    QPointF imgCoordBefore = (point - offset) / zoom;
-    QSize scaledSize = pixMap.size() * zoom;
+    QPointF const imgCoordBefore = (point - offset) / zoom;
+    QSize const scaledSize = pixMap.size() * zoom;
 
     if (zoom > 1 && isFromButton)
     {
@@ -353,4 +356,4 @@ void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 
 void Canvas::changedWidth(int width) { pen.setWidth(width); }
 
-QPixmap &Canvas::takePixmap() { return pixMap; }
+auto Canvas::takePixmap() -> QPixmap & { return pixMap; }

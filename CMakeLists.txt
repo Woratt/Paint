@@ -3,11 +3,19 @@ project(paint LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 qt_standard_project_setup()
 
 add_custom_target(format COMMAND clang-format -i --style=file ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+add_custom_target(tidy
+    COMMAND clang-tidy -fix -p ${CMAKE_BINARY_DIR} ${PROJECT_SOURCE_DIR}/*.cpp
+    COMMENT "Running clang-tidy on canvas.cpp..."
+)
+
+#include_directories(SYSTEM "/Library/Developer/CommandLineTools/usr/include/c++/v1")
+#include_directories(SYSTEM "${CMAKE_OSX_SYSROOT}/usr/include")
 
 qt_add_executable(paint
     WIN32 MACOSX_BUNDLE

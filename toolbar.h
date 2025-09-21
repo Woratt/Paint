@@ -9,10 +9,9 @@
 #include <QSpinBox>
 #include <QToolBar>
 
-#include "filesystem.h"
-#include "paintwindow.h"
-
 class PaintWindow;
+class FileSystem;
+class Canvas;
 
 enum class Tool
 {
@@ -32,10 +31,10 @@ class ToolBar : public QToolBar
     ToolBar(PaintWindow *, QWidget *parent = nullptr);
 
   private:
-    QPushButton *createButton(const QString &);
-    QPushButton *createFlippedButton(const QString &);
-    QWidget *createSpacer(int);
-    QWidget *createExpandingSpacer();
+    static QPushButton *createButton(const QString &);
+    static QPushButton *createFlippedButton(const QString &);
+    static QWidget *createSpacer(int);
+    static QWidget *createExpandingSpacer();
   signals:
     void toolSelected(Tool tool);
     void changedWidth(int Width);

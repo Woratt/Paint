@@ -11,16 +11,14 @@
 #include <QWidget>
 #include <QtGlobal>
 
-#include "toolbar.h"
-
 class ToolBar;
 enum class Tool;
 
 class Canvas : public QWidget
 {
   public:
-    Canvas(const QImage &, QWidget *parent = nullptr);
-    QPixmap &takePixmap();
+    explicit Canvas(const QImage &, QWidget *parent = nullptr);
+    auto takePixmap() -> QPixmap &;
     void changeOffset(bool, const QPointF &);
 
   private:
@@ -31,8 +29,8 @@ class Canvas : public QWidget
     int numClik = 0;
     double zoom = 1.0;
     QPointF offset;
-    QPoint eventPosToImagePoint(const QPoint &) const;
-    bool gestureEvent(QGestureEvent *);
+    [[nodiscard]] auto eventPosToImagePoint(const QPoint &) const -> QPoint;
+    auto gestureEvent(QGestureEvent *) -> bool;
     void pinchTriggered(QPinchGesture *);
     void clampOffset();
     int widthLine = 3;
@@ -42,11 +40,11 @@ class Canvas : public QWidget
 
   protected:
     void paintEvent(QPaintEvent *event) override;
-    void mouseMoveEvent(QMouseEvent *) override;
-    void mousePressEvent(QMouseEvent *) override;
-    void mouseReleaseEvent(QMouseEvent *) override;
-    void wheelEvent(QWheelEvent *) override;
-    bool event(QEvent *) override;
+    void mouseMoveEvent(QMouseEvent * /*event*/) override;
+    void mousePressEvent(QMouseEvent * /*event*/) override;
+    void mouseReleaseEvent(QMouseEvent * /*event*/) override;
+    void wheelEvent(QWheelEvent * /*event*/) override;
+    auto event(QEvent * /*event*/) -> bool override;
   public slots:
     void increaseZoom();
     void reduceZoom();

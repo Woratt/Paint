@@ -5,11 +5,11 @@
 #include <QObject>
 #include <QWidget>
 
-#include "createFileWindow.h"
-#include "filesystem.h"
-
 class PaintWindow;
+class ToolBar;
 class FileSystem;
+class Canvas;
+class createFileWindow;
 
 class MenuBar : public QMenuBar
 {

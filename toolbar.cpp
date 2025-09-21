@@ -1,15 +1,18 @@
 #include "toolbar.h"
+#include "paintwindow.h"
+#include "filesystem.h"
+#include "canvas.h"
 
 ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 {
 
-    FileSystem *fileSystem = new FileSystem();
+    auto  const*fileSystem = new FileSystem();
 
     setToolButtonStyle(Qt::ToolButtonIconOnly);
 
     setMovable(false);
 
-    QLabel *label = new QLabel("Paint");
+    auto *label = new QLabel("Paint");
 
     QFont font = this->font();
     font.setPointSize(24);
@@ -29,9 +32,9 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 
     qDebug() << basePath << "\n";
 
-    QLabel *widthLabel = new QLabel("Width:");
+    auto *widthLabel = new QLabel("Width:");
 
-    QSpinBox *spin = new QSpinBox();
+    auto *spin = new QSpinBox();
     spin->setMinimum(1);
     spin->setMaximum(100);
     spin->setSingleStep(1);
@@ -74,58 +77,58 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 
     addWidget(createSpacer(20));
 
-    connect(paintBt, &QPushButton::clicked, this, [=]() { emit toolSelected(Tool::Brush); });
-    connect(rectangleBt, &QPushButton::clicked, this, [=]() { emit toolSelected(Tool::Rectangle); });
-    connect(circleBt, &QPushButton::clicked, this, [=]() { emit toolSelected(Tool::Circle); });
-    connect(eraserBt, &QPushButton::clicked, this, [=]() { emit toolSelected(Tool::Eraser); });
-    connect(lineBt, &QPushButton::clicked, this, [=]() { emit toolSelected(Tool::Line); });
-    connect(brokenLine, &QPushButton::clicked, this, [=]() { emit toolSelected((Tool::BrokenLine)); });
+    connect(paintBt, &QPushButton::clicked, this, [this]() -> void { emit toolSelected(Tool::Brush); });
+    connect(rectangleBt, &QPushButton::clicked, this, [this]() -> void { emit toolSelected(Tool::Rectangle); });
+    connect(circleBt, &QPushButton::clicked, this, [this]() -> void { emit toolSelected(Tool::Circle); });
+    connect(eraserBt, &QPushButton::clicked, this, [this]() -> void { emit toolSelected(Tool::Eraser); });
+    connect(lineBt, &QPushButton::clicked, this, [this]() -> void { emit toolSelected(Tool::Line); });
+    connect(brokenLine, &QPushButton::clicked, this, [this]() -> void { emit toolSelected((Tool::BrokenLine)); });
     connect(spin, qOverload<int>(&QSpinBox::valueChanged), this, &ToolBar::changedWidth);
 
-    connect(returntBt, &QPushButton::clicked, this, [=]() { fileSystem->undo(paintWindow->takeCanvas()); });
+    connect(returntBt, &QPushButton::clicked, this, [=]() -> void { FileSystem::undo(paintWindow->takeCanvas()); });
 
-    connect(nextBt, &QPushButton::clicked, this, [=]() { fileSystem->redo(paintWindow->takeCanvas()); });
+    connect(nextBt, &QPushButton::clicked, this, [=]() -> void { FileSystem::redo(paintWindow->takeCanvas()); });
 
     connect(increaseZoomBt, &QPushButton::clicked, this,
             [=]()
-            {
+            -> void {
                 paintWindow->takeCanvas()->increaseZoom();
                 paintWindow->takeCanvas()->changeOffset(false, QPointF(0, 0));
             });
     connect(reduceZoomBt, &QPushButton::clicked, this,
             [=]()
-            {
+            -> void {
                 paintWindow->takeCanvas()->reduceZoom();
                 paintWindow->takeCanvas()->changeOffset(false, QPointF(0, 0));
             });
 }
 
-QPushButton *ToolBar::createButton(const QString &path)
+auto ToolBar::createButton(const QString &path) -> QPushButton *
 {
-    QPushButton *bt = new QPushButton();
+    auto *bt = new QPushButton();
     bt->setIcon(QIcon(path));
     return bt;
 }
 
-QPushButton *ToolBar::createFlippedButton(const QString &path)
+auto ToolBar::createFlippedButton(const QString &path) -> QPushButton *
 {
     QPixmap pix(path);
     pix = pix.transformed(QTransform().scale(-1, 1));
-    QPushButton *bt = new QPushButton();
+    auto *bt = new QPushButton();
     bt->setIcon(QIcon(pix));
     return bt;
 }
 
-QWidget *ToolBar::createSpacer(int width)
+auto ToolBar::createSpacer(int width) -> QWidget *
 {
-    QWidget *spacer = new QWidget();
+    auto *spacer = new QWidget();
     spacer->setFixedWidth(width);
     return spacer;
 }
 
-QWidget *ToolBar::createExpandingSpacer()
+auto ToolBar::createExpandingSpacer() -> QWidget *
 {
-    QWidget *spacer = new QWidget();
+    auto *spacer = new QWidget();
     spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     return spacer;
 }

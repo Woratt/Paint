@@ -1,4 +1,6 @@
 #include "createfilewindow.h"
+#include "numberline.h"
+#include "filesystem.h"
 
 createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
 {
@@ -7,23 +9,23 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
     // setMinimumSize(300, 200);
     // setFixedSize(300, 220);
 
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
-    QHBoxLayout *nameLayout = new QHBoxLayout();
-    QHBoxLayout *presentLayout = new QHBoxLayout();
-    QHBoxLayout *widthLayout = new QHBoxLayout();
-    QHBoxLayout *heightLayout = new QHBoxLayout();
-    QHBoxLayout *buttonLayout = new QHBoxLayout();
+    auto *nameLayout = new QHBoxLayout();
+    auto *presentLayout = new QHBoxLayout();
+    auto *widthLayout = new QHBoxLayout();
+    auto *heightLayout = new QHBoxLayout();
+    auto *buttonLayout = new QHBoxLayout();
 
-    QLineEdit *nameLine = new QLineEdit();
-    numberLine *widthLine = new numberLine();
-    numberLine *heightLine = new numberLine();
+    auto *nameLine = new QLineEdit();
+    auto *widthLine = new numberLine();
+    auto *heightLine = new numberLine();
 
-    QPushButton *presentButton = new QPushButton("Custom");
+    auto *presentButton = new QPushButton("Custom");
 
     presentButton->setMinimumWidth(200);
 
-    QMenu *presentMenu = new QMenu();
+    auto *presentMenu = new QMenu();
 
     presentMenu->addAction("Custom");
     presentMenu->addAction("640 X 480");
@@ -54,18 +56,18 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
     widthLine->setPlaceholderText("Width");
     heightLine->setPlaceholderText("Height");
 
-    QLabel *nameLabel = new QLabel();
-    QLabel *presentLabel = new QLabel();
-    QLabel *widthLabel = new QLabel();
-    QLabel *heightLabel = new QLabel();
+    auto *nameLabel = new QLabel();
+    auto *presentLabel = new QLabel();
+    auto *widthLabel = new QLabel();
+    auto *heightLabel = new QLabel();
 
     nameLabel->setText("Name File:");
     presentLabel->setText("Present:");
     widthLabel->setText("Width:");
     heightLabel->setText("Height:");
 
-    QPushButton *okButton = new QPushButton("OK");
-    QPushButton *cancelButton = new QPushButton("Cancel");
+    auto *okButton = new QPushButton("OK");
+    auto *cancelButton = new QPushButton("Cancel");
 
     nameLayout->addStretch();
     nameLayout->addWidget(nameLabel);
@@ -93,9 +95,9 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
 
     connect(presentMenu, &QMenu::triggered, this,
             [=](QAction *action)
-            {
+            -> void {
                 presentButton->setText(action->text());
-                QString text = action->text();
+                QString const text = action->text();
                 if (text == "640 X 480")
                 {
                     widthLine->setText("640");
@@ -183,34 +185,35 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
                 }
             });
 
-    connect(widthLine, &QLineEdit::textEdited, this, [=]() { presentButton->setText("Custom"); });
+    connect(widthLine, &QLineEdit::textEdited, this, [=]() -> void { presentButton->setText("Custom"); });
 
-    connect(heightLine, &QLineEdit::textEdited, this, [=]() { presentButton->setText("Custom"); });
+    connect(heightLine, &QLineEdit::textEdited, this, [=]() -> void { presentButton->setText("Custom"); });
 
     connect(cancelButton, &QPushButton::clicked, this, &QDialog::close);
 
     connect(okButton, &QPushButton::clicked, this,
-            [=]()
-            {
-                QString folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) +
+            [nameLine, widthLine, heightLine, this]()
+            -> void {
+                QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) +
                                      "/MyPaintFiles/" + nameLine->text() + ".png";
                 if (QFile::exists(folderPath))
                 {
-                    QMessageBox *msgBox = new QMessageBox();
+                    auto *msgBox = new QMessageBox();
                     msgBox->setText("This file already exists\n\nReplace it");
                     msgBox->setIcon(QMessageBox::Critical);
 
                     msgBox->setStandardButtons(QMessageBox::Cancel | QMessageBox::Ok);
 
-                    int ret = msgBox->exec();
+                    int const ret = msgBox->exec();
 
                     if (ret == QMessageBox::Ok)
                     {
                         FileSystem().create(nameLine->text(), widthLine->text().toInt(), heightLine->text().toInt());
                         this->close();
                     }
-                    else
+                    else {
                         this->close();
+}
                 }
                 else
                 {

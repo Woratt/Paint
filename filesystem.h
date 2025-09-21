@@ -9,7 +9,6 @@
 #include <QStandardPaths>
 #include <QWidget>
 
-#include "canvas.h"
 class Canvas;
 
 class FileSystem : QWidget
@@ -18,12 +17,12 @@ class FileSystem : QWidget
   public:
     explicit FileSystem(QWidget *parent = nullptr);
 
-  public slots:
-    void create(QString, int, int);
-    void clearDirectory();
-    void saveImage(QPixmap *, const QString &);
-    void undo(Canvas *);
-    void redo(Canvas *);
+  
+    static void create(const QString&, int, int);
+    static void clearDirectory();
+    static void saveImage(QPixmap *, const QString &);
+    static void undo(Canvas *);
+    static void redo(Canvas *);
 };
 
 #endif // FILESYSTEM_H

@@ -13,12 +13,13 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
+#include <QMenu>
 
-#include "createfilewindow.h"
-#include "filesmodel.h"
-#include "filesystem.h"
-#include "menubar.h"
-#include "paintwindow.h"
+class FileSystem;
+class filesModel;
+class createFileWindow;
+class PaintWindow;
+class Canvas;
 
 class HomePage : public QMainWindow
 {

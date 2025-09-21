@@ -1,5 +1,5 @@
-#ifndef PAINTWINDOW_H
-#define PAINTWINDOW_H
+#ifndef USERS_ADMIN_DOWNLOADS_EDUCATION_PAINT_PAINTWINDOW_H
+#define USERS_ADMIN_DOWNLOADS_EDUCATION_PAINT_PAINTWINDOW_H
 
 #include <QAction>
 #include <QMainWindow>
@@ -9,28 +9,31 @@
 #include <QScrollArea>
 #include <QToolBar>
 
-#include "canvas.h"
-#include "menubar.h"
-#include "toolbar.h"
-
-class Canvas;
-class ToolBar;
 class MenuBar;
+class ToolBar;
+class Canvas;
+class createFileWindow;
 
 class PaintWindow : public QMainWindow
 {
     Q_OBJECT
 
   public:
-    PaintWindow(QImage, const QString &, QWidget *parent = nullptr);
-    Canvas *takeCanvas();
-    ~PaintWindow();
+    PaintWindow(const QImage&, const QString &, QWidget *parent = nullptr);
+    auto takeCanvas() -> Canvas*;
+
+    PaintWindow(const PaintWindow&) = delete;
+    auto operator=(const PaintWindow&) -> PaintWindow& = delete;
+    PaintWindow(PaintWindow&&) = delete;
+    auto operator=(PaintWindow&&) -> PaintWindow& = delete;
+
+    ~PaintWindow() override;
 
   protected:
     void paintEvent(QPaintEvent *event) override;
-    void mousePressEvent(QMouseEvent *) override;
-    void mouseMoveEvent(QMouseEvent *) override;
-    void mouseReleaseEvent(QMouseEvent *) override;
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
   private:
     QPoint lastPoint;
@@ -39,4 +42,4 @@ class PaintWindow : public QMainWindow
     Canvas *canvas;
     ToolBar *toolBar;
 };
-#endif // PAINTWINDOW_H
+#endif // USERS_ADMIN_DOWNLOADS_EDUCATION_PAINT_PAINTWINDOW_H

@@ -1,12 +1,15 @@
 #include "homepage.h"
+#include "filesystem.h"
+#include "filesmodel.h"
+#include "createfilewindow.h"
+#include "paintwindow.h"
+#include "canvas.h"
 
 HomePage::HomePage(QWidget *parent) : QMainWindow(parent)
 {
     setMinimumSize(600, 400);
 
     setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowCloseButtonHint);
-
-    // MenuBar* menuBar = new MenuBar("", nullptr);
 
     QWidget *central = new QWidget(this);
 
