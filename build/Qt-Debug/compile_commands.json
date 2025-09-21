@@ -64,5 +64,11 @@
   "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/Qt-Debug/paint_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC -o CMakeFiles/paint.dir/toolbar.cpp.o -c /Users/admin/Downloads/education/Paint/toolbar.cpp",
   "file": "/Users/admin/Downloads/education/Paint/toolbar.cpp",
   "output": "CMakeFiles/paint.dir/toolbar.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/Qt-Debug",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/Qt-Debug/paint_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC -o CMakeFiles/paint.dir/resourcepath.cpp.o -c /Users/admin/Downloads/education/Paint/resourcepath.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/resourcepath.cpp",
+  "output": "CMakeFiles/paint.dir/resourcepath.cpp.o"
 }
 ]

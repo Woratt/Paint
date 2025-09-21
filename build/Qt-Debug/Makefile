@@ -466,6 +466,30 @@ paintwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint.dir/build.make CMakeFiles/paint.dir/paintwindow.cpp.s
 .PHONY : paintwindow.cpp.s
 
+resourcepath.o: resourcepath.cpp.o
+.PHONY : resourcepath.o
+
+# target to build an object file
+resourcepath.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint.dir/build.make CMakeFiles/paint.dir/resourcepath.cpp.o
+.PHONY : resourcepath.cpp.o
+
+resourcepath.i: resourcepath.cpp.i
+.PHONY : resourcepath.i
+
+# target to preprocess a source file
+resourcepath.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint.dir/build.make CMakeFiles/paint.dir/resourcepath.cpp.i
+.PHONY : resourcepath.cpp.i
+
+resourcepath.s: resourcepath.cpp.s
+.PHONY : resourcepath.s
+
+# target to generate assembly for a file
+resourcepath.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint.dir/build.make CMakeFiles/paint.dir/resourcepath.cpp.s
+.PHONY : resourcepath.cpp.s
+
 toolbar.o: toolbar.cpp.o
 .PHONY : toolbar.o
 
@@ -537,6 +561,9 @@ help:
 	@echo "... paintwindow.o"
 	@echo "... paintwindow.i"
 	@echo "... paintwindow.s"
+	@echo "... resourcepath.o"
+	@echo "... resourcepath.i"
+	@echo "... resourcepath.s"
 	@echo "... toolbar.o"
 	@echo "... toolbar.i"
 	@echo "... toolbar.s"

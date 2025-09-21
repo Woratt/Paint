@@ -725,6 +725,8 @@ paint_autogen/timestamp: \
 	/Users/admin/Downloads/education/Paint/numberline.h \
 	/Users/admin/Downloads/education/Paint/paintwindow.cpp \
 	/Users/admin/Downloads/education/Paint/paintwindow.h \
+	/Users/admin/Downloads/education/Paint/resourcepath.cpp \
+	/Users/admin/Downloads/education/Paint/resourcepath.h \
 	/Users/admin/Downloads/education/Paint/toolbar.cpp \
 	/Users/admin/Downloads/education/Paint/toolbar.h \
 	/usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakeCXXCompiler.cmake.in \

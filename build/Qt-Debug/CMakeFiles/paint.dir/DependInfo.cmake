@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/admin/Downloads/education/Paint/numberline.cpp" "CMakeFiles/paint.dir/numberline.cpp.o" "gcc" "CMakeFiles/paint.dir/numberline.cpp.o.d"
   "/Users/admin/Downloads/education/Paint/build/Qt-Debug/paint_autogen/mocs_compilation.cpp" "CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o.d"
   "/Users/admin/Downloads/education/Paint/paintwindow.cpp" "CMakeFiles/paint.dir/paintwindow.cpp.o" "gcc" "CMakeFiles/paint.dir/paintwindow.cpp.o.d"
+  "/Users/admin/Downloads/education/Paint/resourcepath.cpp" "CMakeFiles/paint.dir/resourcepath.cpp.o" "gcc" "CMakeFiles/paint.dir/resourcepath.cpp.o.d"
   "/Users/admin/Downloads/education/Paint/toolbar.cpp" "CMakeFiles/paint.dir/toolbar.cpp.o" "gcc" "CMakeFiles/paint.dir/toolbar.cpp.o.d"
   )
 

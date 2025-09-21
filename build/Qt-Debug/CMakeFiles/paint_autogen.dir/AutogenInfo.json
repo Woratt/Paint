@@ -517,6 +517,12 @@
 			null
 		],
 		[
+			"/Users/admin/Downloads/education/Paint/resourcepath.h",
+			"MU",
+			"EWIEGA46WW/moc_resourcepath.cpp",
+			null
+		],
+		[
 			"/Users/admin/Downloads/education/Paint/toolbar.h",
 			"MU",
 			"EWIEGA46WW/moc_toolbar.cpp",
@@ -595,6 +601,7 @@
 		[ "/Users/admin/Downloads/education/Paint/menubar.cpp", "MU", null ],
 		[ "/Users/admin/Downloads/education/Paint/numberline.cpp", "MU", null ],
 		[ "/Users/admin/Downloads/education/Paint/paintwindow.cpp", "MU", null ],
+		[ "/Users/admin/Downloads/education/Paint/resourcepath.cpp", "MU", null ],
 		[ "/Users/admin/Downloads/education/Paint/toolbar.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

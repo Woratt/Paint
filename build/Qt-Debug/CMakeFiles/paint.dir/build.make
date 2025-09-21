@@ -72,6 +72,62 @@ include CMakeFiles/paint.dir/flags.make
 CMakeFiles/paint.dir/codegen:
 .PHONY : CMakeFiles/paint.dir/codegen
 
+paint.app/Contents/Resources/icons/.DS_Store: /Users/admin/Downloads/education/Paint/icons/.DS_Store
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/.DS_Store"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/.DS_Store paint.app/Contents/Resources/icons/.DS_Store
+
+paint.app/Contents/Resources/icons/arrow.png: /Users/admin/Downloads/education/Paint/icons/arrow.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/arrow.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/arrow.png paint.app/Contents/Resources/icons/arrow.png
+
+paint.app/Contents/Resources/icons/brokenLine.png: /Users/admin/Downloads/education/Paint/icons/brokenLine.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/brokenLine.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/brokenLine.png paint.app/Contents/Resources/icons/brokenLine.png
+
+paint.app/Contents/Resources/icons/bucket.png: /Users/admin/Downloads/education/Paint/icons/bucket.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/bucket.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/bucket.png paint.app/Contents/Resources/icons/bucket.png
+
+paint.app/Contents/Resources/icons/circle.png: /Users/admin/Downloads/education/Paint/icons/circle.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/circle.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/circle.png paint.app/Contents/Resources/icons/circle.png
+
+paint.app/Contents/Resources/icons/cleanup-edges.png: /Users/admin/Downloads/education/Paint/icons/cleanup-edges.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/cleanup-edges.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/cleanup-edges.png paint.app/Contents/Resources/icons/cleanup-edges.png
+
+paint.app/Contents/Resources/icons/eraser.png: /Users/admin/Downloads/education/Paint/icons/eraser.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/eraser.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/eraser.png paint.app/Contents/Resources/icons/eraser.png
+
+paint.app/Contents/Resources/icons/icon.icns: /Users/admin/Downloads/education/Paint/icons/icon.icns
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/icon.icns"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/icon.icns paint.app/Contents/Resources/icons/icon.icns
+
+paint.app/Contents/Resources/icons/increaseZoom.png: /Users/admin/Downloads/education/Paint/icons/increaseZoom.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/increaseZoom.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/increaseZoom.png paint.app/Contents/Resources/icons/increaseZoom.png
+
+paint.app/Contents/Resources/icons/line.png: /Users/admin/Downloads/education/Paint/icons/line.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/line.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/line.png paint.app/Contents/Resources/icons/line.png
+
+paint.app/Contents/Resources/icons/paint.png: /Users/admin/Downloads/education/Paint/icons/paint.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/paint.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/paint.png paint.app/Contents/Resources/icons/paint.png
+
+paint.app/Contents/Resources/icons/palette.png: /Users/admin/Downloads/education/Paint/icons/palette.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/palette.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/palette.png paint.app/Contents/Resources/icons/palette.png
+
+paint.app/Contents/Resources/icons/rectangle.png: /Users/admin/Downloads/education/Paint/icons/rectangle.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/rectangle.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/rectangle.png paint.app/Contents/Resources/icons/rectangle.png
+
+paint.app/Contents/Resources/icons/reduceZoom.png: /Users/admin/Downloads/education/Paint/icons/reduceZoom.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content paint.app/Contents/Resources/icons/reduceZoom.png"
+	$(CMAKE_COMMAND) -E copy /Users/admin/Downloads/education/Paint/icons/reduceZoom.png paint.app/Contents/Resources/icons/reduceZoom.png
+
 CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o: CMakeFiles/paint.dir/flags.make
 CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o: paint_autogen/mocs_compilation.cpp
 CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o: CMakeFiles/paint.dir/compiler_depend.ts
@@ -226,6 +282,20 @@ CMakeFiles/paint.dir/toolbar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/paint.dir/toolbar.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/toolbar.cpp -o CMakeFiles/paint.dir/toolbar.cpp.s
 
+CMakeFiles/paint.dir/resourcepath.cpp.o: CMakeFiles/paint.dir/flags.make
+CMakeFiles/paint.dir/resourcepath.cpp.o: /Users/admin/Downloads/education/Paint/resourcepath.cpp
+CMakeFiles/paint.dir/resourcepath.cpp.o: CMakeFiles/paint.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/paint.dir/resourcepath.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/paint.dir/resourcepath.cpp.o -MF CMakeFiles/paint.dir/resourcepath.cpp.o.d -o CMakeFiles/paint.dir/resourcepath.cpp.o -c /Users/admin/Downloads/education/Paint/resourcepath.cpp
+
+CMakeFiles/paint.dir/resourcepath.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/paint.dir/resourcepath.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/resourcepath.cpp > CMakeFiles/paint.dir/resourcepath.cpp.i
+
+CMakeFiles/paint.dir/resourcepath.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/paint.dir/resourcepath.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/resourcepath.cpp -o CMakeFiles/paint.dir/resourcepath.cpp.s
+
 # Object files for target paint
 paint_OBJECTS = \
 "CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o" \
@@ -238,7 +308,8 @@ paint_OBJECTS = \
 "CMakeFiles/paint.dir/menubar.cpp.o" \
 "CMakeFiles/paint.dir/numberline.cpp.o" \
 "CMakeFiles/paint.dir/paintwindow.cpp.o" \
-"CMakeFiles/paint.dir/toolbar.cpp.o"
+"CMakeFiles/paint.dir/toolbar.cpp.o" \
+"CMakeFiles/paint.dir/resourcepath.cpp.o"
 
 # External object files for target paint
 paint_EXTERNAL_OBJECTS =
@@ -254,16 +325,31 @@ paint.app/Contents/MacOS/paint: CMakeFiles/paint.dir/menubar.cpp.o
 paint.app/Contents/MacOS/paint: CMakeFiles/paint.dir/numberline.cpp.o
 paint.app/Contents/MacOS/paint: CMakeFiles/paint.dir/paintwindow.cpp.o
 paint.app/Contents/MacOS/paint: CMakeFiles/paint.dir/toolbar.cpp.o
+paint.app/Contents/MacOS/paint: CMakeFiles/paint.dir/resourcepath.cpp.o
 paint.app/Contents/MacOS/paint: CMakeFiles/paint.dir/build.make
 paint.app/Contents/MacOS/paint: /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets
 paint.app/Contents/MacOS/paint: /usr/local/lib/QtGui.framework/Versions/A/QtGui
 paint.app/Contents/MacOS/paint: /usr/local/lib/QtCore.framework/Versions/A/QtCore
 paint.app/Contents/MacOS/paint: CMakeFiles/paint.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable paint.app/Contents/MacOS/paint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable paint.app/Contents/MacOS/paint"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/paint.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CMakeFiles/paint.dir/build: paint.app/Contents/MacOS/paint
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/.DS_Store
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/arrow.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/brokenLine.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/bucket.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/circle.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/cleanup-edges.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/eraser.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/icon.icns
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/increaseZoom.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/line.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/paint.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/palette.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/rectangle.png
+CMakeFiles/paint.dir/build: paint.app/Contents/Resources/icons/reduceZoom.png
 .PHONY : CMakeFiles/paint.dir/build
 
 CMakeFiles/paint.dir/clean:

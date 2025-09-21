@@ -14,9 +14,6 @@ add_custom_target(tidy
     COMMENT "Running clang-tidy on canvas.cpp..."
 )
 
-#include_directories(SYSTEM "/Library/Developer/CommandLineTools/usr/include/c++/v1")
-#include_directories(SYSTEM "${CMAKE_OSX_SYSROOT}/usr/include")
-
 qt_add_executable(paint
     WIN32 MACOSX_BUNDLE
     canvas.cpp
@@ -29,6 +26,7 @@ qt_add_executable(paint
     numberline.cpp
     paintwindow.cpp
     toolbar.cpp
+    resourcepath.cpp
     canvas.h
     createfilewindow.h
     filesmodel.h
@@ -38,6 +36,7 @@ qt_add_executable(paint
     numberline.h
     paintwindow.h
     toolbar.h
+    resourcepath.h
 )
 
 target_link_libraries(paint
@@ -46,6 +45,14 @@ target_link_libraries(paint
     Qt6::Gui
     Qt6::Widgets
 )
+
+if(NOT EXISTS "${CMAKE_SOURCE_DIR}/icons/icon.icns")
+    message(WARNING "Icon file not found: ${CMAKE_SOURCE_DIR}/icons/icon.icns")
+endif()
+
+#set_target_properties(paint PROPERTIES
+    #MACOSX_BUNDLE TRUE
+    #MACOSX_BUNDLE_ICON_FILE "${CMAKE_SOURCE_DIR}/icons/icon.icns")
 
 include(GNUInstallDirs)
 
@@ -61,3 +68,23 @@ qt_generate_deploy_app_script(
     NO_UNSUPPORTED_PLATFORM_ERROR
 )
 install(SCRIPT ${deploy_script})
+
+file(GLOB_RECURSE ICONS
+${CMAKE_SOURCE_DIR}/icons/*)
+
+set(RESOURCE_FILES ${ICONS})
+
+set_source_files_properties(${ICONS} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources/icons")
+
+target_sources(paint PRIVATE ${RESOURCE_FILES})
+
+
+
+
+
+
+
+
+
+
+

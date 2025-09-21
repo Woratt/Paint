@@ -3,6 +3,8 @@
 #include "filesystem.h"
 #include "canvas.h"
 
+extern QString resourcePath;
+
 ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 {
 
@@ -40,16 +42,16 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
     spin->setSingleStep(1);
     spin->setValue(3);
 
-    qDebug() << basePath << "\n";
+    qDebug() << resourcePath << "\n";
 
-    QPushButton *paletteBt = createButton(basePath + "palette.png");
-    QPushButton *bucketBt = createButton(basePath + "bucket.png");
-    QPushButton *paintBt = createButton(basePath + "paint.png");
-    QPushButton *lineBt = createButton(basePath + "line.png");
-    QPushButton *brokenLine = createButton(basePath + "brokenLine.png");
-    QPushButton *rectangleBt = createButton(basePath + "rectangle.png");
-    QPushButton *circleBt = createButton(basePath + "circle.png");
-    QPushButton *eraserBt = createButton(basePath + "eraser.png");
+    QPushButton *paletteBt = createButton(resourcePath + "icons/palette.png");
+    QPushButton *bucketBt = createButton(resourcePath + "icons/bucket.png");
+    QPushButton *paintBt = createButton(resourcePath + "icons/paint.png");
+    QPushButton *lineBt = createButton(resourcePath + "icons/line.png");
+    QPushButton *brokenLine = createButton(resourcePath + "icons/brokenLine.png");
+    QPushButton *rectangleBt = createButton(resourcePath + "icons/rectangle.png");
+    QPushButton *circleBt = createButton(resourcePath + "icons/circle.png");
+    QPushButton *eraserBt = createButton(resourcePath + "icons/eraser.png");
 
     addWidget(paletteBt);
     addWidget(bucketBt);
@@ -64,10 +66,10 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 
     addWidget(createExpandingSpacer());
 
-    QPushButton *returntBt = createFlippedButton(basePath + "arrow.png");
-    QPushButton *nextBt = createButton(basePath + "arrow.png");
-    QPushButton *increaseZoomBt = createButton(basePath + "increaseZoom.png");
-    QPushButton *reduceZoomBt = createButton(basePath + "reduceZoom.png");
+    QPushButton *returntBt = createFlippedButton(resourcePath + "icons/arrow.png");
+    QPushButton *nextBt = createButton(resourcePath + "icons/arrow.png");
+    QPushButton *increaseZoomBt = createButton(resourcePath + "icons/increaseZoom.png");
+    QPushButton *reduceZoomBt = createButton(resourcePath + "icons/reduceZoom.png");
 
     addWidget(increaseZoomBt);
     addWidget(reduceZoomBt);
