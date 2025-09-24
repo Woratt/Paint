@@ -33,8 +33,9 @@ jobs:
         
     - name: Run tests
       run: |
-        cd build
-        ./test_paint  # ваш тестовий виконуваний файл
+        cd tests
+        make -j4
+        make run_tests
         
     - name: Code formatting check
       run: |
