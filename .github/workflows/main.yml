@@ -1,0 +1,8 @@
+name: Main Workflow
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: macos-latest
+    steps:
+    - name: Print to console
+      run: echo Hello GT Action!
