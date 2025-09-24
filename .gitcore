@@ -1,17 +1,33 @@
-# Ваші специфічні файли
-Qt-Debug/
-Qt-Release/
+# --- Qt / C++ build ---
+build*/
+cmake-build*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# --- Qt Creator ---
 *.pro.user
-CMakeLists.txt.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
 
-# Автоматично згенеровані файли Qt
-moc_*
-qrc_*
-ui_*
+# --- CMake ---
+CMakeFiles/
+CMakeCache.txt
+Makefile
+install_manifest.txt
+compile_commands.json
+Testing/
+CTestTestfile.cmake
+_deps/
 
-# Ресурси, які компілюються
-*.qrc.depends
-
-# Файли вкладень Qt
-*.qmlc
-*.jsc
+# --- Misc ---
+*.qrc.dep
+*.autosave
+*.swp
+*.DS_Store
