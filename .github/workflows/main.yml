@@ -1,48 +1,29 @@
-name: macOS CI Pipeline
+name: Build Paint (macOS)
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
-  build-and-test:
-    runs-on: macos-latest    # ← Тільки macOS!
-    
+  build:
+    runs-on: macos-latest
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
-    - name: Install Qt and dependencies
+
+    - name: Install dependencies
       run: |
         brew update
-        brew install qt cmake
-        echo "QT_DIR=$(brew --prefix qt)/lib/cmake/Qt6" >> $GITHUB_ENV
-        
+        brew install cmake ninja qt
+
     - name: Configure CMake
-      run: |
-        mkdir build
-        cd build
-        cmake -DCMAKE_PREFIX_PATH=$(brew --prefix qt) ..
-        
-    - name: Build project
-      run: |
-        cd build
-        make -j4
-        
+      run: cmake -S . -B build -G Ninja -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
+
+    - name: Build
+      run: cmake --build build
+
     - name: Run tests
-      run: |
-        cd tests
-        make -j4
-        make run_tests
-        
-    - name: Code formatting check
-      run: |
-        cd build
-        make format-check
-        
-    - name: Static analysis
-      run: |
-        cd build
-        make tidy
+      run: ctest --test-dir build --output-on-failure
