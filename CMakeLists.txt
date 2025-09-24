@@ -14,6 +14,8 @@ add_custom_target(tidy
     COMMENT "Running clang-tidy on canvas.cpp..."
 )
 
+enable_testing()
+
 qt_add_executable(paint
     WIN32 MACOSX_BUNDLE
     canvas.cpp
