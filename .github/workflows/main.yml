@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: macOS CI Pipeline
 
 on:
   push:
@@ -8,36 +8,23 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        
+    runs-on: macos-latest    # ← Тільки macOS!
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
       
-    - name: Install dependencies (Linux)
-      if: matrix.os == 'ubuntu-latest'
+    - name: Install Qt and dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y qt6-base-dev cmake build-essential
-        
-    - name: Install dependencies (macOS)
-      if: matrix.os == 'macos-latest'
-      run: |
+        brew update
         brew install qt cmake
-        
-    - name: Install dependencies (Windows)
-      if: matrix.os == 'windows-latest'
-      run: |
-        choco install qt cmake
+        echo "QT_DIR=$(brew --prefix qt)/lib/cmake/Qt6" >> $GITHUB_ENV
         
     - name: Configure CMake
       run: |
         mkdir build
         cd build
-        cmake ..
+        cmake -DCMAKE_PREFIX_PATH=$(brew --prefix qt) ..
         
     - name: Build project
       run: |
@@ -49,8 +36,12 @@ jobs:
         cd build
         ./test_paint  # ваш тестовий виконуваний файл
         
-    - name: Generate coverage report
+    - name: Code formatting check
       run: |
         cd build
-        make coverage
-      # Додаємо звіт coverage до GitHub
+        make format-check
+        
+    - name: Static analysis
+      run: |
+        cd build
+        make tidy
