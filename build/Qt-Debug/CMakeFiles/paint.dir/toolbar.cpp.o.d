@@ -957,17 +957,10 @@ CMakeFiles/paint.dir/toolbar.cpp.o: \
   /usr/local/include/QtCore/qregularexpression.h \
   /usr/local/lib/QtWidgets.framework/Headers/QToolBar \
   /usr/local/lib/QtWidgets.framework/Headers/qtoolbar.h \
-  /Users/admin/Downloads/education/Paint/paintwindow.h \
-  /usr/local/lib/QtGui.framework/Headers/QAction \
-  /usr/local/lib/QtGui.framework/Headers/qaction.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
-  /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
-  /usr/local/include/QtWidgets/qtabwidget.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMenuBar \
-  /usr/local/lib/QtWidgets.framework/Headers/qmenubar.h \
-  /usr/local/include/QtWidgets/qmenu.h \
-  /usr/local/lib/QtGui.framework/Headers/QMouseEvent \
-  /usr/local/lib/QtGui.framework/Headers/qevent.h \
+  /Users/admin/Downloads/education/Paint/canvas.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QGestureEvent \
+  /usr/local/lib/QtWidgets.framework/Headers/qgesture.h \
+  /usr/local/include/QtGui/qevent.h \
   /usr/local/include/QtGui/qeventpoint.h \
   /usr/local/include/QtGui/qvector2d.h \
   /usr/local/include/QtGui/qvectornd.h \
@@ -984,12 +977,19 @@ CMakeFiles/paint.dir/toolbar.cpp.o: \
   /usr/local/include/QtCore/QSizeF /usr/local/include/QtGui/QTransform \
   /usr/local/lib/QtGui.framework/Headers/qtransform.h \
   /usr/local/include/QtGui/qscreen_platform.h \
+  /usr/local/lib/QtGui.framework/Headers/QMouseEvent \
+  /usr/local/lib/QtGui.framework/Headers/qevent.h \
   /usr/local/lib/QtGui.framework/Headers/QPainter \
   /usr/local/lib/QtGui.framework/Headers/qpainter.h \
   /usr/local/include/QtGui/qtextoption.h /usr/local/include/QtGui/qpen.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QScrollArea \
-  /usr/local/lib/QtWidgets.framework/Headers/qscrollarea.h \
-  /usr/local/include/QtWidgets/qabstractscrollarea.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QPinchGesture \
+  /usr/local/lib/QtGui.framework/Headers/QPixmap \
+  /usr/local/lib/QtGui.framework/Headers/qpixmap.h \
+  /usr/local/lib/QtGui.framework/Headers/QWheelEvent \
+  /usr/local/lib/QtWidgets.framework/Headers/QWidget \
+  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+  /usr/local/lib/QtCore.framework/Headers/QtGlobal \
+  /usr/local/lib/QtCore.framework/Headers/qglobal.h \
   /Users/admin/Downloads/education/Paint/filesystem.h \
   /usr/local/lib/QtGui.framework/Headers/QColor \
   /usr/local/lib/QtGui.framework/Headers/qcolor.h \
@@ -1000,15 +1000,15 @@ CMakeFiles/paint.dir/toolbar.cpp.o: \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/QStandardPaths \
   /usr/local/lib/QtCore.framework/Headers/qstandardpaths.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QWidget \
-  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-  /Users/admin/Downloads/education/Paint/canvas.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QGestureEvent \
-  /usr/local/lib/QtWidgets.framework/Headers/qgesture.h \
-  /usr/local/include/QtGui/qevent.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QPinchGesture \
-  /usr/local/lib/QtGui.framework/Headers/QPixmap \
-  /usr/local/lib/QtGui.framework/Headers/qpixmap.h \
-  /usr/local/lib/QtGui.framework/Headers/QWheelEvent \
-  /usr/local/lib/QtCore.framework/Headers/QtGlobal \
-  /usr/local/lib/QtCore.framework/Headers/qglobal.h
+  /Users/admin/Downloads/education/Paint/paintwindow.h \
+  /usr/local/lib/QtGui.framework/Headers/QAction \
+  /usr/local/lib/QtGui.framework/Headers/qaction.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
+  /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /usr/local/include/QtWidgets/qtabwidget.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QMenuBar \
+  /usr/local/lib/QtWidgets.framework/Headers/qmenubar.h \
+  /usr/local/include/QtWidgets/qmenu.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QScrollArea \
+  /usr/local/lib/QtWidgets.framework/Headers/qscrollarea.h \
+  /usr/local/include/QtWidgets/qabstractscrollarea.h

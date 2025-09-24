@@ -993,10 +993,6 @@ CMakeFiles/paint.dir/createfilewindow.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /usr/local/lib/QtWidgets.framework/Headers/QWidget \
   /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-  /Users/admin/Downloads/education/Paint/numberline.h \
-  /usr/local/lib/QtGui.framework/Headers/QIntValidator \
-  /usr/local/lib/QtGui.framework/Headers/qvalidator.h \
-  /usr/local/lib/QtGui.framework/Headers/QRegularExpressionValidator \
   /Users/admin/Downloads/education/Paint/filesystem.h \
   /usr/local/lib/QtGui.framework/Headers/QColor \
   /usr/local/lib/QtGui.framework/Headers/qcolor.h \
@@ -1007,4 +1003,8 @@ CMakeFiles/paint.dir/createfilewindow.cpp.o: \
   /usr/local/lib/QtGui.framework/Headers/QImage \
   /usr/local/lib/QtGui.framework/Headers/qimage.h \
   /usr/local/lib/QtCore.framework/Headers/QStandardPaths \
-  /usr/local/lib/QtCore.framework/Headers/qstandardpaths.h
+  /usr/local/lib/QtCore.framework/Headers/qstandardpaths.h \
+  /Users/admin/Downloads/education/Paint/numberline.h \
+  /usr/local/lib/QtGui.framework/Headers/QIntValidator \
+  /usr/local/lib/QtGui.framework/Headers/qvalidator.h \
+  /usr/local/lib/QtGui.framework/Headers/QRegularExpressionValidator

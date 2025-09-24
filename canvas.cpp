@@ -1,7 +1,9 @@
 #include "canvas.h"
 #include "toolbar.h"
 
-static QVector<QImage> history;
+QVector<QImage> Canvas::history;
+
+Canvas::Canvas(QWidget *parent) : QWidget(parent){}
 
 Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
 {
@@ -33,6 +35,23 @@ Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
     pen.setJoinStyle(Qt::RoundJoin);
 
     grabGesture(Qt::PinchGesture);
+}
+
+Canvas& Canvas::operator=(const Canvas& canvas){
+    if (this == &canvas) {
+        return *this;
+    }
+
+    lastPoint = canvas.lastPoint;
+    secondPoint = canvas.secondPoint;
+    pixMap = canvas.pixMap;
+    tool = canvas.tool;
+    numClik = canvas.numClik;
+    zoom = canvas.zoom;
+    offset = canvas.offset;
+    //widthLine = canvas.widthLine;
+    numOfHistory = canvas.numOfHistory;
+    return *this;
 }
 
 void Canvas::paintEvent(QPaintEvent * /*event*/)
@@ -80,7 +99,7 @@ void Canvas::mouseMoveEvent(QMouseEvent *event)
 {
     if (!draw) {
         return;
-}
+    }
     QPainter painter(&pixMap);
     painter.setRenderHint(QPainter::Antialiasing, true);
 
@@ -138,9 +157,10 @@ void Canvas::mousePressEvent(QMouseEvent *event)
 void Canvas::mouseReleaseEvent(QMouseEvent *event)
 {
 
-    if (!draw || event->button() != Qt::LeftButton) {
+    if (!draw || event->button() != Qt::LeftButton)
+    {
         return;
-}
+    }
 
     draw = false;
 

@@ -987,6 +987,8 @@ CMakeFiles/paint.dir/homepage.cpp.o: \
   /usr/local/include/QtWidgets/qrubberband.h \
   /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
   /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QMenu \
+  /usr/local/lib/QtWidgets.framework/Headers/qmenu.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtWidgets.framework/Headers/QPushButton \
@@ -995,39 +997,10 @@ CMakeFiles/paint.dir/homepage.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /usr/local/lib/QtWidgets.framework/Headers/QWidget \
   /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMenu \
-  /usr/local/lib/QtWidgets.framework/Headers/qmenu.h \
-  /Users/admin/Downloads/education/Paint/filesystem.h \
-  /usr/local/lib/QtGui.framework/Headers/QColor \
-  /usr/local/lib/QtGui.framework/Headers/qcolor.h \
-  /usr/local/lib/QtCore.framework/Headers/QDebug \
-  /usr/local/lib/QtCore.framework/Headers/qdebug.h \
-  /usr/local/lib/QtCore.framework/Headers/QDir \
-  /usr/local/lib/QtCore.framework/Headers/qdir.h \
-  /usr/local/lib/QtGui.framework/Headers/QImage \
-  /usr/local/lib/QtGui.framework/Headers/qimage.h \
-  /usr/local/lib/QtCore.framework/Headers/QStandardPaths \
-  /usr/local/lib/QtCore.framework/Headers/qstandardpaths.h \
-  /Users/admin/Downloads/education/Paint/filesmodel.h \
-  /Users/admin/Downloads/education/Paint/createfilewindow.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QLineEdit \
-  /usr/local/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /usr/local/include/QtGui/qtextcursor.h \
-  /usr/local/include/QtGui/qtextformat.h /usr/local/include/QtGui/qpen.h \
-  /usr/local/include/QtGui/qtextoption.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMenuBar \
-  /usr/local/lib/QtWidgets.framework/Headers/qmenubar.h \
-  /usr/local/include/QtWidgets/qmenu.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
-  /usr/local/include/QtWidgets/qdialogbuttonbox.h \
-  /Users/admin/Downloads/education/Paint/paintwindow.h \
-  /usr/local/lib/QtGui.framework/Headers/QAction \
-  /usr/local/lib/QtGui.framework/Headers/qaction.h \
-  /usr/local/lib/QtGui.framework/Headers/QMouseEvent \
-  /usr/local/lib/QtGui.framework/Headers/qevent.h \
+  /Users/admin/Downloads/education/Paint/canvas.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QGestureEvent \
+  /usr/local/lib/QtWidgets.framework/Headers/qgesture.h \
+  /usr/local/include/QtGui/qevent.h \
   /usr/local/include/QtGui/qeventpoint.h \
   /usr/local/include/QtGui/qvector2d.h \
   /usr/local/include/QtGui/qvectornd.h \
@@ -1042,19 +1015,46 @@ CMakeFiles/paint.dir/homepage.cpp.o: \
   /usr/local/include/QtCore/QSizeF /usr/local/include/QtGui/QTransform \
   /usr/local/lib/QtGui.framework/Headers/qtransform.h \
   /usr/local/include/QtGui/qscreen_platform.h \
+  /usr/local/lib/QtGui.framework/Headers/QMouseEvent \
+  /usr/local/lib/QtGui.framework/Headers/qevent.h \
   /usr/local/lib/QtGui.framework/Headers/QPainter \
   /usr/local/lib/QtGui.framework/Headers/qpainter.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QScrollArea \
-  /usr/local/lib/QtWidgets.framework/Headers/qscrollarea.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QToolBar \
-  /usr/local/lib/QtWidgets.framework/Headers/qtoolbar.h \
-  /Users/admin/Downloads/education/Paint/canvas.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QGestureEvent \
-  /usr/local/lib/QtWidgets.framework/Headers/qgesture.h \
-  /usr/local/include/QtGui/qevent.h \
+  /usr/local/include/QtGui/qtextoption.h /usr/local/include/QtGui/qpen.h \
   /usr/local/lib/QtWidgets.framework/Headers/QPinchGesture \
   /usr/local/lib/QtGui.framework/Headers/QPixmap \
   /usr/local/lib/QtGui.framework/Headers/qpixmap.h \
   /usr/local/lib/QtGui.framework/Headers/QWheelEvent \
   /usr/local/lib/QtCore.framework/Headers/QtGlobal \
-  /usr/local/lib/QtCore.framework/Headers/qglobal.h
+  /usr/local/lib/QtCore.framework/Headers/qglobal.h \
+  /Users/admin/Downloads/education/Paint/createfilewindow.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
+  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QLineEdit \
+  /usr/local/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /usr/local/include/QtGui/qtextcursor.h \
+  /usr/local/include/QtGui/qtextformat.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QMenuBar \
+  /usr/local/lib/QtWidgets.framework/Headers/qmenubar.h \
+  /usr/local/include/QtWidgets/qmenu.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
+  /usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /usr/local/include/QtWidgets/qdialogbuttonbox.h \
+  /Users/admin/Downloads/education/Paint/filesmodel.h \
+  /usr/local/lib/QtCore.framework/Headers/QStandardPaths \
+  /usr/local/lib/QtCore.framework/Headers/qstandardpaths.h \
+  /Users/admin/Downloads/education/Paint/filesystem.h \
+  /usr/local/lib/QtGui.framework/Headers/QColor \
+  /usr/local/lib/QtGui.framework/Headers/qcolor.h \
+  /usr/local/lib/QtCore.framework/Headers/QDebug \
+  /usr/local/lib/QtCore.framework/Headers/qdebug.h \
+  /usr/local/lib/QtCore.framework/Headers/QDir \
+  /usr/local/lib/QtCore.framework/Headers/qdir.h \
+  /usr/local/lib/QtGui.framework/Headers/QImage \
+  /usr/local/lib/QtGui.framework/Headers/qimage.h \
+  /Users/admin/Downloads/education/Paint/paintwindow.h \
+  /usr/local/lib/QtGui.framework/Headers/QAction \
+  /usr/local/lib/QtGui.framework/Headers/qaction.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QScrollArea \
+  /usr/local/lib/QtWidgets.framework/Headers/qscrollarea.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QToolBar \
+  /usr/local/lib/QtWidgets.framework/Headers/qtoolbar.h

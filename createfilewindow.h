@@ -26,4 +26,4 @@ class createFileWindow : public QDialog
     explicit createFileWindow(QWidget *parent = nullptr);
 };
 
-#endif //CREATEFILEWINDOW_H
+#endif // CREATEFILEWINDOW_H

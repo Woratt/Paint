@@ -1,17 +1,20 @@
 #include "resourcepath.h"
 
-resourcepath::resourcepath() {}
+resourcepath::resourcepath() = default;
 
 extern std::string resourcePath;
-auto resourcepath::getResourcePath() -> QString{
+auto resourcepath::getResourcePath() -> QString
+{
     CFBundleRef mainBundle = CFBundleGetMainBundle();
 
     CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
 
     char path[PATH_MAX];
 
-    if (resourcesURL) {
-        if (CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8*)path, PATH_MAX)) {
+    if (resourcesURL != nullptr)
+    {
+        if (CFURLGetFileSystemRepresentation(resourcesURL, TRUE, reinterpret_cast<UInt8 *>(path), PATH_MAX) != 0u)
+        {
             CFRelease(resourcesURL);
             return QString(path) + "/";
         }

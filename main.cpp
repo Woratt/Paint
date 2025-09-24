@@ -10,7 +10,7 @@ auto main(int argc, char *argv[]) -> int
 {
     QApplication const app(argc, argv);
 
-    app.setWindowIcon(QIcon(resourcePath + "icons/icon.icns"));
+    QApplication::setWindowIcon(QIcon(resourcePath + "icons/icon.icns"));
     HomePage homePage;
 
     homePage.show();

@@ -3,7 +3,7 @@
 
 FileSystem::FileSystem(QWidget *parent) : QWidget(parent) {}
 
-void FileSystem::create(const QString& name, int width, int height)
+void FileSystem::create(const QString &name, int width, int height)
 {
     QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/MyPaintFiles";
 

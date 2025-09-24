@@ -1,9 +1,9 @@
 #include "menubar.h"
-#include "paintwindow.h"
-#include "toolbar.h"
-#include "filesystem.h"
 #include "canvas.h"
 #include "createfilewindow.h"
+#include "filesystem.h"
+#include "paintwindow.h"
+#include "toolbar.h"
 
 MenuBar::MenuBar(const QString &nameImage, PaintWindow *paintWindow, QWidget *parent)
     : QMenuBar(parent), nameImage(nameImage), fileSystem(new FileSystem()), paintWindow(paintWindow)
@@ -34,20 +34,22 @@ MenuBar::MenuBar(const QString &nameImage, PaintWindow *paintWindow, QWidget *pa
     undoAct->setShortcut(QKeySequence::Undo);
     redoAct->setShortcut(QKeySequence::Redo);
 
-    connect(saveAct, &QAction::triggered, this,
-            [this, paintWindow, nameImage]() -> void { FileSystem::saveImage(&(paintWindow->takeCanvas()->takePixmap()), nameImage); });
+    connect(saveAct, &QAction::triggered, this, [this, paintWindow, nameImage]() -> void
+            { FileSystem::saveImage(&(paintWindow->takeCanvas()->takePixmap()), nameImage); });
     connect(newAct, &QAction::triggered, this,
-            [this]()
-            -> void {
+            [this]() -> void
+            {
                 auto *window = new createFileWindow(this);
                 window->exec();
             });
     connect(openAct, &QAction::triggered, this, &MenuBar::open);
     connect(closeAct, &QAction::triggered, this, &MenuBar::close);
 
-    connect(undoAct, &QAction::triggered, this, [this, paintWindow]() -> void { FileSystem::undo(paintWindow->takeCanvas()); });
+    connect(undoAct, &QAction::triggered, this,
+            [this, paintWindow]() -> void { FileSystem::undo(paintWindow->takeCanvas()); });
 
-    connect(redoAct, &QAction::triggered, this, [this, paintWindow]() -> void { FileSystem::redo(paintWindow->takeCanvas()); });
+    connect(redoAct, &QAction::triggered, this,
+            [this, paintWindow]() -> void { FileSystem::redo(paintWindow->takeCanvas()); });
 }
 
 void MenuBar::close() {}

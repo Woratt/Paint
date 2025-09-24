@@ -1,0 +1,17 @@
+# Ваші специфічні файли
+Qt-Debug/
+Qt-Release/
+*.pro.user
+CMakeLists.txt.user
+
+# Автоматично згенеровані файли Qt
+moc_*
+qrc_*
+ui_*
+
+# Ресурси, які компілюються
+*.qrc.depends
+
+# Файли вкладень Qt
+*.qmlc
+*.jsc

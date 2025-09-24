@@ -987,6 +987,8 @@ CMakeFiles/paint.dir/main.cpp.o: \
   /usr/local/include/QtWidgets/qrubberband.h \
   /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
   /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QMenu \
+  /usr/local/lib/QtWidgets.framework/Headers/qmenu.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtWidgets.framework/Headers/QPushButton \
@@ -995,8 +997,6 @@ CMakeFiles/paint.dir/main.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /usr/local/lib/QtWidgets.framework/Headers/QWidget \
   /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMenu \
-  /usr/local/lib/QtWidgets.framework/Headers/qmenu.h \
   /Users/admin/Downloads/education/Paint/paintwindow.h \
   /usr/local/lib/QtGui.framework/Headers/QAction \
   /usr/local/lib/QtGui.framework/Headers/qaction.h \

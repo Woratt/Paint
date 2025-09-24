@@ -1,14 +1,14 @@
 #include "toolbar.h"
-#include "paintwindow.h"
-#include "filesystem.h"
 #include "canvas.h"
+#include "filesystem.h"
+#include "paintwindow.h"
 
 extern QString resourcePath;
 
 ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 {
 
-    auto  const*fileSystem = new FileSystem();
+    auto const *fileSystem = new FileSystem();
 
     setToolButtonStyle(Qt::ToolButtonIconOnly);
 
@@ -92,14 +92,14 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
     connect(nextBt, &QPushButton::clicked, this, [=]() -> void { FileSystem::redo(paintWindow->takeCanvas()); });
 
     connect(increaseZoomBt, &QPushButton::clicked, this,
-            [=]()
-            -> void {
+            [=]() -> void
+            {
                 paintWindow->takeCanvas()->increaseZoom();
                 paintWindow->takeCanvas()->changeOffset(false, QPointF(0, 0));
             });
     connect(reduceZoomBt, &QPushButton::clicked, this,
-            [=]()
-            -> void {
+            [=]() -> void
+            {
                 paintWindow->takeCanvas()->reduceZoom();
                 paintWindow->takeCanvas()->changeOffset(false, QPointF(0, 0));
             });

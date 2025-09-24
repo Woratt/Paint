@@ -19,13 +19,13 @@ class PaintWindow : public QMainWindow
     Q_OBJECT
 
   public:
-    PaintWindow(const QImage&, const QString &, QWidget *parent = nullptr);
-    auto takeCanvas() -> Canvas*;
+    PaintWindow(const QImage &, const QString &, QWidget *parent = nullptr);
+    auto takeCanvas() -> Canvas *;
 
-    PaintWindow(const PaintWindow&) = delete;
-    auto operator=(const PaintWindow&) -> PaintWindow& = delete;
-    PaintWindow(PaintWindow&&) = delete;
-    auto operator=(PaintWindow&&) -> PaintWindow& = delete;
+    PaintWindow(const PaintWindow &) = delete;
+    auto operator=(const PaintWindow &) -> PaintWindow & = delete;
+    PaintWindow(PaintWindow &&) = delete;
+    auto operator=(PaintWindow &&) -> PaintWindow & = delete;
 
     ~PaintWindow() override;
 

@@ -9,11 +9,11 @@
 #include <QLabel>
 #include <QListView>
 #include <QMainWindow>
+#include <QMenu>
 #include <QObject>
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
-#include <QMenu>
 
 class FileSystem;
 class filesModel;

@@ -1,13 +1,11 @@
 #include "createfilewindow.h"
-#include "numberline.h"
 #include "filesystem.h"
+#include "numberline.h"
 
 createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
 {
 
     setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint);
-    // setMinimumSize(300, 200);
-    // setFixedSize(300, 220);
 
     auto *mainLayout = new QVBoxLayout(this);
 
@@ -94,8 +92,8 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
     mainLayout->addLayout(buttonLayout);
 
     connect(presentMenu, &QMenu::triggered, this,
-            [=](QAction *action)
-            -> void {
+            [=](QAction *action) -> void
+            {
                 presentButton->setText(action->text());
                 QString const text = action->text();
                 if (text == "640 X 480")
@@ -192,10 +190,10 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
     connect(cancelButton, &QPushButton::clicked, this, &QDialog::close);
 
     connect(okButton, &QPushButton::clicked, this,
-            [nameLine, widthLine, heightLine, this]()
-            -> void {
+            [nameLine, widthLine, heightLine, this]() -> void
+            {
                 QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) +
-                                     "/MyPaintFiles/" + nameLine->text() + ".png";
+                                           "/MyPaintFiles/" + nameLine->text() + ".png";
                 if (QFile::exists(folderPath))
                 {
                     auto *msgBox = new QMessageBox();
@@ -211,9 +209,10 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
                         FileSystem().create(nameLine->text(), widthLine->text().toInt(), heightLine->text().toInt());
                         this->close();
                     }
-                    else {
+                    else
+                    {
                         this->close();
-}
+                    }
                 }
                 else
                 {

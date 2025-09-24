@@ -891,19 +891,35 @@ CMakeFiles/paint.dir/paintwindow.cpp.o: \
   /usr/local/include/QtWidgets/qframe.h \
   /usr/local/lib/QtWidgets.framework/Headers/QToolBar \
   /usr/local/lib/QtWidgets.framework/Headers/qtoolbar.h \
-  /Users/admin/Downloads/education/Paint/menubar.h \
-  /usr/local/lib/QtCore.framework/Headers/QObject \
-  /usr/local/lib/QtWidgets.framework/Headers/QWidget \
-  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-  /Users/admin/Downloads/education/Paint/toolbar.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QApplication \
-  /usr/local/lib/QtWidgets.framework/Headers/qapplication.h \
-  /usr/local/lib/QtCore.framework/Headers/QDir \
-  /usr/local/lib/QtCore.framework/Headers/qdir.h \
-  /usr/local/include/QtCore/qdirlisting.h \
-  /usr/local/include/QtCore/qfiledevice.h \
+  /Users/admin/Downloads/education/Paint/canvas.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QGestureEvent \
+  /usr/local/lib/QtWidgets.framework/Headers/qgesture.h \
   /usr/local/include/QtCore/qdatetime.h \
   /usr/local/include/QtCore/qcalendar.h \
+  /usr/local/include/QtGui/qevent.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QLabel \
+  /usr/local/lib/QtWidgets.framework/Headers/qlabel.h \
+  /usr/local/include/QtGui/qpicture.h \
+  /usr/local/include/QtGui/qtextdocument.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QPinchGesture \
+  /usr/local/lib/QtGui.framework/Headers/QPixmap \
+  /usr/local/lib/QtGui.framework/Headers/qpixmap.h \
+  /usr/local/lib/QtGui.framework/Headers/QWheelEvent \
+  /usr/local/lib/QtWidgets.framework/Headers/QWidget \
+  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+  /usr/local/lib/QtCore.framework/Headers/QtGlobal \
+  /usr/local/lib/QtCore.framework/Headers/qglobal.h \
+  /Users/admin/Downloads/education/Paint/createfilewindow.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QApplication \
+  /usr/local/lib/QtWidgets.framework/Headers/qapplication.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
+  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
+  /usr/local/lib/QtGui.framework/Headers/QFileSystemModel \
+  /usr/local/lib/QtGui.framework/Headers/qfilesystemmodel.h \
+  /usr/local/include/QtCore/qabstractitemmodel.h \
+  /usr/local/include/QtCore/qdir.h \
+  /usr/local/include/QtCore/qdirlisting.h \
+  /usr/local/include/QtCore/qfiledevice.h \
   /usr/local/include/QtCore/qfile.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
@@ -978,37 +994,6 @@ CMakeFiles/paint.dir/paintwindow.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /usr/local/include/QtCore/qfileinfo.h \
   /usr/local/include/QtCore/qtimezone.h \
-  /usr/local/lib/QtCore.framework/Headers/QFile \
-  /usr/local/lib/QtCore.framework/Headers/qfile.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QLabel \
-  /usr/local/lib/QtWidgets.framework/Headers/qlabel.h \
-  /usr/local/include/QtGui/qpicture.h \
-  /usr/local/include/QtGui/qtextdocument.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QPushButton \
-  /usr/local/lib/QtWidgets.framework/Headers/qpushbutton.h \
-  /usr/local/include/QtWidgets/qabstractbutton.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QSpinBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qspinbox.h \
-  /usr/local/include/QtWidgets/qabstractspinbox.h \
-  /usr/local/include/QtGui/qvalidator.h \
-  /usr/local/include/QtCore/qregularexpression.h \
-  /Users/admin/Downloads/education/Paint/canvas.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QGestureEvent \
-  /usr/local/lib/QtWidgets.framework/Headers/qgesture.h \
-  /usr/local/include/QtGui/qevent.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QPinchGesture \
-  /usr/local/lib/QtGui.framework/Headers/QPixmap \
-  /usr/local/lib/QtGui.framework/Headers/qpixmap.h \
-  /usr/local/lib/QtGui.framework/Headers/QWheelEvent \
-  /usr/local/lib/QtCore.framework/Headers/QtGlobal \
-  /usr/local/lib/QtCore.framework/Headers/qglobal.h \
-  /Users/admin/Downloads/education/Paint/createfilewindow.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
-  /usr/local/lib/QtGui.framework/Headers/QFileSystemModel \
-  /usr/local/lib/QtGui.framework/Headers/qfilesystemmodel.h \
-  /usr/local/include/QtCore/qabstractitemmodel.h \
-  /usr/local/include/QtCore/qdir.h \
   /usr/local/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /usr/local/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /usr/local/include/QtWidgets/qlayout.h \
@@ -1025,6 +1010,9 @@ CMakeFiles/paint.dir/paintwindow.cpp.o: \
   /usr/local/include/QtCore/qitemselectionmodel.h \
   /usr/local/include/QtWidgets/qabstractitemdelegate.h \
   /usr/local/include/QtWidgets/qstyleoption.h \
+  /usr/local/include/QtWidgets/qabstractspinbox.h \
+  /usr/local/include/QtGui/qvalidator.h \
+  /usr/local/include/QtCore/qregularexpression.h \
   /usr/local/include/QtWidgets/qslider.h \
   /usr/local/include/QtWidgets/qabstractslider.h \
   /usr/local/include/QtWidgets/qstyle.h \
@@ -1034,4 +1022,16 @@ CMakeFiles/paint.dir/paintwindow.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /usr/local/include/QtWidgets/qdialog.h \
   /usr/local/include/QtWidgets/qdialogbuttonbox.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QVBoxLayout
+  /usr/local/lib/QtCore.framework/Headers/QObject \
+  /usr/local/lib/QtWidgets.framework/Headers/QPushButton \
+  /usr/local/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /usr/local/include/QtWidgets/qabstractbutton.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QVBoxLayout \
+  /Users/admin/Downloads/education/Paint/menubar.h \
+  /Users/admin/Downloads/education/Paint/toolbar.h \
+  /usr/local/lib/QtCore.framework/Headers/QDir \
+  /usr/local/lib/QtCore.framework/Headers/qdir.h \
+  /usr/local/lib/QtCore.framework/Headers/QFile \
+  /usr/local/lib/QtCore.framework/Headers/qfile.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QSpinBox \
+  /usr/local/lib/QtWidgets.framework/Headers/qspinbox.h

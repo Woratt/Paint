@@ -17,8 +17,7 @@ class FileSystem : QWidget
   public:
     explicit FileSystem(QWidget *parent = nullptr);
 
-  
-    static void create(const QString&, int, int);
+    static void create(const QString &, int, int);
     static void clearDirectory();
     static void saveImage(QPixmap *, const QString &);
     static void undo(Canvas *);

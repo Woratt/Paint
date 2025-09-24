@@ -1,9 +1,9 @@
 #include "homepage.h"
-#include "filesystem.h"
-#include "filesmodel.h"
-#include "createfilewindow.h"
-#include "paintwindow.h"
 #include "canvas.h"
+#include "createfilewindow.h"
+#include "filesmodel.h"
+#include "filesystem.h"
+#include "paintwindow.h"
 
 HomePage::HomePage(QWidget *parent) : QMainWindow(parent)
 {

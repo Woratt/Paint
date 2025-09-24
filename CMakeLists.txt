@@ -50,10 +50,6 @@ if(NOT EXISTS "${CMAKE_SOURCE_DIR}/icons/icon.icns")
     message(WARNING "Icon file not found: ${CMAKE_SOURCE_DIR}/icons/icon.icns")
 endif()
 
-#set_target_properties(paint PROPERTIES
-    #MACOSX_BUNDLE TRUE
-    #MACOSX_BUNDLE_ICON_FILE "${CMAKE_SOURCE_DIR}/icons/icon.icns")
-
 include(GNUInstallDirs)
 
 install(TARGETS paint
@@ -77,14 +73,3 @@ set(RESOURCE_FILES ${ICONS})
 set_source_files_properties(${ICONS} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources/icons")
 
 target_sources(paint PRIVATE ${RESOURCE_FILES})
-
-
-
-
-
-
-
-
-
-
-

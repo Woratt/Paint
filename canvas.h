@@ -17,11 +17,14 @@ enum class Tool;
 class Canvas : public QWidget
 {
   public:
+    explicit Canvas(QWidget *parent = nullptr);
     explicit Canvas(const QImage &, QWidget *parent = nullptr);
     auto takePixmap() -> QPixmap &;
     void changeOffset(bool, const QPointF &);
+    Canvas& operator=(const Canvas&);
 
   private:
+    static QVector<QImage> history;
     QPixmap pixMap;
     bool draw = false;
     QPoint lastPoint, secondPoint;
@@ -33,7 +36,7 @@ class Canvas : public QWidget
     auto gestureEvent(QGestureEvent *) -> bool;
     void pinchTriggered(QPinchGesture *);
     void clampOffset();
-    int widthLine = 3;
+    //int widthLine = 3;
     void addImageInHistory(const QImage &);
     int numOfHistory = 0;
     QPen pen;

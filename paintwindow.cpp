@@ -1,10 +1,11 @@
 #include "paintwindow.h"
-#include "menubar.h"
-#include "toolbar.h"
 #include "canvas.h"
 #include "createfilewindow.h"
+#include "menubar.h"
+#include "toolbar.h"
 
-PaintWindow::PaintWindow(const QImage& image, const QString &name, QWidget *parent) : QMainWindow(parent), toolBar(new ToolBar(this)), menu(new MenuBar(name, this)), canvas(new Canvas(image))
+PaintWindow::PaintWindow(const QImage &image, const QString &name, QWidget *parent)
+    : QMainWindow(parent), toolBar(new ToolBar(this)), menu(new MenuBar(name, this)), canvas(new Canvas(image))
 {
     auto *central = new QWidget(this);
 
@@ -18,12 +19,8 @@ PaintWindow::PaintWindow(const QImage& image, const QString &name, QWidget *pare
 
     VCentralLayout->setContentsMargins(0, 0, 0, 0);
 
-    
     addToolBar(toolBar);
 
-    
-
-    
     auto *scrollArea = new QScrollArea;
     scrollArea->setWidget(canvas);
     scrollArea->setAlignment(Qt::AlignCenter);
