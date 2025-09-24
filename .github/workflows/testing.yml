@@ -1,6 +1,7 @@
 name: Test Paint
 on: push
 jobs:
+  build:
   runs-on: macos-latest
   steps:
     - name: Get repository code 
