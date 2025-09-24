@@ -2,25 +2,25 @@ name: Test Paint
 on: push
 jobs:
   build:
-  runs-on: macos-latest
-  steps:
-    - name: Get repository code 
-      uses: actions/checkout@v3
-    - name: Install dependecies
-      run: |
-        brew update
-        brew instal cmake qt
-    - name: Configure CMake
-      run: |
-        mkdir build
-        cd build
-        cmake ..
-    - name: Build project
-      run: |
-        cmake --build .
-    - name: Run tests
-      run: |
-        cd ..
-        cd tests
-        make run_tests
+    runs-on: macos-latest
+    steps:
+      - name: Get repository code 
+        uses: actions/checkout@v3
+      - name: Install dependecies
+        run: |
+          brew update
+          brew instal cmake qt
+      - name: Configure CMake
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+      - name: Build project
+        run: |
+          cmake --build .
+      - name: Run tests
+        run: |
+          cd ..
+          cd tests
+          make run_tests
 
