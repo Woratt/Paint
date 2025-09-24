@@ -1,27 +1,29 @@
 name: Test Paint
+
 on: push
+
 jobs:
   build:
     runs-on: macos-latest
     steps:
       - name: Get repository code 
         uses: actions/checkout@v3
-      - name: Install dependecies
+
+      - name: Install dependencies
         run: |
           brew update
-          brew instal cmake qt
+          brew install cmake qt
+
       - name: Configure CMake
         run: |
-          mkdir build
-          cd build
-          cmake ..
+          cmake -S . -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
+
       - name: Build project
         run: |
-          cd build
-          cmake --build .
+          cmake --build build -- -j$(sysctl -n hw.ncpu)
+
       - name: Run tests
         run: |
-          cd tests
           cd build
-          make run_tests
+          ctest --output-on-failure
 
