@@ -7,65 +7,81 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
 
     setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint);
 
-    auto *mainLayout = new QVBoxLayout(this);
+    createsAllComponents();
+    initializeLayouts();
+    initializeFields();
+    initializeButtons();
+    initializeButtonMenu();
+    initializeConnections();
+}
 
-    auto *nameLayout = new QHBoxLayout();
-    auto *presentLayout = new QHBoxLayout();
-    auto *widthLayout = new QHBoxLayout();
-    auto *heightLayout = new QHBoxLayout();
-    auto *buttonLayout = new QHBoxLayout();
+void createFileWindow::createsAllComponents(){
+    mainLayout = new QVBoxLayout(this);
 
-    auto *nameLine = new QLineEdit();
-    auto *widthLine = new numberLine();
-    auto *heightLine = new numberLine();
+    nameLayout = new QHBoxLayout();
+    presentLayout = new QHBoxLayout();
+    widthLayout = new QHBoxLayout();
+    heightLayout = new QHBoxLayout();
+    buttonLayout = new QHBoxLayout();
 
-    auto *presentButton = new QPushButton("Custom");
+    nameLabel = new QLabel();
+    presentLabel = new QLabel();
+    widthLabel = new QLabel();
+    heightLabel = new QLabel();
+
+    nameLine = new QLineEdit();
+    widthLine = new numberLine();
+    heightLine = new numberLine();
+
+    okButton = new QPushButton("OK");
+    cancelButton = new QPushButton("Cancel");
+    presentButton = new QPushButton("Custom");
+}
+
+void createFileWindow::initializeButtonMenu(){
+    QMap<QString, QSize> presetSizes = {
+        {"640 X 480", QSize(640, 480)},
+        {"800 X 600", QSize(800, 600)},
+        {"1024 X 768", QSize(1024, 768)},
+        {"1280 X 1024", QSize(1280, 1024)},
+        {"1440 X 900", QSize(1440, 900)},
+        {"1280 X 720 (720P HD)", QSize(1280, 720)},
+        {"1920 X 1080 (1080P HD)", QSize(1920, 1080)},
+        {"2560 X 1440 (1440P HD)", QSize(2560, 1440)},
+        {"3840 X 2160 (HD 4K)", QSize(3840, 2160)},
+        {"5120 X 2280 (5K)", QSize(5120, 2280)},
+        {"A0", QSize(841, 1189)},
+        {"A1", QSize(594, 841)},
+        {"A2", QSize(420, 594)},
+        {"A3", QSize(297, 420)},
+        {"A4", QSize(210, 297)},
+        {"A5", QSize(148, 210)},
+        {"A6", QSize(105, 148)}
+    };
 
     presentButton->setMinimumWidth(200);
 
     auto *presentMenu = new QMenu();
 
-    presentMenu->addAction("Custom");
-    presentMenu->addAction("640 X 480");
-    presentMenu->addAction("800 X 600");
-    presentMenu->addAction("1024 X 768");
-    presentMenu->addAction("1280 X 1024");
-    presentMenu->addAction("1440 X 900");
-    presentMenu->addAction("1280 X 720 (720P HD)");
-    presentMenu->addAction("1920 X 1080 (1080P HD)");
-    presentMenu->addAction("2560 X 1440 (1440P HD)");
-    presentMenu->addAction("3840 X 2160 (HD 4K)");
-    presentMenu->addAction("5120 X 2280 (5K)");
-    presentMenu->addAction("A0");
-    presentMenu->addAction("A1");
-    presentMenu->addAction("A2");
-    presentMenu->addAction("A3");
-    presentMenu->addAction("A4");
-    presentMenu->addAction("A5");
-    presentMenu->addAction("A6");
+    for (const auto &str : presetSizes.keys()) {
+        presentMenu->addAction(str);
+    }
 
     presentButton->setMenu(presentMenu);
 
-    nameLine->setFixedWidth(200);
-    widthLine->setFixedWidth(200);
-    heightLine->setFixedWidth(200);
+    connect(presentMenu, &QMenu::triggered, this,
+            [=](QAction *action) -> void
+            {
+                presentButton->setText(action->text());
+                if(presetSizes.contains(action->text())){
+                    QSize sz = presetSizes[action->text()];
+                    widthLine->setText(QString::number(sz.width()));
+                    heightLine->setText(QString::number(sz.height()));
+                }
+            });
+}
 
-    nameLine->setPlaceholderText("Name File");
-    widthLine->setPlaceholderText("Width");
-    heightLine->setPlaceholderText("Height");
-
-    auto *nameLabel = new QLabel();
-    auto *presentLabel = new QLabel();
-    auto *widthLabel = new QLabel();
-    auto *heightLabel = new QLabel();
-
-    nameLabel->setText("Name File:");
-    presentLabel->setText("Present:");
-    widthLabel->setText("Width:");
-    heightLabel->setText("Height:");
-
-    auto *okButton = new QPushButton("OK");
-    auto *cancelButton = new QPushButton("Cancel");
+void createFileWindow::initializeLayouts(){
 
     nameLayout->addStretch();
     nameLayout->addWidget(nameLabel);
@@ -90,99 +106,31 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
     mainLayout->addLayout(widthLayout);
     mainLayout->addLayout(heightLayout);
     mainLayout->addLayout(buttonLayout);
+}
 
-    connect(presentMenu, &QMenu::triggered, this,
-            [=](QAction *action) -> void
-            {
-                presentButton->setText(action->text());
-                QString const text = action->text();
-                if (text == "640 X 480")
-                {
-                    widthLine->setText("640");
-                    heightLine->setText("480");
-                }
-                else if (text == "800 X 600")
-                {
-                    widthLine->setText("800");
-                    heightLine->setText("600");
-                }
-                else if (text == "1024 X 768")
-                {
-                    widthLine->setText("1024");
-                    heightLine->setText("768");
-                }
-                else if (text == "1280 X 1024")
-                {
-                    widthLine->setText("1280");
-                    heightLine->setText("1024");
-                }
-                else if (text == "1440 X 900")
-                {
-                    widthLine->setText("1440");
-                    heightLine->setText("900");
-                }
-                else if (text == "1280 X 720 (720P HD)")
-                {
-                    widthLine->setText("1280");
-                    heightLine->setText("720");
-                }
-                else if (text == "1920 X 1080 (1080P HD)")
-                {
-                    widthLine->setText("1920");
-                    heightLine->setText("1080");
-                }
-                else if (text == "2560 X 1440 (1440P HD)")
-                {
-                    widthLine->setText("2560");
-                    heightLine->setText("1440");
-                }
-                else if (text == "3840 X 2160 (HD 4K)")
-                {
-                    widthLine->setText("3840");
-                    heightLine->setText("2160");
-                }
-                else if (text == "5120 X 2280 (5K)")
-                {
-                    widthLine->setText("5120");
-                    heightLine->setText("2280");
-                }
-                else if (text == "A0")
-                {
-                    widthLine->setText("841");
-                    heightLine->setText("1189");
-                }
-                else if (text == "A1")
-                {
-                    widthLine->setText("594");
-                    heightLine->setText("841");
-                }
-                else if (text == "A2")
-                {
-                    widthLine->setText("420");
-                    heightLine->setText("594");
-                }
-                else if (text == "A3")
-                {
-                    widthLine->setText("297");
-                    heightLine->setText("420");
-                }
-                else if (text == "A4")
-                {
-                    widthLine->setText("210");
-                    heightLine->setText("297");
-                }
-                else if (text == "A5")
-                {
-                    widthLine->setText("148");
-                    heightLine->setText("210");
-                }
-                else if (text == "A6")
-                {
-                    widthLine->setText("105");
-                    heightLine->setText("148");
-                }
-            });
+void createFileWindow::initializeFields(){
 
+    nameLabel->setText("Name File:");
+    presentLabel->setText("Present:");
+    widthLabel->setText("Width:");
+    heightLabel->setText("Height:");
+
+    nameLine->setFixedWidth(200);
+    widthLine->setFixedWidth(200);
+    heightLine->setFixedWidth(200);
+
+    nameLine->setPlaceholderText("Name File");
+    widthLine->setPlaceholderText("Width");
+    heightLine->setPlaceholderText("Height");
+}
+
+void createFileWindow::initializeButtons(){
+
+    buttonLayout->addWidget(cancelButton);
+    buttonLayout->addWidget(okButton);
+}
+
+void createFileWindow::initializeConnections(){
     connect(widthLine, &QLineEdit::textEdited, this, [=]() -> void { presentButton->setText("Custom"); });
 
     connect(heightLine, &QLineEdit::textEdited, this, [=]() -> void { presentButton->setText("Custom"); });
@@ -190,34 +138,40 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
     connect(cancelButton, &QPushButton::clicked, this, &QDialog::close);
 
     connect(okButton, &QPushButton::clicked, this,
-            [nameLine, widthLine, heightLine, this]() -> void
+            [=]() -> void
             {
                 QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) +
                                            "/MyPaintFiles/" + nameLine->text() + ".png";
-                if (QFile::exists(folderPath))
-                {
+                if(widthLine->text() == "0" || heightLine->text() == "0" || nameLine->text().isEmpty()){
                     auto *msgBox = new QMessageBox();
-                    msgBox->setText("This file already exists\n\nReplace it");
-                    msgBox->setIcon(QMessageBox::Critical);
+                    msgBox->setText("incomplete information ");
+                    msgBox->exec();
+                }else{
+                    if (QFile::exists(folderPath))
+                    {
+                        auto *msgBox = new QMessageBox();
+                        msgBox->setText("This file already exists\n\nReplace it");
+                        msgBox->setIcon(QMessageBox::Critical);
 
-                    msgBox->setStandardButtons(QMessageBox::Cancel | QMessageBox::Ok);
+                        msgBox->setStandardButtons(QMessageBox::Cancel | QMessageBox::Ok);
 
-                    int const ret = msgBox->exec();
+                        int const ret = msgBox->exec();
 
-                    if (ret == QMessageBox::Ok)
+                        if (ret == QMessageBox::Ok)
+                        {
+                            FileSystem().create(nameLine->text(), widthLine->text().toInt(), heightLine->text().toInt());
+                            this->close();
+                        }
+                        else
+                        {
+                            this->close();
+                        }
+                    }
+                    else
                     {
                         FileSystem().create(nameLine->text(), widthLine->text().toInt(), heightLine->text().toInt());
                         this->close();
                     }
-                    else
-                    {
-                        this->close();
-                    }
-                }
-                else
-                {
-                    FileSystem().create(nameLine->text(), widthLine->text().toInt(), heightLine->text().toInt());
-                    this->close();
                 }
             });
 }
