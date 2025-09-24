@@ -62,4 +62,4 @@ add_custom_target(run_tests
     COMMENT "Running tests..."
 )
 
-add_test(NAME PaintTests COMMAND tests)
+add_test(NAME PaintTests COMMAND test_paint)
