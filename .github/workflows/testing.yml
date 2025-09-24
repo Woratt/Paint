@@ -22,9 +22,6 @@ jobs:
       - name: Run tests
         run: |
           cd tests
-          mkdir build
           cd build
-          cmake ..
-          cmake --build .
           make run_tests
 
