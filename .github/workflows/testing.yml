@@ -21,7 +21,6 @@ jobs:
           cmake --build .
       - name: Run tests
         run: |
-          cd ..
           cd tests
           make run_tests
 
