@@ -61,3 +61,5 @@ add_custom_target(run_tests
     DEPENDS test_paint
     COMMENT "Running tests..."
 )
+
+add_test(NAME PaintTests COMMAND tests)

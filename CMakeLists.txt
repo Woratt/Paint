@@ -16,6 +16,8 @@ add_custom_target(tidy
 
 enable_testing()
 
+add_subdirectory(tests)
+
 qt_add_executable(paint
     WIN32 MACOSX_BUNDLE
     canvas.cpp
