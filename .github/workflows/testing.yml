@@ -62,7 +62,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          choco install cmake.install -y
+          choco install cmake -y
           choco install ninja -y
           choco install qt5 -y
 
