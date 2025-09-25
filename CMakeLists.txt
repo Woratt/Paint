@@ -7,6 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 qt_standard_project_setup()
+qt_add_exe
 
 add_custom_target(format COMMAND clang-format -i --style=file ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
 add_custom_target(tidy

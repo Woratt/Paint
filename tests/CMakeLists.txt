@@ -26,7 +26,7 @@ add_library(paint_lib
     ../menubar.cpp
     ../numberline.cpp
     ../paintwindow.cpp
-    #../resourcepath.cpp
+    ../resourcepath.cpp
     ../toolbar.cpp
 )
 
