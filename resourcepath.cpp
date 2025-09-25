@@ -4,8 +4,8 @@ resourcepath::resourcepath() = default;
 
 auto resourcepath::getResourcePath() -> QString
 {
+#ifdef __APPLE__
     CFBundleRef mainBundle = CFBundleGetMainBundle();
-
     CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
 
     char path[PATH_MAX];
@@ -20,4 +20,8 @@ auto resourcepath::getResourcePath() -> QString
         CFRelease(resourcesURL);
     }
     return "";
+#else
+  // Для Linux та Windows просто повертаємо відносний шлях
+    return "./resources/";
+#endif
 }

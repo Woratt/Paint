@@ -3,13 +3,15 @@
 
 #include <QString>
 
+#ifdef __APPLE__
 #include <CoreFoundation/CoreFoundation.h>
+#endif
 
 class resourcepath
 {
   public:
     resourcepath();
-    auto static getResourcePath() -> QString;
+    static auto getResourcePath() -> QString;
 };
 
 #endif // RESOURCEPATH_H
