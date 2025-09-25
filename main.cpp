@@ -5,9 +5,9 @@
 
 #include "resourcepath.h"
 
-extern QString resourcePath = resourcepath::getResourcePath();
 auto main(int argc, char *argv[]) -> int
 {
+    QString resourcePath = resourcepath::getResourcePath();
     QApplication const app(argc, argv);
 #ifdef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(resourcePath + "icons/icon.icns"));
