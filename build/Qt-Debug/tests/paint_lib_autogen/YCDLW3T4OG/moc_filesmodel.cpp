@@ -13,7 +13,6 @@
 
 #include <memory>
 
-
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'filesmodel.h' doesn't include <QObject>."
@@ -30,35 +29,29 @@
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 QT_WARNING_DISABLE_GCC("-Wuseless-cast")
-namespace {
-struct qt_meta_tag_ZN10filesModelE_t {};
+namespace
+{
+struct qt_meta_tag_ZN10filesModelE_t
+{
+};
 } // unnamed namespace
 
 template <> constexpr inline auto filesModel::qt_create_metaobjectdata<qt_meta_tag_ZN10filesModelE_t>()
 {
     namespace QMC = QtMocConstants;
-    QtMocHelpers::StringRefStorage qt_stringData {
-        "filesModel"
-    };
+    QtMocHelpers::StringRefStorage qt_stringData{"filesModel"};
 
-    QtMocHelpers::UintData qt_methods {
-    };
-    QtMocHelpers::UintData qt_properties {
-    };
-    QtMocHelpers::UintData qt_enums {
-    };
+    QtMocHelpers::UintData qt_methods{};
+    QtMocHelpers::UintData qt_properties{};
+    QtMocHelpers::UintData qt_enums{};
     return QtMocHelpers::metaObjectData<filesModel, qt_meta_tag_ZN10filesModelE_t>(QMC::MetaObjectFlag{}, qt_stringData,
-            qt_methods, qt_properties, qt_enums);
+                                                                                   qt_methods, qt_properties, qt_enums);
 }
-Q_CONSTINIT const QMetaObject filesModel::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10filesModelE_t>.stringdata,
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10filesModelE_t>.data,
-    qt_static_metacall,
-    nullptr,
-    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN10filesModelE_t>.metaTypes,
-    nullptr
-} };
+Q_CONSTINIT const QMetaObject filesModel::staticMetaObject = {
+    {QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10filesModelE_t>.stringdata,
+     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10filesModelE_t>.data, qt_static_metacall, nullptr,
+     qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN10filesModelE_t>.metaTypes, nullptr}};
 
 void filesModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
@@ -76,9 +69,10 @@ const QMetaObject *filesModel::metaObject() const
 
 void *filesModel::qt_metacast(const char *_clname)
 {
-    if (!_clname) return nullptr;
+    if (!_clname)
+        return nullptr;
     if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10filesModelE_t>.strings))
-        return static_cast<void*>(this);
+        return static_cast<void *>(this);
     return QWidget::qt_metacast(_clname);
 }
 
