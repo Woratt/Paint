@@ -10,6 +10,7 @@
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles/install/strip.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles/paint_autogen_timestamp_deps.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles/paint_autogen.dir
+/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/paint_lib.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/test_paint.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/run_tests.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/test.dir
@@ -19,6 +20,8 @@
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/install.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/install/local.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/install/strip.dir
+/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir
+/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/paint_lib_autogen.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/test_paint_autogen.dir
 /Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-build/CMakeFiles/test.dir

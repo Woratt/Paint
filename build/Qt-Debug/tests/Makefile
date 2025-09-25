@@ -172,6 +172,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/paint_lib.dir/rule:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/paint_lib.dir/rule
+.PHONY : tests/CMakeFiles/paint_lib.dir/rule
+
+# Convenience name for target.
+paint_lib: tests/CMakeFiles/paint_lib.dir/rule
+.PHONY : paint_lib
+
+# fast build rule for target.
+paint_lib/fast:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/build
+.PHONY : paint_lib/fast
+
+# Convenience name for target.
 tests/CMakeFiles/test_paint.dir/rule:
 	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_paint.dir/rule
 .PHONY : tests/CMakeFiles/test_paint.dir/rule
@@ -198,6 +212,34 @@ run_tests: tests/CMakeFiles/run_tests.dir/rule
 run_tests/fast:
 	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_tests.dir/build.make tests/CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
+
+# Convenience name for target.
+tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/rule:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/rule
+.PHONY : tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+paint_lib_autogen_timestamp_deps: tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/rule
+.PHONY : paint_lib_autogen_timestamp_deps
+
+# fast build rule for target.
+paint_lib_autogen_timestamp_deps/fast:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build
+.PHONY : paint_lib_autogen_timestamp_deps/fast
+
+# Convenience name for target.
+tests/CMakeFiles/paint_lib_autogen.dir/rule:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/paint_lib_autogen.dir/rule
+.PHONY : tests/CMakeFiles/paint_lib_autogen.dir/rule
+
+# Convenience name for target.
+paint_lib_autogen: tests/CMakeFiles/paint_lib_autogen.dir/rule
+.PHONY : paint_lib_autogen
+
+# fast build rule for target.
+paint_lib_autogen/fast:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen.dir/build.make tests/CMakeFiles/paint_lib_autogen.dir/build
+.PHONY : paint_lib_autogen/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/rule:
@@ -232,7 +274,7 @@ __/canvas.o: __/canvas.cpp.o
 
 # target to build an object file
 __/canvas.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/canvas.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/canvas.cpp.o
 .PHONY : __/canvas.cpp.o
 
 __/canvas.i: __/canvas.cpp.i
@@ -240,7 +282,7 @@ __/canvas.i: __/canvas.cpp.i
 
 # target to preprocess a source file
 __/canvas.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/canvas.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/canvas.cpp.i
 .PHONY : __/canvas.cpp.i
 
 __/canvas.s: __/canvas.cpp.s
@@ -248,7 +290,7 @@ __/canvas.s: __/canvas.cpp.s
 
 # target to generate assembly for a file
 __/canvas.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/canvas.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/canvas.cpp.s
 .PHONY : __/canvas.cpp.s
 
 __/createfilewindow.o: __/createfilewindow.cpp.o
@@ -256,7 +298,7 @@ __/createfilewindow.o: __/createfilewindow.cpp.o
 
 # target to build an object file
 __/createfilewindow.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/createfilewindow.cpp.o
 .PHONY : __/createfilewindow.cpp.o
 
 __/createfilewindow.i: __/createfilewindow.cpp.i
@@ -264,7 +306,7 @@ __/createfilewindow.i: __/createfilewindow.cpp.i
 
 # target to preprocess a source file
 __/createfilewindow.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/createfilewindow.cpp.i
 .PHONY : __/createfilewindow.cpp.i
 
 __/createfilewindow.s: __/createfilewindow.cpp.s
@@ -272,7 +314,7 @@ __/createfilewindow.s: __/createfilewindow.cpp.s
 
 # target to generate assembly for a file
 __/createfilewindow.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/createfilewindow.cpp.s
 .PHONY : __/createfilewindow.cpp.s
 
 __/filesmodel.o: __/filesmodel.cpp.o
@@ -280,7 +322,7 @@ __/filesmodel.o: __/filesmodel.cpp.o
 
 # target to build an object file
 __/filesmodel.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/filesmodel.cpp.o
 .PHONY : __/filesmodel.cpp.o
 
 __/filesmodel.i: __/filesmodel.cpp.i
@@ -288,7 +330,7 @@ __/filesmodel.i: __/filesmodel.cpp.i
 
 # target to preprocess a source file
 __/filesmodel.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/filesmodel.cpp.i
 .PHONY : __/filesmodel.cpp.i
 
 __/filesmodel.s: __/filesmodel.cpp.s
@@ -296,7 +338,7 @@ __/filesmodel.s: __/filesmodel.cpp.s
 
 # target to generate assembly for a file
 __/filesmodel.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/filesmodel.cpp.s
 .PHONY : __/filesmodel.cpp.s
 
 __/filesystem.o: __/filesystem.cpp.o
@@ -304,7 +346,7 @@ __/filesystem.o: __/filesystem.cpp.o
 
 # target to build an object file
 __/filesystem.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/filesystem.cpp.o
 .PHONY : __/filesystem.cpp.o
 
 __/filesystem.i: __/filesystem.cpp.i
@@ -312,7 +354,7 @@ __/filesystem.i: __/filesystem.cpp.i
 
 # target to preprocess a source file
 __/filesystem.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/filesystem.cpp.i
 .PHONY : __/filesystem.cpp.i
 
 __/filesystem.s: __/filesystem.cpp.s
@@ -320,7 +362,7 @@ __/filesystem.s: __/filesystem.cpp.s
 
 # target to generate assembly for a file
 __/filesystem.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/filesystem.cpp.s
 .PHONY : __/filesystem.cpp.s
 
 __/homepage.o: __/homepage.cpp.o
@@ -328,7 +370,7 @@ __/homepage.o: __/homepage.cpp.o
 
 # target to build an object file
 __/homepage.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/homepage.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/homepage.cpp.o
 .PHONY : __/homepage.cpp.o
 
 __/homepage.i: __/homepage.cpp.i
@@ -336,7 +378,7 @@ __/homepage.i: __/homepage.cpp.i
 
 # target to preprocess a source file
 __/homepage.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/homepage.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/homepage.cpp.i
 .PHONY : __/homepage.cpp.i
 
 __/homepage.s: __/homepage.cpp.s
@@ -344,7 +386,7 @@ __/homepage.s: __/homepage.cpp.s
 
 # target to generate assembly for a file
 __/homepage.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/homepage.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/homepage.cpp.s
 .PHONY : __/homepage.cpp.s
 
 __/menubar.o: __/menubar.cpp.o
@@ -352,7 +394,7 @@ __/menubar.o: __/menubar.cpp.o
 
 # target to build an object file
 __/menubar.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/menubar.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/menubar.cpp.o
 .PHONY : __/menubar.cpp.o
 
 __/menubar.i: __/menubar.cpp.i
@@ -360,7 +402,7 @@ __/menubar.i: __/menubar.cpp.i
 
 # target to preprocess a source file
 __/menubar.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/menubar.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/menubar.cpp.i
 .PHONY : __/menubar.cpp.i
 
 __/menubar.s: __/menubar.cpp.s
@@ -368,7 +410,7 @@ __/menubar.s: __/menubar.cpp.s
 
 # target to generate assembly for a file
 __/menubar.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/menubar.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/menubar.cpp.s
 .PHONY : __/menubar.cpp.s
 
 __/numberline.o: __/numberline.cpp.o
@@ -376,7 +418,7 @@ __/numberline.o: __/numberline.cpp.o
 
 # target to build an object file
 __/numberline.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/numberline.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/numberline.cpp.o
 .PHONY : __/numberline.cpp.o
 
 __/numberline.i: __/numberline.cpp.i
@@ -384,7 +426,7 @@ __/numberline.i: __/numberline.cpp.i
 
 # target to preprocess a source file
 __/numberline.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/numberline.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/numberline.cpp.i
 .PHONY : __/numberline.cpp.i
 
 __/numberline.s: __/numberline.cpp.s
@@ -392,7 +434,7 @@ __/numberline.s: __/numberline.cpp.s
 
 # target to generate assembly for a file
 __/numberline.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/numberline.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/numberline.cpp.s
 .PHONY : __/numberline.cpp.s
 
 __/paintwindow.o: __/paintwindow.cpp.o
@@ -400,7 +442,7 @@ __/paintwindow.o: __/paintwindow.cpp.o
 
 # target to build an object file
 __/paintwindow.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/paintwindow.cpp.o
 .PHONY : __/paintwindow.cpp.o
 
 __/paintwindow.i: __/paintwindow.cpp.i
@@ -408,7 +450,7 @@ __/paintwindow.i: __/paintwindow.cpp.i
 
 # target to preprocess a source file
 __/paintwindow.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/paintwindow.cpp.i
 .PHONY : __/paintwindow.cpp.i
 
 __/paintwindow.s: __/paintwindow.cpp.s
@@ -416,7 +458,7 @@ __/paintwindow.s: __/paintwindow.cpp.s
 
 # target to generate assembly for a file
 __/paintwindow.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/paintwindow.cpp.s
 .PHONY : __/paintwindow.cpp.s
 
 __/resourcepath.o: __/resourcepath.cpp.o
@@ -424,7 +466,7 @@ __/resourcepath.o: __/resourcepath.cpp.o
 
 # target to build an object file
 __/resourcepath.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/resourcepath.cpp.o
 .PHONY : __/resourcepath.cpp.o
 
 __/resourcepath.i: __/resourcepath.cpp.i
@@ -432,7 +474,7 @@ __/resourcepath.i: __/resourcepath.cpp.i
 
 # target to preprocess a source file
 __/resourcepath.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/resourcepath.cpp.i
 .PHONY : __/resourcepath.cpp.i
 
 __/resourcepath.s: __/resourcepath.cpp.s
@@ -440,7 +482,7 @@ __/resourcepath.s: __/resourcepath.cpp.s
 
 # target to generate assembly for a file
 __/resourcepath.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/resourcepath.cpp.s
 .PHONY : __/resourcepath.cpp.s
 
 __/toolbar.o: __/toolbar.cpp.o
@@ -448,7 +490,7 @@ __/toolbar.o: __/toolbar.cpp.o
 
 # target to build an object file
 __/toolbar.cpp.o:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.o
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/toolbar.cpp.o
 .PHONY : __/toolbar.cpp.o
 
 __/toolbar.i: __/toolbar.cpp.i
@@ -456,7 +498,7 @@ __/toolbar.i: __/toolbar.cpp.i
 
 # target to preprocess a source file
 __/toolbar.cpp.i:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.i
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/toolbar.cpp.i
 .PHONY : __/toolbar.cpp.i
 
 __/toolbar.s: __/toolbar.cpp.s
@@ -464,8 +506,32 @@ __/toolbar.s: __/toolbar.cpp.s
 
 # target to generate assembly for a file
 __/toolbar.cpp.s:
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.s
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/__/toolbar.cpp.s
 .PHONY : __/toolbar.cpp.s
+
+paint_lib_autogen/mocs_compilation.o: paint_lib_autogen/mocs_compilation.cpp.o
+.PHONY : paint_lib_autogen/mocs_compilation.o
+
+# target to build an object file
+paint_lib_autogen/mocs_compilation.cpp.o:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o
+.PHONY : paint_lib_autogen/mocs_compilation.cpp.o
+
+paint_lib_autogen/mocs_compilation.i: paint_lib_autogen/mocs_compilation.cpp.i
+.PHONY : paint_lib_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+paint_lib_autogen/mocs_compilation.cpp.i:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.i
+.PHONY : paint_lib_autogen/mocs_compilation.cpp.i
+
+paint_lib_autogen/mocs_compilation.s: paint_lib_autogen/mocs_compilation.cpp.s
+.PHONY : paint_lib_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+paint_lib_autogen/mocs_compilation.cpp.s:
+	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.s
+.PHONY : paint_lib_autogen/mocs_compilation.cpp.s
 
 test_canvas.o: test_canvas.cpp.o
 .PHONY : test_canvas.o
@@ -552,9 +618,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... paint_lib_autogen"
+	@echo "... paint_lib_autogen_timestamp_deps"
 	@echo "... run_tests"
 	@echo "... test_paint_autogen"
 	@echo "... test_paint_autogen_timestamp_deps"
+	@echo "... paint_lib"
 	@echo "... test_paint"
 	@echo "... __/canvas.o"
 	@echo "... __/canvas.i"
@@ -586,6 +655,9 @@ help:
 	@echo "... __/toolbar.o"
 	@echo "... __/toolbar.i"
 	@echo "... __/toolbar.s"
+	@echo "... paint_lib_autogen/mocs_compilation.o"
+	@echo "... paint_lib_autogen/mocs_compilation.i"
+	@echo "... paint_lib_autogen/mocs_compilation.s"
 	@echo "... test_canvas.o"
 	@echo "... test_canvas.i"
 	@echo "... test_canvas.s"

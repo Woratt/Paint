@@ -62,69 +62,7 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/test_paint_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "test_paint_autogen/timestamp",
-	"HEADERS" : 
-	[
-		[
-			"/Users/admin/Downloads/education/Paint/canvas.h",
-			"MU",
-			"YCDLW3T4OG/moc_canvas.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/createfilewindow.h",
-			"MU",
-			"YCDLW3T4OG/moc_createfilewindow.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/filesmodel.h",
-			"MU",
-			"YCDLW3T4OG/moc_filesmodel.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/filesystem.h",
-			"MU",
-			"YCDLW3T4OG/moc_filesystem.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/homepage.h",
-			"MU",
-			"YCDLW3T4OG/moc_homepage.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/menubar.h",
-			"MU",
-			"YCDLW3T4OG/moc_menubar.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/numberline.h",
-			"MU",
-			"YCDLW3T4OG/moc_numberline.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/paintwindow.h",
-			"MU",
-			"YCDLW3T4OG/moc_paintwindow.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/resourcepath.h",
-			"MU",
-			"YCDLW3T4OG/moc_resourcepath.cpp",
-			null
-		],
-		[
-			"/Users/admin/Downloads/education/Paint/toolbar.h",
-			"MU",
-			"YCDLW3T4OG/moc_toolbar.cpp",
-			null
-		]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/test_paint_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/test_paint_autogen/mocs_compilation.cpp",
@@ -138,7 +76,6 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/Users/admin/Downloads/education/Paint",
 		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest/include",
 		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest",
 		"/usr/local/lib/QtCore.framework/Headers",
@@ -176,7 +113,10 @@
 	],
 	"MOC_PREDEFS_FILE" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/test_paint_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/paint_lib_autogen/mocs_compilation.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 2,
 	"PARSE_CACHE_FILE" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/test_paint_autogen.dir/ParseCache.txt",
@@ -187,19 +127,6 @@
 	"SETTINGS_FILE" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/CMakeFiles/test_paint_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/Users/admin/Downloads/education/Paint/canvas.cpp", "MU", null ],
-		[
-			"/Users/admin/Downloads/education/Paint/createfilewindow.cpp",
-			"MU",
-			null
-		],
-		[ "/Users/admin/Downloads/education/Paint/filesmodel.cpp", "MU", null ],
-		[ "/Users/admin/Downloads/education/Paint/filesystem.cpp", "MU", null ],
-		[ "/Users/admin/Downloads/education/Paint/homepage.cpp", "MU", null ],
-		[ "/Users/admin/Downloads/education/Paint/menubar.cpp", "MU", null ],
-		[ "/Users/admin/Downloads/education/Paint/numberline.cpp", "MU", null ],
-		[ "/Users/admin/Downloads/education/Paint/paintwindow.cpp", "MU", null ],
-		[ "/Users/admin/Downloads/education/Paint/resourcepath.cpp", "MU", null ],
 		[
 			"/Users/admin/Downloads/education/Paint/tests/test_canvas.cpp",
 			"MU",
@@ -209,12 +136,14 @@
 			"/Users/admin/Downloads/education/Paint/tests/test_main.cpp",
 			"MU",
 			null
-		],
-		[ "/Users/admin/Downloads/education/Paint/toolbar.cpp", "MU", null ]
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : 
+	[
+		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/paint_lib_autogen/mocs_compilation.cpp"
+	],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0

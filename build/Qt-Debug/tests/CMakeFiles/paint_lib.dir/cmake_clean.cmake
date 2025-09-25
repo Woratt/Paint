@@ -24,7 +24,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/paint_lib.dir/__/toolbar.cpp.o.d"
   "CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o.d"
-  "libpaint_lib.dylib"
+  "libpaint_lib.a"
   "libpaint_lib.pdb"
 )
 

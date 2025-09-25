@@ -14,9 +14,7 @@
 			"target_link_libraries",
 			"set_target_properties",
 			"include",
-			"find_package",
-			"add_compile_definitions",
-			"target_include_directories"
+			"find_package"
 		],
 		"files" : 
 		[
@@ -37,13 +35,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 42,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 52,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
@@ -119,18 +117,6 @@
 				"file" : 6,
 				"line" : 62,
 				"parent" : 16
-			},
-			{
-				"command" : 5,
-				"file" : 0,
-				"line" : 7,
-				"parent" : 0
-			},
-			{
-				"command" : 6,
-				"file" : 0,
-				"line" : 48,
-				"parent" : 0
 			}
 		]
 	},
@@ -149,10 +135,6 @@
 			],
 			"defines" : 
 			[
-				{
-					"backtrace" : 18,
-					"define" : "PAINT_LIBRARY=1"
-				},
 				{
 					"backtrace" : 2,
 					"define" : "QT_CORE_LIB"
@@ -189,10 +171,6 @@
 				{
 					"backtrace" : 0,
 					"path" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/test_paint_autogen/include"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "/Users/admin/Downloads/education/Paint/tests/.."
 				},
 				{
 					"backtrace" : 2,
@@ -247,8 +225,8 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "paint_lib::@a44f0ac069e85531cdee"
+			"backtrace" : 0,
+			"id" : "test_paint_autogen::@a44f0ac069e85531cdee"
 		},
 		{
 			"backtrace" : 2,
@@ -260,10 +238,6 @@
 		},
 		{
 			"id" : "test_paint_autogen_timestamp_deps::@a44f0ac069e85531cdee"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "test_paint_autogen::@a44f0ac069e85531cdee"
 		}
 	],
 	"id" : "test_paint::@a44f0ac069e85531cdee",
@@ -284,17 +258,12 @@
 				"role" : "frameworkPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests -Wl,-rpath,/usr/local/lib",
+				"fragment" : "-Wl,-rpath,/usr/local/lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
 				"fragment" : "../lib/libgtest_main.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "libpaint_lib.dylib",
 				"role" : "libraries"
 			},
 			{

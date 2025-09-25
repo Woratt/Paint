@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libgmock.a"
+			"path" : "lib/libgmock_main.a"
 		}
 	],
 	"backtrace" : 3,
@@ -17,15 +17,13 @@
 			"install",
 			"install_project",
 			"target_link_libraries",
-			"add_compile_definitions",
 			"include_directories",
 			"target_compile_features"
 		],
 		"files" : 
 		[
 			"build/Qt-Debug/_deps/googletest-src/googletest/cmake/internal_utils.cmake",
-			"build/Qt-Debug/_deps/googletest-src/googlemock/CMakeLists.txt",
-			"tests/CMakeLists.txt"
+			"build/Qt-Debug/_deps/googletest-src/googlemock/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -35,7 +33,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 96,
+				"line" : 99,
 				"parent" : 0
 			},
 			{
@@ -65,26 +63,17 @@
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 97,
+				"line" : 100,
 				"parent" : 0
 			},
 			{
-				"file" : 2
-			},
-			{
 				"command" : 6,
-				"file" : 2,
-				"line" : 7,
-				"parent" : 7
-			},
-			{
-				"command" : 7,
 				"file" : 1,
 				"line" : 74,
 				"parent" : 0
 			},
 			{
-				"command" : 8,
+				"command" : 7,
 				"file" : 0,
 				"line" : 198,
 				"parent" : 2
@@ -103,34 +92,29 @@
 					"fragment" : " -DGTEST_HAS_PTHREAD=0  "
 				}
 			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 8,
-					"define" : "PAINT_LIBRARY=1"
-				}
-			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-build/googlemock/gmock_autogen/include"
+					"path" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-build/googlemock/gmock_main_autogen/include"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 7,
+					"isSystem" : true,
 					"path" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googlemock/include"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 7,
+					"isSystem" : true,
 					"path" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googlemock"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest/include"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest"
 				}
@@ -140,7 +124,7 @@
 			{
 				"backtraces" : 
 				[
-					10
+					8
 				],
 				"standard" : "17"
 			},
@@ -154,18 +138,22 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 0,
+			"id" : "gmock_main_autogen::@0f7bb11d64f3678238c7"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "gmock::@0f7bb11d64f3678238c7"
+		},
+		{
 			"backtrace" : 6,
 			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
-			"id" : "gmock_autogen_timestamp_deps::@0f7bb11d64f3678238c7"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "gmock_autogen::@0f7bb11d64f3678238c7"
+			"id" : "gmock_main_autogen_timestamp_deps::@0f7bb11d64f3678238c7"
 		}
 	],
-	"id" : "gmock::@0f7bb11d64f3678238c7",
+	"id" : "gmock_main::@0f7bb11d64f3678238c7",
 	"install" : 
 	{
 		"destinations" : 
@@ -180,8 +168,8 @@
 			"path" : "/tmp"
 		}
 	},
-	"name" : "gmock",
-	"nameOnDisk" : "libgmock.a",
+	"name" : "gmock_main",
+	"nameOnDisk" : "libgmock_main.a",
 	"paths" : 
 	{
 		"build" : "_deps/googletest-build/googlemock",
@@ -218,25 +206,25 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Qt-Debug/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp",
+			"path" : "build/Qt-Debug/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "build/Qt-Debug/_deps/googletest-src/googlemock/src/gmock-all.cc",
+			"path" : "build/Qt-Debug/_deps/googletest-src/googlemock/src/gmock_main.cc",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Qt-Debug/_deps/googletest-build/googlemock/gmock_autogen/timestamp",
+			"path" : "build/Qt-Debug/_deps/googletest-build/googlemock/gmock_main_autogen/timestamp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Qt-Debug/_deps/googletest-build/googlemock/gmock_autogen/timestamp.rule",
+			"path" : "build/Qt-Debug/_deps/googletest-build/googlemock/gmock_main_autogen/timestamp.rule",
 			"sourceGroupIndex" : 2
 		}
 	],

@@ -237,6 +237,19 @@ paint_autogen/fast:
 .PHONY : paint_autogen/fast
 
 #=============================================================================
+# Target rules for targets named paint_lib
+
+# Build rule for target.
+paint_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paint_lib
+.PHONY : paint_lib
+
+# fast build rule for target.
+paint_lib/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/build
+.PHONY : paint_lib/fast
+
+#=============================================================================
 # Target rules for targets named test_paint
 
 # Build rule for target.
@@ -261,6 +274,32 @@ run_tests: cmake_check_build_system
 run_tests/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_tests.dir/build.make tests/CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named paint_lib_autogen_timestamp_deps
+
+# Build rule for target.
+paint_lib_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paint_lib_autogen_timestamp_deps
+.PHONY : paint_lib_autogen_timestamp_deps
+
+# fast build rule for target.
+paint_lib_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build
+.PHONY : paint_lib_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named paint_lib_autogen
+
+# Build rule for target.
+paint_lib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paint_lib_autogen
+.PHONY : paint_lib_autogen
+
+# fast build rule for target.
+paint_lib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen.dir/build.make tests/CMakeFiles/paint_lib_autogen.dir/build
+.PHONY : paint_lib_autogen/fast
 
 #=============================================================================
 # Target rules for targets named test_paint_autogen_timestamp_deps
@@ -756,6 +795,8 @@ help:
 	@echo "... gtest_main_autogen_timestamp_deps"
 	@echo "... paint_autogen"
 	@echo "... paint_autogen_timestamp_deps"
+	@echo "... paint_lib_autogen"
+	@echo "... paint_lib_autogen_timestamp_deps"
 	@echo "... run_tests"
 	@echo "... test_paint_autogen"
 	@echo "... test_paint_autogen_timestamp_deps"
@@ -765,6 +806,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... paint"
+	@echo "... paint_lib"
 	@echo "... test_paint"
 	@echo "... canvas.o"
 	@echo "... canvas.i"

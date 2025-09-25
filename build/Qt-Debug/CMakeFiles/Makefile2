@@ -163,11 +163,13 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 # Directory level rules for directory tests
 
 # Recursive "all" directory target.
+tests/all: tests/CMakeFiles/paint_lib.dir/all
 tests/all: tests/CMakeFiles/test_paint.dir/all
 tests/all: _deps/googletest-build/all
 .PHONY : tests/all
 
 # Recursive "codegen" directory target.
+tests/codegen: tests/CMakeFiles/paint_lib.dir/codegen
 tests/codegen: tests/CMakeFiles/test_paint.dir/codegen
 tests/codegen: _deps/googletest-build/codegen
 .PHONY : tests/codegen
@@ -177,8 +179,11 @@ tests/preinstall: _deps/googletest-build/preinstall
 .PHONY : tests/preinstall
 
 # Recursive "clean" directory target.
+tests/clean: tests/CMakeFiles/paint_lib.dir/clean
 tests/clean: tests/CMakeFiles/test_paint.dir/clean
 tests/clean: tests/CMakeFiles/run_tests.dir/clean
+tests/clean: tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/paint_lib_autogen.dir/clean
 tests/clean: tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/clean
 tests/clean: tests/CMakeFiles/test_paint_autogen.dir/clean
 tests/clean: _deps/googletest-build/clean
@@ -223,7 +228,7 @@ CMakeFiles/format.dir/clean:
 CMakeFiles/tidy.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=51 "Built target tidy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=54 "Built target tidy"
 .PHONY : CMakeFiles/tidy.dir/all
 
 # Build rule for subdir invocation for target.
@@ -240,7 +245,7 @@ tidy: CMakeFiles/tidy.dir/rule
 # codegen rule for target.
 CMakeFiles/tidy.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=51 "Finished codegen for target tidy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=54 "Finished codegen for target tidy"
 .PHONY : CMakeFiles/tidy.dir/codegen
 
 # clean rule for target.
@@ -346,21 +351,54 @@ CMakeFiles/paint_autogen.dir/clean:
 .PHONY : CMakeFiles/paint_autogen.dir/clean
 
 #=============================================================================
+# Target rules for target tests/CMakeFiles/paint_lib.dir
+
+# All Build rule for target.
+tests/CMakeFiles/paint_lib.dir/all: tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/paint_lib.dir/all: tests/CMakeFiles/paint_lib_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=35,36,37,38,39,40,41,42,43,44,45,46 "Built target paint_lib"
+.PHONY : tests/CMakeFiles/paint_lib.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/paint_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/paint_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/paint_lib.dir/rule
+
+# Convenience name for target.
+paint_lib: tests/CMakeFiles/paint_lib.dir/rule
+.PHONY : paint_lib
+
+# codegen rule for target.
+tests/CMakeFiles/paint_lib.dir/codegen: tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=35,36,37,38,39,40,41,42,43,44,45,46 "Finished codegen for target paint_lib"
+.PHONY : tests/CMakeFiles/paint_lib.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/paint_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib.dir/build.make tests/CMakeFiles/paint_lib.dir/clean
+.PHONY : tests/CMakeFiles/paint_lib.dir/clean
+
+#=============================================================================
 # Target rules for target tests/CMakeFiles/test_paint.dir
 
 # All Build rule for target.
-tests/CMakeFiles/test_paint.dir/all: tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/all
 tests/CMakeFiles/test_paint.dir/all: tests/CMakeFiles/test_paint_autogen.dir/all
 tests/CMakeFiles/test_paint.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 tests/CMakeFiles/test_paint.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+tests/CMakeFiles/test_paint.dir/all: tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target test_paint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=49,50,51,52 "Built target test_paint"
 .PHONY : tests/CMakeFiles/test_paint.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_paint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_paint.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_paint.dir/rule
@@ -372,7 +410,7 @@ test_paint: tests/CMakeFiles/test_paint.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_paint.dir/codegen: tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint.dir/build.make tests/CMakeFiles/test_paint.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Finished codegen for target test_paint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=49,50,51,52 "Finished codegen for target test_paint"
 .PHONY : tests/CMakeFiles/test_paint.dir/codegen
 
 # clean rule for target.
@@ -387,12 +425,12 @@ tests/CMakeFiles/test_paint.dir/clean:
 tests/CMakeFiles/run_tests.dir/all: tests/CMakeFiles/test_paint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_tests.dir/build.make tests/CMakeFiles/run_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_tests.dir/build.make tests/CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=35 "Built target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=48 "Built target run_tests"
 .PHONY : tests/CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/run_tests.dir/rule
@@ -404,13 +442,77 @@ run_tests: tests/CMakeFiles/run_tests.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/run_tests.dir/codegen: tests/CMakeFiles/test_paint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_tests.dir/build.make tests/CMakeFiles/run_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=35 "Finished codegen for target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=48 "Finished codegen for target run_tests"
 .PHONY : tests/CMakeFiles/run_tests.dir/codegen
 
 # clean rule for target.
 tests/CMakeFiles/run_tests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/run_tests.dir/build.make tests/CMakeFiles/run_tests.dir/clean
 .PHONY : tests/CMakeFiles/run_tests.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num= "Built target paint_lib_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+paint_lib_autogen_timestamp_deps: tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/rule
+.PHONY : paint_lib_autogen_timestamp_deps
+
+# codegen rule for target.
+tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num= "Finished codegen for target paint_lib_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/paint_lib_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/paint_lib_autogen.dir/all: tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen.dir/build.make tests/CMakeFiles/paint_lib_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen.dir/build.make tests/CMakeFiles/paint_lib_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=47 "Built target paint_lib_autogen"
+.PHONY : tests/CMakeFiles/paint_lib_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/paint_lib_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/paint_lib_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/paint_lib_autogen.dir/rule
+
+# Convenience name for target.
+paint_lib_autogen: tests/CMakeFiles/paint_lib_autogen.dir/rule
+.PHONY : paint_lib_autogen
+
+# codegen rule for target.
+tests/CMakeFiles/paint_lib_autogen.dir/codegen: tests/CMakeFiles/paint_lib_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen.dir/build.make tests/CMakeFiles/paint_lib_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=47 "Finished codegen for target paint_lib_autogen"
+.PHONY : tests/CMakeFiles/paint_lib_autogen.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/paint_lib_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/paint_lib_autogen.dir/build.make tests/CMakeFiles/paint_lib_autogen.dir/clean
+.PHONY : tests/CMakeFiles/paint_lib_autogen.dir/clean
 
 #=============================================================================
 # Target rules for target tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir
@@ -451,7 +553,7 @@ tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/clean:
 tests/CMakeFiles/test_paint_autogen.dir/all: tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint_autogen.dir/build.make tests/CMakeFiles/test_paint_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint_autogen.dir/build.make tests/CMakeFiles/test_paint_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=50 "Built target test_paint_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=53 "Built target test_paint_autogen"
 .PHONY : tests/CMakeFiles/test_paint_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -468,7 +570,7 @@ test_paint_autogen: tests/CMakeFiles/test_paint_autogen.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_paint_autogen.dir/codegen: tests/CMakeFiles/test_paint_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_paint_autogen.dir/build.make tests/CMakeFiles/test_paint_autogen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=50 "Finished codegen for target test_paint_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=53 "Finished codegen for target test_paint_autogen"
 .PHONY : tests/CMakeFiles/test_paint_autogen.dir/codegen
 
 # clean rule for target.
@@ -480,9 +582,9 @@ tests/CMakeFiles/test_paint_autogen.dir/clean:
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen_timestamp_deps.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/all
-_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=1,2,3,4 "Built target gmock"
@@ -514,10 +616,10 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen_timestamp_deps.dir/all
-_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=6,7,8,9 "Built target gmock_main"
@@ -710,9 +812,9 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 # Target rules for target _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen_timestamp_deps.dir/all
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/all
-_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=16,17,18,19 "Built target gtest_main"

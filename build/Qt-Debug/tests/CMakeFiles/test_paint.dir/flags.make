@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/test_paint_autogen/include -I/Users/admin/Downloads/education/Paint/tests/.. -isystem /Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers
+CXX_INCLUDES = -I/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/test_paint_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers
 
 CXX_FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC
 

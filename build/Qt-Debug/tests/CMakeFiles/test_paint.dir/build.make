@@ -114,161 +114,11 @@ tests/CMakeFiles/test_paint.dir/test_canvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/test_canvas.cpp.s"
 	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp -o CMakeFiles/test_paint.dir/test_canvas.cpp.s
 
-tests/CMakeFiles/test_paint.dir/__/canvas.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/canvas.cpp.o: /Users/admin/Downloads/education/Paint/canvas.cpp
-tests/CMakeFiles/test_paint.dir/__/canvas.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tests/CMakeFiles/test_paint.dir/__/canvas.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/canvas.cpp.o -MF CMakeFiles/test_paint.dir/__/canvas.cpp.o.d -o CMakeFiles/test_paint.dir/__/canvas.cpp.o -c /Users/admin/Downloads/education/Paint/canvas.cpp
-
-tests/CMakeFiles/test_paint.dir/__/canvas.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/canvas.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/canvas.cpp > CMakeFiles/test_paint.dir/__/canvas.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/canvas.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/canvas.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/canvas.cpp -o CMakeFiles/test_paint.dir/__/canvas.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o: /Users/admin/Downloads/education/Paint/createfilewindow.cpp
-tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o -MF CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o.d -o CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o -c /Users/admin/Downloads/education/Paint/createfilewindow.cpp
-
-tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/createfilewindow.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/createfilewindow.cpp > CMakeFiles/test_paint.dir/__/createfilewindow.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/createfilewindow.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/createfilewindow.cpp -o CMakeFiles/test_paint.dir/__/createfilewindow.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.o: /Users/admin/Downloads/education/Paint/filesmodel.cpp
-tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.o -MF CMakeFiles/test_paint.dir/__/filesmodel.cpp.o.d -o CMakeFiles/test_paint.dir/__/filesmodel.cpp.o -c /Users/admin/Downloads/education/Paint/filesmodel.cpp
-
-tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/filesmodel.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/filesmodel.cpp > CMakeFiles/test_paint.dir/__/filesmodel.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/filesmodel.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/filesmodel.cpp -o CMakeFiles/test_paint.dir/__/filesmodel.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.o: /Users/admin/Downloads/education/Paint/filesystem.cpp
-tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.o -MF CMakeFiles/test_paint.dir/__/filesystem.cpp.o.d -o CMakeFiles/test_paint.dir/__/filesystem.cpp.o -c /Users/admin/Downloads/education/Paint/filesystem.cpp
-
-tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/filesystem.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/filesystem.cpp > CMakeFiles/test_paint.dir/__/filesystem.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/filesystem.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/filesystem.cpp -o CMakeFiles/test_paint.dir/__/filesystem.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/homepage.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/homepage.cpp.o: /Users/admin/Downloads/education/Paint/homepage.cpp
-tests/CMakeFiles/test_paint.dir/__/homepage.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object tests/CMakeFiles/test_paint.dir/__/homepage.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/homepage.cpp.o -MF CMakeFiles/test_paint.dir/__/homepage.cpp.o.d -o CMakeFiles/test_paint.dir/__/homepage.cpp.o -c /Users/admin/Downloads/education/Paint/homepage.cpp
-
-tests/CMakeFiles/test_paint.dir/__/homepage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/homepage.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/homepage.cpp > CMakeFiles/test_paint.dir/__/homepage.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/homepage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/homepage.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/homepage.cpp -o CMakeFiles/test_paint.dir/__/homepage.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/menubar.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/menubar.cpp.o: /Users/admin/Downloads/education/Paint/menubar.cpp
-tests/CMakeFiles/test_paint.dir/__/menubar.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object tests/CMakeFiles/test_paint.dir/__/menubar.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/menubar.cpp.o -MF CMakeFiles/test_paint.dir/__/menubar.cpp.o.d -o CMakeFiles/test_paint.dir/__/menubar.cpp.o -c /Users/admin/Downloads/education/Paint/menubar.cpp
-
-tests/CMakeFiles/test_paint.dir/__/menubar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/menubar.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/menubar.cpp > CMakeFiles/test_paint.dir/__/menubar.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/menubar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/menubar.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/menubar.cpp -o CMakeFiles/test_paint.dir/__/menubar.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/numberline.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/numberline.cpp.o: /Users/admin/Downloads/education/Paint/numberline.cpp
-tests/CMakeFiles/test_paint.dir/__/numberline.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object tests/CMakeFiles/test_paint.dir/__/numberline.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/numberline.cpp.o -MF CMakeFiles/test_paint.dir/__/numberline.cpp.o.d -o CMakeFiles/test_paint.dir/__/numberline.cpp.o -c /Users/admin/Downloads/education/Paint/numberline.cpp
-
-tests/CMakeFiles/test_paint.dir/__/numberline.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/numberline.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/numberline.cpp > CMakeFiles/test_paint.dir/__/numberline.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/numberline.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/numberline.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/numberline.cpp -o CMakeFiles/test_paint.dir/__/numberline.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.o: /Users/admin/Downloads/education/Paint/paintwindow.cpp
-tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.o -MF CMakeFiles/test_paint.dir/__/paintwindow.cpp.o.d -o CMakeFiles/test_paint.dir/__/paintwindow.cpp.o -c /Users/admin/Downloads/education/Paint/paintwindow.cpp
-
-tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/paintwindow.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/paintwindow.cpp > CMakeFiles/test_paint.dir/__/paintwindow.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/paintwindow.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/paintwindow.cpp -o CMakeFiles/test_paint.dir/__/paintwindow.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.o: /Users/admin/Downloads/education/Paint/resourcepath.cpp
-tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.o -MF CMakeFiles/test_paint.dir/__/resourcepath.cpp.o.d -o CMakeFiles/test_paint.dir/__/resourcepath.cpp.o -c /Users/admin/Downloads/education/Paint/resourcepath.cpp
-
-tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/resourcepath.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/resourcepath.cpp > CMakeFiles/test_paint.dir/__/resourcepath.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/resourcepath.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/resourcepath.cpp -o CMakeFiles/test_paint.dir/__/resourcepath.cpp.s
-
-tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.o: tests/CMakeFiles/test_paint.dir/flags.make
-tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.o: /Users/admin/Downloads/education/Paint/toolbar.cpp
-tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.o: tests/CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.o"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.o -MF CMakeFiles/test_paint.dir/__/toolbar.cpp.o.d -o CMakeFiles/test_paint.dir/__/toolbar.cpp.o -c /Users/admin/Downloads/education/Paint/toolbar.cpp
-
-tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/__/toolbar.cpp.i"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/toolbar.cpp > CMakeFiles/test_paint.dir/__/toolbar.cpp.i
-
-tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/__/toolbar.cpp.s"
-	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/toolbar.cpp -o CMakeFiles/test_paint.dir/__/toolbar.cpp.s
-
 # Object files for target test_paint
 test_paint_OBJECTS = \
 "CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/test_paint.dir/test_main.cpp.o" \
-"CMakeFiles/test_paint.dir/test_canvas.cpp.o" \
-"CMakeFiles/test_paint.dir/__/canvas.cpp.o" \
-"CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o" \
-"CMakeFiles/test_paint.dir/__/filesmodel.cpp.o" \
-"CMakeFiles/test_paint.dir/__/filesystem.cpp.o" \
-"CMakeFiles/test_paint.dir/__/homepage.cpp.o" \
-"CMakeFiles/test_paint.dir/__/menubar.cpp.o" \
-"CMakeFiles/test_paint.dir/__/numberline.cpp.o" \
-"CMakeFiles/test_paint.dir/__/paintwindow.cpp.o" \
-"CMakeFiles/test_paint.dir/__/resourcepath.cpp.o" \
-"CMakeFiles/test_paint.dir/__/toolbar.cpp.o"
+"CMakeFiles/test_paint.dir/test_canvas.cpp.o"
 
 # External object files for target test_paint
 test_paint_EXTERNAL_OBJECTS =
@@ -276,16 +126,6 @@ test_paint_EXTERNAL_OBJECTS =
 tests/test_paint: tests/CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o
 tests/test_paint: tests/CMakeFiles/test_paint.dir/test_main.cpp.o
 tests/test_paint: tests/CMakeFiles/test_paint.dir/test_canvas.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/canvas.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/createfilewindow.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/filesmodel.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/filesystem.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/homepage.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/menubar.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/numberline.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/paintwindow.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/resourcepath.cpp.o
-tests/test_paint: tests/CMakeFiles/test_paint.dir/__/toolbar.cpp.o
 tests/test_paint: tests/CMakeFiles/test_paint.dir/build.make
 tests/test_paint: lib/libgtest_main.a
 tests/test_paint: /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets
@@ -293,7 +133,7 @@ tests/test_paint: lib/libgtest.a
 tests/test_paint: /usr/local/lib/QtGui.framework/Versions/A/QtGui
 tests/test_paint: /usr/local/lib/QtCore.framework/Versions/A/QtCore
 tests/test_paint: tests/CMakeFiles/test_paint.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable test_paint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable test_paint"
 	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_paint.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

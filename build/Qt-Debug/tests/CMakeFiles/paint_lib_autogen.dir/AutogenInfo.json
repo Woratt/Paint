@@ -128,14 +128,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/paint_lib_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/admin/Downloads/education/Paint/build/Qt-Debug/tests/paint_lib_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : 
-	[
-		"PAINT_LIBRARY=1",
-		"QT_CORE_LIB",
-		"QT_GUI_LIB",
-		"QT_WIDGETS_LIB",
-		"paint_lib_EXPORTS"
-	],
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -145,7 +138,6 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/Users/admin/Downloads/education/Paint",
 		"/usr/local/lib/QtCore.framework/Headers",
 		"/usr/local/lib/QtCore.framework",
 		"/usr/local/share/qt/mkspecs/macx-clang",
