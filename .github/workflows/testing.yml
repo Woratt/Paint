@@ -79,7 +79,7 @@ jobs:
 
       - name: Build project
         run: |
-          cmake --build build --config Release
+          cmake --build build --config Debug
         shell: powershell
 
       - name: Run tests
