@@ -61,13 +61,14 @@ install(TARGETS paint
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
-
-qt_generate_deploy_app_script(
-    TARGET paint
-    OUTPUT_SCRIPT deploy_script
-    NO_UNSUPPORTED_PLATFORM_ERROR
-)
-install(SCRIPT ${deploy_script})
+if(APPLE OR WIN32)
+    qt_generate_deploy_app_script(
+        TARGET paint
+        OUTPUT_SCRIPT deploy_script
+        NO_UNSUPPORTED_PLATFORM_ERROR
+    )
+    install(SCRIPT ${deploy_script})
+endif()
 
 file(GLOB_RECURSE ICONS
 ${CMAKE_SOURCE_DIR}/icons/*)
