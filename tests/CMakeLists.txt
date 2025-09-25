@@ -17,6 +17,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
 enable_testing()
 
+# ✅ Тільки бібліотека - без дублікатів
 add_library(paint_lib
     ../canvas.cpp
     ../createfilewindow.cpp
@@ -30,39 +31,25 @@ add_library(paint_lib
     ../toolbar.cpp
 )
 
+# ✅ Тільки тестові файли
 add_executable(test_paint 
     test_main.cpp
     test_canvas.cpp
-    ../canvas.cpp
-    ../createfilewindow.cpp
-    ../filesmodel.cpp
-    ../filesystem.cpp
-    ../homepage.cpp
-    ../menubar.cpp
-    ../numberline.cpp
-    ../paintwindow.cpp
-    ../resourcepath.cpp
-    ../toolbar.cpp
-    #test_createfilewindow.cpp
-    #test_filesmodel.cpp
-    #test_filesystem.cpp
-    #test_homepage.cpp
-    #test_menubar.cpp
-    #test_numberline.cpp
-    #test_paintwindow.cpp
-    #test_recourcepath.cpp
-    #test_toolbar.cpp
+    # ❌ ВИДАЛИТИ дубльовані файли звідси!
 )
 
-target_link_libraries(paint_lib
-    PUBLIC Qt6::Core Qt6::Gui Qt6::Widgets
-)
-
+# ✅ Підключіть бібліотеку до тестів
 target_link_libraries(test_paint PRIVATE
-    #paint_lib
     GTest::gtest_main
+    paint_lib              # ← ось це важливо!
     Qt6::Core
     Qt6::Gui
+    Qt6::Widgets
+)
+
+target_link_libraries(paint_lib PRIVATE
+    Qt6::Core
+    Qt6::Gui  
     Qt6::Widgets
 )
 
