@@ -17,10 +17,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
 enable_testing()
 
-# 🔥 ПРОСТИЙ СПОСІБ: всі файли в одному executable
-add_executable(test_paint 
-    test_main.cpp
-    test_canvas.cpp
+add_library(paint_lib
     ../canvas.cpp
     ../createfilewindow.cpp
     ../filesmodel.cpp
@@ -33,14 +30,31 @@ add_executable(test_paint
     ../toolbar.cpp
 )
 
+add_executable(test_paint 
+    test_main.cpp
+    test_canvas.cpp
+    #test_createfilewindow.cpp
+    #test_filesmodel.cpp
+    #test_filesystem.cpp
+    #test_homepage.cpp
+    #test_menubar.cpp
+    #test_numberline.cpp
+    #test_paintwindow.cpp
+    #test_recourcepath.cpp
+    #test_toolbar.cpp
+)
+
+target_link_libraries(paint_lib
+    PUBLIC Qt6::Core Qt6::Gui Qt6::Widgets
+)
+
 target_link_libraries(test_paint PRIVATE
+    #paint_lib
     GTest::gtest_main
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
 )
-
-target_include_directories(test_paint PRIVATE ..)
 
 add_custom_target(run_tests
     COMMAND ./test_paint

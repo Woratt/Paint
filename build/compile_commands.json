@@ -1,0 +1,200 @@
+[
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/build/paint_autogen/mocs_compilation.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/build/paint_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/paint.dir/paint_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/canvas.cpp.o -c /Users/admin/Downloads/education/Paint/canvas.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/canvas.cpp",
+  "output": "CMakeFiles/paint.dir/canvas.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/createfilewindow.cpp.o -c /Users/admin/Downloads/education/Paint/createfilewindow.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/createfilewindow.cpp",
+  "output": "CMakeFiles/paint.dir/createfilewindow.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/filesmodel.cpp.o -c /Users/admin/Downloads/education/Paint/filesmodel.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/filesmodel.cpp",
+  "output": "CMakeFiles/paint.dir/filesmodel.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/filesystem.cpp.o -c /Users/admin/Downloads/education/Paint/filesystem.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/filesystem.cpp",
+  "output": "CMakeFiles/paint.dir/filesystem.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/homepage.cpp.o -c /Users/admin/Downloads/education/Paint/homepage.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/homepage.cpp",
+  "output": "CMakeFiles/paint.dir/homepage.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/main.cpp.o -c /Users/admin/Downloads/education/Paint/main.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/main.cpp",
+  "output": "CMakeFiles/paint.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/menubar.cpp.o -c /Users/admin/Downloads/education/Paint/menubar.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/menubar.cpp",
+  "output": "CMakeFiles/paint.dir/menubar.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/numberline.cpp.o -c /Users/admin/Downloads/education/Paint/numberline.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/numberline.cpp",
+  "output": "CMakeFiles/paint.dir/numberline.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/paintwindow.cpp.o -c /Users/admin/Downloads/education/Paint/paintwindow.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/paintwindow.cpp",
+  "output": "CMakeFiles/paint.dir/paintwindow.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/toolbar.cpp.o -c /Users/admin/Downloads/education/Paint/toolbar.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/toolbar.cpp",
+  "output": "CMakeFiles/paint.dir/toolbar.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/paint_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint.dir/resourcepath.cpp.o -c /Users/admin/Downloads/education/Paint/resourcepath.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/resourcepath.cpp",
+  "output": "CMakeFiles/paint.dir/resourcepath.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/mocs_compilation.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/mocs_compilation.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/canvas.cpp.o -c /Users/admin/Downloads/education/Paint/canvas.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/canvas.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/canvas.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/createfilewindow.cpp.o -c /Users/admin/Downloads/education/Paint/createfilewindow.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/createfilewindow.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/createfilewindow.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/filesmodel.cpp.o -c /Users/admin/Downloads/education/Paint/filesmodel.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/filesmodel.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/filesmodel.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/filesystem.cpp.o -c /Users/admin/Downloads/education/Paint/filesystem.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/filesystem.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/filesystem.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/homepage.cpp.o -c /Users/admin/Downloads/education/Paint/homepage.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/homepage.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/homepage.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/menubar.cpp.o -c /Users/admin/Downloads/education/Paint/menubar.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/menubar.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/menubar.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/numberline.cpp.o -c /Users/admin/Downloads/education/Paint/numberline.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/numberline.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/numberline.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/paintwindow.cpp.o -c /Users/admin/Downloads/education/Paint/paintwindow.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/paintwindow.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/paintwindow.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/include -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/paint_lib.dir/__/toolbar.cpp.o -c /Users/admin/Downloads/education/Paint/toolbar.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/toolbar.cpp",
+  "output": "tests/CMakeFiles/paint_lib.dir/__/toolbar.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/mocs_compilation.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/mocs_compilation.cpp",
+  "output": "tests/CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/test_paint.dir/test_main.cpp.o -c /Users/admin/Downloads/education/Paint/tests/test_main.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/tests/test_main.cpp",
+  "output": "tests/CMakeFiles/test_paint.dir/test_main.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/tests",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -std=gnu++17 -fPIC -o CMakeFiles/test_paint.dir/test_canvas.cpp.o -c /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/tests/test_canvas.cpp",
+  "output": "tests/CMakeFiles/test_paint.dir/test_canvas.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_autogen/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gmock.dir/gmock_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/gmock_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_autogen/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_main_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gmock_main.dir/gmock_main_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/gmock_main_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/gmock_main_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_autogen/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gtest.dir/gtest_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/gtest_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_autogen/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_main_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gtest_main.dir/gtest_main_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/gtest_main_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/gtest_main_autogen/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/include -isystem /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest -std=c++17  -DGTEST_HAS_PTHREAD=0   -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]

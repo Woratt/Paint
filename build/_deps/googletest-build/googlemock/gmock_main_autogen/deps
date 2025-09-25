@@ -1,0 +1,6 @@
+gmock_main_autogen/timestamp: \
+	/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/CMakeLists.txt \
+	/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/cmake/gmock.pc.in \
+	/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in \
+	/Users/admin/Downloads/education/Paint/build/_deps/googletest-src/googlemock/src/gmock_main.cc \
+	/usr/local/bin/cmake

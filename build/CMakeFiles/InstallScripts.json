@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/admin/Downloads/education/Paint/build/cmake_install.cmake",
+		"/Users/admin/Downloads/education/Paint/build/tests/cmake_install.cmake",
+		"/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/cmake_install.cmake",
+		"/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/Users/admin/Downloads/education/Paint/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
