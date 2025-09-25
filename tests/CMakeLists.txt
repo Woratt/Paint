@@ -35,6 +35,14 @@ add_executable(test_paint
     test_canvas.cpp
     ../canvas.cpp
     ../createfilewindow.cpp
+    ../filesmodel.cpp
+    ../filesystem.cpp
+    ../homepage.cpp
+    ../menubar.cpp
+    ../numberline.cpp
+    ../paintwindow.cpp
+    ../resourcepath.cpp
+    ../toolbar.cpp
     #test_createfilewindow.cpp
     #test_filesmodel.cpp
     #test_filesystem.cpp
