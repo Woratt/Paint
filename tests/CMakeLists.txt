@@ -33,6 +33,8 @@ add_library(paint_lib
 add_executable(test_paint 
     test_main.cpp
     test_canvas.cpp
+    ../canvas.cpp
+    ../createfilewindow.cpp
     #test_createfilewindow.cpp
     #test_filesmodel.cpp
     #test_filesystem.cpp
@@ -49,8 +51,11 @@ target_link_libraries(paint_lib
 )
 
 target_link_libraries(test_paint PRIVATE
-    paint_lib
+    #paint_lib
     GTest::gtest_main
+    Qt6::Core
+    Qt6::Gui
+    Qt6::Widgets
 )
 
 add_custom_target(run_tests
