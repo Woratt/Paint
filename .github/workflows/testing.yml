@@ -12,7 +12,7 @@ jobs:
       - name: Install dependencies
         run: |
           brew update
-          brew install cmake qt
+          brew install cmake qt 
 
       - name: Configure CMake
         run: |
@@ -27,3 +27,16 @@ jobs:
           cd build
           ctest --output-on-failure
 
+  slang-format:
+    runs-on: macos-latest
+    steps:
+      - name: Get repository code 
+        uses: actions/checkout@v3
+
+      - name: Install slang-format
+        run: |
+          brew update
+          brew install slang-format
+
+      - name: Run clang-format
+        run: clang-format --dry-run --Werror $(find . -regex '.*\.\(cpp\|h\)')
