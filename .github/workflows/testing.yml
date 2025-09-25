@@ -51,8 +51,8 @@ jobs:
 
       - name: Run tests
         run: |
-          cd build
-          ctest --output-on-failure
+          export QT_QPA_PLATFORM=offscreen
+          ctest --output-on-failure --test-dir build
 
   build-windows:
     runs-on: windows-latest
@@ -74,7 +74,7 @@ jobs:
 
       - name: Configure CMake
         run: |
-          cmake -S . -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release
+          cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:/Qt/6.6.1/mingw_64"
         shell: bash
 
       - name: Build project
