@@ -38,5 +38,14 @@ jobs:
           brew update
           brew install clang-format
 
-      - name: Run clang-format
-        run: clang-format --dry-run --Werror $(find . -regex '.*\.\(cpp\|h\)')
+      - name: Run clang-format (fix)
+        run: |
+          clang-format -i $(find . -regex '.*\.\(cpp\|h\)')
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Apply clang-format fixes" || echo "No changes to commit"
+          git push
