@@ -64,7 +64,7 @@ jobs:
         run: |
           choco install cmake -y
           choco install ninja -y
-          choco install qt5 -y
+          choco install qt6 -y
 
       - name: Canfigure Cmake
         run: |
