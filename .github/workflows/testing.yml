@@ -6,50 +6,69 @@ permissions:
 on: push
 
 jobs:
-  build:
-    strategy:
-     matrix:
-      os: [ubuntu-latest, macos-latest, windows-latest]
-
-    runs-on: ${{ matrix.os }}
+  build-macOS:
+    runs-on: macos-latest
     steps:
       - name: Get repository code 
         uses: actions/checkout@v3
 
-      - name: Install dependencies (macOS)
-        if: matrix.os == 'macos-latest'
+      - name: Install dependencies 
         run: |
           brew update
           brew install cmake qt
 
-      - name: Install dependencies (windows)
-        if: matrix.os == 'windows-latest'
+      - name: Configure CMake 
         run: |
-          choco install qt6 cmake ninja
-        
-      - name: Install dependencies (linux)
-        if: matrix.os == 'ubuntu-latest'
+          cmake -S . -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
+
+      - name: Build project
+        run: |
+          cmake --build build -- -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 2)
+
+      - name: Run tests
+        run: |
+          cd build
+          ctest --output-on-failure
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository code 
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake build-essential
 
-      - name: Configure CMake (macOS)
-        if: matrix.os == 'macos-latest'
-        run: |
-          cmake -S . -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
-
-      - name: Canfigure Cmake (windows/linux)
-        if: matrix.os != 'macos-latest'
+      - name: Canfigure Cmake
         run: |
           cmake -S . -B build
-
-      - name: Build project (macOS/Linux)
-        if: matrix.os != 'windows-latest'
+      
+      - name: Build project
         run: |
           cmake --build build -- -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 2)
 
-      - name: Build project (windows)
-        if: matrix.os == 'windows-latest'
+      - name: Run tests
+        run: |
+          cd build
+          ctest --output-on-failure
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Get repository code 
+        uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        run: |
+          choco install qt6 cmake ninja
+
+      - name: Canfigure Cmake
+        run: |
+          cmake -S . -B build
+
+      - name: Build project
         run: |
           cmake --build build --config Release
 
@@ -57,6 +76,10 @@ jobs:
         run: |
           cd build
           ctest --output-on-failure
+
+
+
+
 
   slang-format:
     runs-on: macos-latest

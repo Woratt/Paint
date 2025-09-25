@@ -2,12 +2,11 @@
 #include "canvas.h"
 #include "filesystem.h"
 #include "paintwindow.h"
-
-extern QString resourcePath;
+#include "resourcepath.h"
 
 ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 {
-
+    QString resourcePath = resourcepath::getResourcePath();
     auto const *fileSystem = new FileSystem();
 
     setToolButtonStyle(Qt::ToolButtonIconOnly);
