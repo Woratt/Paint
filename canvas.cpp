@@ -3,7 +3,7 @@
 
 QVector<QImage> Canvas::history;
 
-Canvas::Canvas(QWidget *parent) : QWidget(parent){}
+Canvas::Canvas(QWidget *parent) : QWidget(parent) {}
 
 Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
 {
@@ -37,8 +37,10 @@ Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
     grabGesture(Qt::PinchGesture);
 }
 
-Canvas& Canvas::operator=(const Canvas& canvas){
-    if (this == &canvas) {
+Canvas &Canvas::operator=(const Canvas &canvas)
+{
+    if (this == &canvas)
+    {
         return *this;
     }
 
@@ -49,7 +51,7 @@ Canvas& Canvas::operator=(const Canvas& canvas){
     numClik = canvas.numClik;
     zoom = canvas.zoom;
     offset = canvas.offset;
-    //widthLine = canvas.widthLine;
+    // widthLine = canvas.widthLine;
     numOfHistory = canvas.numOfHistory;
     return *this;
 }
@@ -97,7 +99,8 @@ void Canvas::paintEvent(QPaintEvent * /*event*/)
 
 void Canvas::mouseMoveEvent(QMouseEvent *event)
 {
-    if (!draw) {
+    if (!draw)
+    {
         return;
     }
     QPainter painter(&pixMap);

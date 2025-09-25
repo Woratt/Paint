@@ -15,7 +15,8 @@ createFileWindow::createFileWindow(QWidget *parent) : QDialog(parent)
     initializeConnections();
 }
 
-void createFileWindow::createsAllComponents(){
+void createFileWindow::createsAllComponents()
+{
     mainLayout = new QVBoxLayout(this);
 
     nameLayout = new QHBoxLayout();
@@ -38,32 +39,32 @@ void createFileWindow::createsAllComponents(){
     presentButton = new QPushButton("Custom");
 }
 
-void createFileWindow::initializeButtonMenu(){
-    QMap<QString, QSize> presetSizes = {
-        {"640 X 480", QSize(640, 480)},
-        {"800 X 600", QSize(800, 600)},
-        {"1024 X 768", QSize(1024, 768)},
-        {"1280 X 1024", QSize(1280, 1024)},
-        {"1440 X 900", QSize(1440, 900)},
-        {"1280 X 720 (720P HD)", QSize(1280, 720)},
-        {"1920 X 1080 (1080P HD)", QSize(1920, 1080)},
-        {"2560 X 1440 (1440P HD)", QSize(2560, 1440)},
-        {"3840 X 2160 (HD 4K)", QSize(3840, 2160)},
-        {"5120 X 2280 (5K)", QSize(5120, 2280)},
-        {"A0", QSize(841, 1189)},
-        {"A1", QSize(594, 841)},
-        {"A2", QSize(420, 594)},
-        {"A3", QSize(297, 420)},
-        {"A4", QSize(210, 297)},
-        {"A5", QSize(148, 210)},
-        {"A6", QSize(105, 148)}
-    };
+void createFileWindow::initializeButtonMenu()
+{
+    QMap<QString, QSize> presetSizes = {{"640 X 480", QSize(640, 480)},
+                                        {"800 X 600", QSize(800, 600)},
+                                        {"1024 X 768", QSize(1024, 768)},
+                                        {"1280 X 1024", QSize(1280, 1024)},
+                                        {"1440 X 900", QSize(1440, 900)},
+                                        {"1280 X 720 (720P HD)", QSize(1280, 720)},
+                                        {"1920 X 1080 (1080P HD)", QSize(1920, 1080)},
+                                        {"2560 X 1440 (1440P HD)", QSize(2560, 1440)},
+                                        {"3840 X 2160 (HD 4K)", QSize(3840, 2160)},
+                                        {"5120 X 2280 (5K)", QSize(5120, 2280)},
+                                        {"A0", QSize(841, 1189)},
+                                        {"A1", QSize(594, 841)},
+                                        {"A2", QSize(420, 594)},
+                                        {"A3", QSize(297, 420)},
+                                        {"A4", QSize(210, 297)},
+                                        {"A5", QSize(148, 210)},
+                                        {"A6", QSize(105, 148)}};
 
     presentButton->setMinimumWidth(200);
 
     auto *presentMenu = new QMenu();
 
-    for (const auto &str : presetSizes.keys()) {
+    for (const auto &str : presetSizes.keys())
+    {
         presentMenu->addAction(str);
     }
 
@@ -73,7 +74,8 @@ void createFileWindow::initializeButtonMenu(){
             [=](QAction *action) -> void
             {
                 presentButton->setText(action->text());
-                if(presetSizes.contains(action->text())){
+                if (presetSizes.contains(action->text()))
+                {
                     QSize sz = presetSizes[action->text()];
                     widthLine->setText(QString::number(sz.width()));
                     heightLine->setText(QString::number(sz.height()));
@@ -81,7 +83,8 @@ void createFileWindow::initializeButtonMenu(){
             });
 }
 
-void createFileWindow::initializeLayouts(){
+void createFileWindow::initializeLayouts()
+{
 
     nameLayout->addStretch();
     nameLayout->addWidget(nameLabel);
@@ -108,7 +111,8 @@ void createFileWindow::initializeLayouts(){
     mainLayout->addLayout(buttonLayout);
 }
 
-void createFileWindow::initializeFields(){
+void createFileWindow::initializeFields()
+{
 
     nameLabel->setText("Name File:");
     presentLabel->setText("Present:");
@@ -124,13 +128,15 @@ void createFileWindow::initializeFields(){
     heightLine->setPlaceholderText("Height");
 }
 
-void createFileWindow::initializeButtons(){
+void createFileWindow::initializeButtons()
+{
 
     buttonLayout->addWidget(cancelButton);
     buttonLayout->addWidget(okButton);
 }
 
-void createFileWindow::initializeConnections(){
+void createFileWindow::initializeConnections()
+{
     connect(widthLine, &QLineEdit::textEdited, this, [=]() -> void { presentButton->setText("Custom"); });
 
     connect(heightLine, &QLineEdit::textEdited, this, [=]() -> void { presentButton->setText("Custom"); });
@@ -142,11 +148,14 @@ void createFileWindow::initializeConnections(){
             {
                 QString const folderPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) +
                                            "/MyPaintFiles/" + nameLine->text() + ".png";
-                if(widthLine->text() == "0" || heightLine->text() == "0" || nameLine->text().isEmpty()){
+                if (widthLine->text() == "0" || heightLine->text() == "0" || nameLine->text().isEmpty())
+                {
                     auto *msgBox = new QMessageBox();
                     msgBox->setText("incomplete information ");
                     msgBox->exec();
-                }else{
+                }
+                else
+                {
                     if (QFile::exists(folderPath))
                     {
                         auto *msgBox = new QMessageBox();
@@ -159,7 +168,8 @@ void createFileWindow::initializeConnections(){
 
                         if (ret == QMessageBox::Ok)
                         {
-                            FileSystem().create(nameLine->text(), widthLine->text().toInt(), heightLine->text().toInt());
+                            FileSystem().create(nameLine->text(), widthLine->text().toInt(),
+                                                heightLine->text().toInt());
                             this->close();
                         }
                         else

@@ -24,6 +24,7 @@ class createFileWindow : public QDialog
     Q_OBJECT
   public:
     explicit createFileWindow(QWidget *parent = nullptr);
+
   private:
     QHBoxLayout *nameLayout;
     QHBoxLayout *presentLayout;

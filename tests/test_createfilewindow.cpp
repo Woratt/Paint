@@ -1,10 +1,9 @@
-#include <gtest/gtest.h>
 #include "../createfilewindow.h"
+#include <gtest/gtest.h>
 
-struct CreateFileWindowFixture : public testing::Test{
-    createFileWindow* fileWindow;
+struct CreateFileWindowFixture : public testing::Test
+{
+    createFileWindow *fileWindow;
 
-    void SetUp() override {
-        fileWindow = new createFileWindow();
-    }
+    void SetUp() override { fileWindow = new createFileWindow(); }
 };

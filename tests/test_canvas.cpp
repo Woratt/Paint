@@ -1,7 +1,7 @@
-#include <gtest/gtest.h>
-#include <QPinchGesture>
-#include <iostream>
 #include <QImage>
+#include <QPinchGesture>
+#include <gtest/gtest.h>
+#include <iostream>
 #define private public
 #define protected public
 #include "../canvas.h"
@@ -9,13 +9,13 @@
 #undef private
 #undef protected
 
+struct CanvasFixture : public testing::Test
+{
+    QImage *image;
+    Canvas *canvas;
 
-
-struct CanvasFixture : public testing::Test{
-    QImage* image;
-    Canvas* canvas;
-
-    void SetUp() override {
+    void SetUp() override
+    {
         image = new QImage(200, 200, QImage::Format_RGB32);
         image->fill(Qt::white);
         canvas = new Canvas(*image);
@@ -23,15 +23,16 @@ struct CanvasFixture : public testing::Test{
 };
 
 // Test constructor
-TEST_F(CanvasFixture, constructor){
+TEST_F(CanvasFixture, constructor)
+{
     ASSERT_EQ(canvas->takePixmap().size(), image->size());
     ASSERT_EQ(canvas->takePixmap().toImage().format(), image->format());
     ASSERT_EQ(Canvas::history.size(), 1);
     ASSERT_EQ(Canvas::history[0].size(), image->size());
 
     QSize const scaledSize = canvas->pixMap.size() * canvas->zoom;
-    ASSERT_EQ(canvas->offset, QPointF((canvas->width() - scaledSize.width()) / 2,
-                                (canvas->height() - scaledSize.height()) / 2));
+    ASSERT_EQ(canvas->offset,
+              QPointF((canvas->width() - scaledSize.width()) / 2, (canvas->height() - scaledSize.height()) / 2));
     ASSERT_EQ(canvas->pen.width(), 3);
     ASSERT_EQ(canvas->pen.color(), Qt::black);
     EXPECT_EQ(canvas->pen.capStyle(), Qt::RoundCap);
@@ -39,7 +40,8 @@ TEST_F(CanvasFixture, constructor){
 }
 
 // Test function increaseZoom
-TEST_F(CanvasFixture, increaseZoom){
+TEST_F(CanvasFixture, increaseZoom)
+{
 
     canvas->increaseZoom();
 
@@ -47,7 +49,8 @@ TEST_F(CanvasFixture, increaseZoom){
 }
 
 // Test function reduceZoom
-TEST_F(CanvasFixture, reduceZoom){
+TEST_F(CanvasFixture, reduceZoom)
+{
 
     canvas->reduceZoom();
 
@@ -55,7 +58,8 @@ TEST_F(CanvasFixture, reduceZoom){
 }
 
 // Test function setTool
-TEST_F(CanvasFixture, setTool){
+TEST_F(CanvasFixture, setTool)
+{
     Tool tool = Tool::Brush;
 
     canvas->setTool(tool);
@@ -64,7 +68,8 @@ TEST_F(CanvasFixture, setTool){
 }
 
 // Test function changedWidth
-TEST_F(CanvasFixture, changedWidth){
+TEST_F(CanvasFixture, changedWidth)
+{
     int width = 5;
     canvas->changedWidth(width);
 
@@ -77,17 +82,11 @@ TEST_F(CanvasFixture, changedWidth){
 }
 
 // Test mouse press end start drawing
-TEST_F(CanvasFixture, MousePressStartDrawing){
-    QMouseEvent event(
-        QEvent::MouseButtonPress,
-        QPointF(50, 50),      
-        QPointF(50, 50),       
-        QPointF(50, 50),       
-        Qt::LeftButton,        
-        Qt::LeftButton,       
-        Qt::NoModifier        
-    );
-    
+TEST_F(CanvasFixture, MousePressStartDrawing)
+{
+    QMouseEvent event(QEvent::MouseButtonPress, QPointF(50, 50), QPointF(50, 50), QPointF(50, 50), Qt::LeftButton,
+                      Qt::LeftButton, Qt::NoModifier);
+
     canvas->setTool(Tool::Brush);
     canvas->mousePressEvent(&event);
 
@@ -97,19 +96,14 @@ TEST_F(CanvasFixture, MousePressStartDrawing){
 }
 
 // Test mouse move event
-TEST_F(CanvasFixture, mouseMoveEvent){
+TEST_F(CanvasFixture, mouseMoveEvent)
+{
     canvas->draw = true;
     canvas->setTool(Tool::Brush);
     canvas->lastPoint = QPoint(100, 100);
 
-    QMouseEvent event(QEvent::MouseMove,
-        QPointF(150, 150),       
-        QPointF(150, 150),     
-        QPointF(150, 150), 
-        Qt::NoButton,           
-        Qt::LeftButton,         
-        Qt::NoModifier 
-    );
+    QMouseEvent event(QEvent::MouseMove, QPointF(150, 150), QPointF(150, 150), QPointF(150, 150), Qt::NoButton,
+                      Qt::LeftButton, Qt::NoModifier);
 
     canvas->mouseMoveEvent(&event);
 
@@ -129,21 +123,15 @@ TEST_F(CanvasFixture, mouseMoveEvent){
 }
 
 // Test mouse release event
-TEST_F(CanvasFixture, mouseReleaseEvent){
+TEST_F(CanvasFixture, mouseReleaseEvent)
+{
     canvas->draw = true;
     canvas->setTool(Tool::Circle);
     canvas->lastPoint = QPoint(100, 100);
     canvas->secondPoint = QPoint(150, 150);
 
-    QMouseEvent event(
-        QEvent::MouseButtonRelease,
-        QPointF(150, 150),  
-        QPointF(150, 150),  
-        QPointF(150, 150),
-        Qt::LeftButton,     
-        Qt::LeftButton,     
-        Qt::NoModifier      
-    );
+    QMouseEvent event(QEvent::MouseButtonRelease, QPointF(150, 150), QPointF(150, 150), QPointF(150, 150),
+                      Qt::LeftButton, Qt::LeftButton, Qt::NoModifier);
 
     canvas->mouseReleaseEvent(&event);
 
@@ -161,37 +149,22 @@ TEST_F(CanvasFixture, mouseReleaseEvent){
 }
 
 // Test wheel event
-TEST_F(CanvasFixture, WheelEventZoomOffsets) {
+TEST_F(CanvasFixture, WheelEventZoomOffsets)
+{
     canvas->zoom = 1.0;
     QPointF oldOffset = canvas->offset;
 
-    QWheelEvent wheelEventUp(
-        QPointF(100, 100),         
-        QPointF(100, 100),         
-        QPoint(0, 0),              
-        QPoint(0, 120),          
-        Qt::NoButton,       
-        Qt::NoModifier,            
-        Qt::ScrollPhase::ScrollUpdate,
-        false,                     
-        Qt::MouseEventSource::MouseEventNotSynthesized 
-    );
+    QWheelEvent wheelEventUp(QPointF(100, 100), QPointF(100, 100), QPoint(0, 0), QPoint(0, 120), Qt::NoButton,
+                             Qt::NoModifier, Qt::ScrollPhase::ScrollUpdate, false,
+                             Qt::MouseEventSource::MouseEventNotSynthesized);
 
     canvas->wheelEvent(&wheelEventUp);
 
     EXPECT_LE(canvas->offset.y(), oldOffset.y());
 
-    QWheelEvent wheelEventDown(
-        QPointF(100, 100),
-        QPointF(100, 100),
-        QPoint(0, 0),
-        QPoint(0, -120),
-        Qt::NoButton,
-        Qt::NoModifier,
-        Qt::ScrollPhase::ScrollUpdate,
-        false,
-        Qt::MouseEventSource::MouseEventNotSynthesized
-    );
+    QWheelEvent wheelEventDown(QPointF(100, 100), QPointF(100, 100), QPoint(0, 0), QPoint(0, -120), Qt::NoButton,
+                               Qt::NoModifier, Qt::ScrollPhase::ScrollUpdate, false,
+                               Qt::MouseEventSource::MouseEventNotSynthesized);
 
     canvas->wheelEvent(&wheelEventDown);
 
@@ -199,7 +172,8 @@ TEST_F(CanvasFixture, WheelEventZoomOffsets) {
 }
 
 // Checking the transformation of a position from an event position to an image point
-TEST_F(CanvasFixture, eventPosToImagePoint){
+TEST_F(CanvasFixture, eventPosToImagePoint)
+{
     canvas->zoom = 1.0;
     canvas->offset = QPointF(0, 0);
 
@@ -227,7 +201,8 @@ TEST_F(CanvasFixture, eventPosToImagePoint){
 }
 
 // test pinch zoom
-TEST_F(CanvasFixture, pinchTriggered){
+TEST_F(CanvasFixture, pinchTriggered)
+{
     QPinchGesture pinch;
     pinch.setScaleFactor(1.2);
     pinch.setCenterPoint(QPointF(400, 400));
@@ -253,134 +228,142 @@ TEST_F(CanvasFixture, pinchTriggered){
 }
 
 // Image smaller than canvas_CentersImage
-TEST_F(CanvasFixture, ImageSmallerThanCanvas_CentersImage) {
+TEST_F(CanvasFixture, ImageSmallerThanCanvas_CentersImage)
+{
     QPixmap smallPixmap(100, 100);
     smallPixmap.fill(Qt::red);
     canvas->pixMap = smallPixmap;
-    canvas->zoom = 1.0; 
-    
+    canvas->zoom = 1.0;
+
     canvas->offset = QPointF(0, 0);
-    
+
     canvas->clampOffset();
-    
+
     QSize scaledSize = canvas->pixMap.size() * canvas->zoom;
     int expectedX = (canvas->width() - scaledSize.width()) / 2;
     int expectedY = (canvas->height() - scaledSize.height()) / 2;
-    
+
     EXPECT_EQ(canvas->offset.x(), expectedX);
     EXPECT_EQ(canvas->offset.y(), expectedY);
 }
 
 // --- Image larger than canvas (constraint) ---
-TEST_F(CanvasFixture, ImageLargerThanCanvas_ClampsToBounds) {
+TEST_F(CanvasFixture, ImageLargerThanCanvas_ClampsToBounds)
+{
     QPixmap largePixmap(800, 800);
     largePixmap.fill(Qt::blue);
     canvas->pixMap = largePixmap;
     canvas->zoom = 1.0;
-    
+
     canvas->offset = QPointF(-1000, -1000);
-    
+
     canvas->clampOffset();
-    
+
     QSize scaledSize = canvas->pixMap.size() * canvas->zoom;
-    int minX = canvas->width() - scaledSize.width(); 
-    int minY = canvas->height() - scaledSize.height(); 
-    
+    int minX = canvas->width() - scaledSize.width();
+    int minY = canvas->height() - scaledSize.height();
+
     EXPECT_EQ(canvas->offset.x(), minX);
     EXPECT_EQ(canvas->offset.y(), minY);
 }
 
 // --- Offset within acceptable limits (does not change) ---
-TEST_F(CanvasFixture, OffsetWithinBounds_NoChange) {
-    QPixmap pixmap(800, 800); 
+TEST_F(CanvasFixture, OffsetWithinBounds_NoChange)
+{
+    QPixmap pixmap(800, 800);
     canvas->pixMap = pixmap;
     canvas->zoom = 1.0;
-    
+
     QSize scaledSize = canvas->pixMap.size() * canvas->zoom;
-    int validX = (canvas->width() - scaledSize.width()) / 2; 
-    int validY = (canvas->height() - scaledSize.height()) / 2; 
-    
+    int validX = (canvas->width() - scaledSize.width()) / 2;
+    int validY = (canvas->height() - scaledSize.height()) / 2;
+
     canvas->offset = QPointF(validX, validY);
-    
+
     canvas->clampOffset();
-    
+
     EXPECT_EQ(canvas->offset.x(), validX);
     EXPECT_EQ(canvas->offset.y(), validY);
 }
 
 // --- Effect of zoom on centering ---
-TEST_F(CanvasFixture, ZoomAffectsCentering) {
+TEST_F(CanvasFixture, ZoomAffectsCentering)
+{
     QPixmap pixmap(800, 800);
     canvas->pixMap = pixmap;
-    
-    canvas->zoom = 0.5; 
+
+    canvas->zoom = 0.5;
     canvas->offset = QPointF(0, 0);
     canvas->clampOffset();
-    
+
     QSize scaledSizeSmall = canvas->pixMap.size() * canvas->zoom;
     int expectedXSmall = (canvas->width() - scaledSizeSmall.width()) / 2;
     EXPECT_EQ(canvas->offset.x(), expectedXSmall);
-    
+
     canvas->zoom = 2.0;
     canvas->offset = QPointF(0, 0);
     canvas->clampOffset();
-    
-    EXPECT_EQ(canvas->offset.x(), 0); 
+
+    EXPECT_EQ(canvas->offset.x(), 0);
 }
 
 // --- Boundary cases ---
-TEST_F(CanvasFixture, EdgeCases) {
+TEST_F(CanvasFixture, EdgeCases)
+{
     QPixmap pixmap(720, 720);
     canvas->pixMap = pixmap;
     canvas->zoom = 1.0;
-    
+
     canvas->clampOffset();
-    
+
     EXPECT_EQ(canvas->offset.x(), 0);
     EXPECT_EQ(canvas->offset.y(), 0);
 }
 
 // --- Positive offset values (too far to the right/bottom) ---
-TEST_F(CanvasFixture, PositiveOffsetClamped) {
+TEST_F(CanvasFixture, PositiveOffsetClamped)
+{
     QPixmap pixmap(500, 400);
     canvas->pixMap = pixmap;
     canvas->zoom = 1.0;
-    
+
     canvas->offset = QPointF(1000, 1000);
-    
+
     canvas->clampOffset();
-    
+
     EXPECT_EQ(canvas->offset.x(), 110);
     EXPECT_EQ(canvas->offset.y(), 160);
 }
 
 // --- Partial centering (only along one axis) ---
-TEST_F(CanvasFixture, PartialCentering) {
+TEST_F(CanvasFixture, PartialCentering)
+{
     QPixmap pixmap(300, 800);
     canvas->pixMap = pixmap;
     canvas->zoom = 1.0;
-    
+
     canvas->offset = QPointF(-50, -80);
     canvas->clampOffset();
-    
+
     QSize scaledSize = canvas->pixMap.size() * canvas->zoom;
-    
+
     int expectedX = (canvas->width() - scaledSize.width()) / 2;
-    
+
     int minY = canvas->height() - scaledSize.height();
-    
+
     EXPECT_EQ(canvas->offset.x(), expectedX);
     EXPECT_EQ(canvas->offset.y(), minY);
 }
 
 // --- Blank image ---
-TEST_F(CanvasFixture, EmptyImage) {
-    canvas->pixMap = QPixmap(); 
+TEST_F(CanvasFixture, EmptyImage)
+{
+    canvas->pixMap = QPixmap();
     canvas->zoom = 1.0;
     canvas->offset = QPointF(100, 100);
-    
+
     EXPECT_NO_THROW(canvas->clampOffset());
-    
+
     EXPECT_EQ(canvas->offset.x(), (canvas->width() - 0) / 2);
     EXPECT_EQ(canvas->offset.y(), (canvas->height() - 0) / 2);
 }
