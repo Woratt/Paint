@@ -5,7 +5,7 @@
 
 #include "resourcepath.h"
 
-QString resourcePath = resourcepath::getResourcePath();
+extern QString resourcePath = resourcepath::getResourcePath();
 auto main(int argc, char *argv[]) -> int
 {
     QApplication const app(argc, argv);
