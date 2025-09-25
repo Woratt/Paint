@@ -18,6 +18,10 @@
 	[
 		{
 			"backtrace" : 0,
+			"id" : "paint_lib::@a44f0ac069e85531cdee"
+		},
+		{
+			"backtrace" : 0,
 			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
 		}
 	],

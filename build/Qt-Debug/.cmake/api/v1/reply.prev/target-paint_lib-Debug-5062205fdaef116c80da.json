@@ -139,11 +139,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "paint_lib_autogen_timestamp_deps::@a44f0ac069e85531cdee"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "paint_lib_autogen::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "paint_lib_autogen_timestamp_deps::@a44f0ac069e85531cdee"
 		}
 	],
 	"id" : "paint_lib::@a44f0ac069e85531cdee",
