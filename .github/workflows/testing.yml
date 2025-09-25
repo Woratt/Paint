@@ -7,23 +7,51 @@ on: push
 
 jobs:
   build:
-    runs-on: macos-latest
+    strategy:
+     matrix:
+      os: [ubuntu-latest, macos-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Get repository code 
         uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Install dependencies (macOS)
+        if: matrix.os == 'macos-latest'
         run: |
           brew update
-          brew install cmake qt 
+          brew install cmake qt tools-dev cmake build-essential
 
-      - name: Configure CMake
+      - name: Install dependencies (windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          choco install qt cmake ninja
+        
+      - name: Install dependencies (linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qt6-base-dev qt6-
+
+      - name: Configure CMake (macOS)
+        if: matrix.os == 'macos-latest'
         run: |
           cmake -S . -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
 
-      - name: Build project
+      - name: Canfigure Cmake (windows/linux)
+        if: matrix.os != 'macos-latest'
         run: |
-          cmake --build build -- -j$(sysctl -n hw.ncpu)
+          cmake -S . -B build
+
+      - name: Build project (macOS/Linux)
+        if: matrix.os != 'windows-latest'
+        run: |
+          cmake --build build -- -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 2)
+
+      - name: Build project (windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          cmake --build build --config Release
 
       - name: Run tests
         run: |
