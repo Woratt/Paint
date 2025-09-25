@@ -11,7 +11,6 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/google/googletest.git
     GIT_TAG release-1.14.0
 )
-set(gtest_disable_pthreads ON)
 FetchContent_MakeAvailable(googletest)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
