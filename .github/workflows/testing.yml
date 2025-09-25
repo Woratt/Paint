@@ -40,7 +40,7 @@ jobs:
 
       - name: Run clang-format (fix)
         run: |
-          clang-format -i $(find . -regex '.*\.\(cpp\|h\)')
+          clang-format -i $(find . -type f \( -name "*.cpp" -o -name "*.h" \))
 
       - name: Commit changes
         run: |
