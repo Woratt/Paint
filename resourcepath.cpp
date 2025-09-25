@@ -21,7 +21,7 @@ auto resourcepath::getResourcePath() -> QString
     }
     return "";
 #else
-  // Для Linux та Windows просто повертаємо відносний шлях
+    // Для Linux та Windows просто повертаємо відносний шлях
     return "./resources/";
 #endif
 }
