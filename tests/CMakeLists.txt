@@ -49,12 +49,11 @@ target_link_libraries(paint_lib
 )
 
 target_link_libraries(test_paint PRIVATE
-    gtest_main
     paint_lib
-)
-
-target_link_libraries(test_paint
-    PRIVATE paint_lib GTest::gtest_main Qt6::Core Qt6::Gui Qt6::Widgets
+    GTest::gtest_main
+    Qt6::Core
+    Qt6::Gui
+    Qt6::Widgets
 )
 
 add_custom_target(run_tests
