@@ -49,7 +49,7 @@ target_link_libraries(paint_lib
 )
 
 target_link_libraries(test_paint PRIVATE
-    #paint_lib
+    paint_lib
     GTest::gtest_main
     Qt6::Core
     Qt6::Gui

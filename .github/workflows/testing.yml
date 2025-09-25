@@ -87,10 +87,6 @@ jobs:
           ctest --output-on-failure
         shell: msys2 {0}
 
-
-
-
-
   slang-format:
     runs-on: macos-latest
     steps:
