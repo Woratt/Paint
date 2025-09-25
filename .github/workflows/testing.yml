@@ -62,7 +62,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          choco install qt6 cmake ninja
+          choco install qt6 cmake ninja -y
 
       - name: Canfigure Cmake
         run: |
