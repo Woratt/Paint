@@ -12,13 +12,13 @@
 #include <QtGlobal>
 
 #if defined(_WIN32) && !defined(PAINT_STATIC)
-#  if defined(PAINT_LIBRARY)
-#    define PAINT_EXPORT __declspec(dllexport)
-#  else
-#    define PAINT_EXPORT __declspec(dllimport)
-#  endif
+#if defined(PAINT_LIBRARY)
+#define PAINT_EXPORT __declspec(dllexport)
 #else
-#  define PAINT_EXPORT
+#define PAINT_EXPORT __declspec(dllimport)
+#endif
+#else
+#define PAINT_EXPORT
 #endif
 
 class ToolBar;
