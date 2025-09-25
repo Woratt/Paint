@@ -2,7 +2,6 @@
 
 resourcepath::resourcepath() = default;
 
-
 auto resourcepath::getResourcePath() -> QString
 {
     CFBundleRef mainBundle = CFBundleGetMainBundle();
