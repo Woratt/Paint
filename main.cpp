@@ -9,9 +9,9 @@ extern QString resourcePath = resourcepath::getResourcePath();
 auto main(int argc, char *argv[]) -> int
 {
     QApplication const app(argc, argv);
-    #ifdef Q_OS_MAC
+#ifdef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(resourcePath + "icons/icon.icns"));
-    #endif
+#endif
     HomePage homePage;
 
     homePage.show();
