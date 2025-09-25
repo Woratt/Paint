@@ -32,7 +32,7 @@ class Canvas : public QWidget
     int numClik = 0;
     double zoom = 1.0;
     QPointF offset;
-    auto eventPosToImagePoint(const QPoint &) const -> QPoint;
+    [[nodiscard]] auto eventPosToImagePoint(const QPoint &) const -> QPoint;
     auto gestureEvent(QGestureEvent *) -> bool;
     void pinchTriggered(QPinchGesture *);
     void clampOffset();

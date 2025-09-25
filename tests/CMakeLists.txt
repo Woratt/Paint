@@ -45,15 +45,12 @@ add_executable(test_paint
 )
 
 target_link_libraries(paint_lib
-    PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets
+    PUBLIC Qt6::Core Qt6::Gui Qt6::Widgets
 )
 
 target_link_libraries(test_paint PRIVATE
     paint_lib
     GTest::gtest_main
-    Qt6::Core
-    Qt6::Gui
-    Qt6::Widgets
 )
 
 add_custom_target(run_tests
