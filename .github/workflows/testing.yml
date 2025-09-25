@@ -36,7 +36,7 @@ jobs:
       - name: Install slang-format
         run: |
           brew update
-          brew install slang-format
+          brew install clang-format
 
       - name: Run clang-format
         run: clang-format --dry-run --Werror $(find . -regex '.*\.\(cpp\|h\)')
