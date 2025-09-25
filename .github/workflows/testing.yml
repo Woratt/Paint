@@ -17,7 +17,7 @@ jobs:
           brew update
           brew install cmake qt
 
-      - name: Configure CMake 
+      - name: Configure CMake
         run: |
           cmake -S . -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
 
@@ -41,7 +41,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake build-essential
 
-      - name: Canfigure Cmake
+      - name: Configure CMake
         run: |
           cmake -S . -B build
       
@@ -57,27 +57,36 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - name: Get repository code 
+      - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Install dependencies
         run: |
           choco install cmake -y
           choco install ninja -y
-          choco install qt6 -y
+        shell: powershell
 
-      - name: Canfigure Cmake
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: 6.6.1   # або інша потрібна версія
+          arch: win64_msvc2019_64
+
+      - name: Configure CMake
         run: |
-          cmake -S . -B build
+          cmake -S . -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release
+        shell: bash
 
       - name: Build project
         run: |
           cmake --build build --config Release
+        shell: bash
 
       - name: Run tests
         run: |
           cd build
           ctest --output-on-failure
+        shell: bash
 
 
 
