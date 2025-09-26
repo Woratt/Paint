@@ -88,10 +88,6 @@ jobs:
         ctest --output-on-failure
       shell: powershell
 
-
-
-
-
   slang-format:
     runs-on: macos-latest
     steps:
