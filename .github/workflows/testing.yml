@@ -62,8 +62,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          choco install cmake -y
-          choco install ninja -y
+          choco install cmake ninja -y
         shell: powershell
 
       - name: Install Qt
@@ -72,14 +71,32 @@ jobs:
           version: 6.6.1
           arch: win64_msvc2019_64
 
+      - name: Debug - Show source files
+        run: |
+          Get-ChildItem -Recurse -Include *.cpp,*.h | ForEach-Object { Write-Host "Found: $($_.FullName)" }
+        shell: powershell
+
       - name: Configure CMake
         run: |
           cmake -B build -S . -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Debug
         shell: powershell
 
+      - name: Debug - Show library contents
+        run: |
+          Write-Host "=== paint_lib source files ==="
+          Get-Content build/CMakeFiles/paint_lib.dir/sources.build | Write-Host
+          Write-Host "=== test_paint source files ==="  
+          Get-Content build/tests/CMakeFiles/test_paint.dir/sources.build | Write-Host
+        shell: powershell
+
       - name: Build project
         run: |
           cmake --build build --config Debug --verbose
+        shell: powershell
+
+      - name: Check if symbols are in library
+        run: |
+          dumpbin /SYMBOLS "build/Debug/paint_lib.lib" | findstr "eventPosToImagePoint\|pinchTriggered\|clampOffset\|history"
         shell: powershell
 
       - name: Run tests
