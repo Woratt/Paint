@@ -55,44 +55,43 @@ jobs:
           ctest --output-on-failure --test-dir build
 
   build-windows:
-    build-windows:
-      runs-on: windows-latest
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v4
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-        # ⬇️ Встановлюємо Ninja, щоб збірка була швидкою
-        - name: Install Ninja
-          uses: seanmiddleditch/gha-setup-ninja@v3
+      # ⬇️ Встановлюємо Ninja, щоб збірка була швидкою
+      - name: Install Ninja
+        uses: seanmiddleditch/gha-setup-ninja@v3
 
-        # ⬇️ Встановлюємо Qt (MSVC-сумісну версію)
-        - name: Install Qt
-          uses: jurplel/install-qt-action@v3
-          with:
-            version: '6.7.*'
-            host: 'windows'
-            target: 'desktop'
-            arch: 'win64_msvc2019_64'   # ⚠️ важливо: MSVC-Qt, не MinGW
+      # ⬇️ Встановлюємо Qt (MSVC-сумісну версію)
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '6.7.*'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win64_msvc2019_64'   # ⚠️ важливо: MSVC-Qt, не MinGW
 
-        # ⬇️ Налаштовуємо Clang (йде в комплекті з Visual Studio)
-        - name: Setup MSVC + Clang
-          uses: ilammy/msvc-dev-cmd@v1
-          with:
-            toolset: 'ClangCL'          # 💡 Використовуємо ClangCL ABI
+      # ⬇️ Налаштовуємо Clang (йде в комплекті з Visual Studio)
+      - name: Setup MSVC + Clang
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          toolset: 'ClangCL'          # 💡 Використовуємо ClangCL ABI
 
-        # ⬇️ Конфігурація CMake з Clang
-        - name: Configure CMake
-          run: |
-            cmake -S . -B build ^
-              -G "Ninja" ^
-              -DCMAKE_BUILD_TYPE=Release ^
-              -DCMAKE_C_COMPILER=clang-cl ^
-              -DCMAKE_CXX_COMPILER=clang-cl ^
-              -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }}"
+      # ⬇️ Конфігурація CMake з Clang
+      - name: Configure CMake
+        run: |
+          cmake -S . -B build ^
+            -G "Ninja" ^
+            -DCMAKE_BUILD_TYPE=Release ^
+            -DCMAKE_C_COMPILER=clang-cl ^
+            -DCMAKE_CXX_COMPILER=clang-cl ^
+            -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }}"
 
-        # ⬇️ Збірка
-        - name: Build
-          run: cmake --build build --config R
+      # ⬇️ Збірка
+      - name: Build
+        run: cmake --build build --config R
 
   slang-format:
     runs-on: macos-latest
