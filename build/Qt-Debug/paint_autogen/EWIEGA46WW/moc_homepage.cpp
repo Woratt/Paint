@@ -7,13 +7,12 @@
 *****************************************************************************/
 
 #include "../../../../homepage.h"
-#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
+#include <QtGui/qtextcursor.h>
 
 #include <QtCore/qtmochelpers.h>
 
 #include <memory>
-
 
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -31,35 +30,29 @@
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 QT_WARNING_DISABLE_GCC("-Wuseless-cast")
-namespace {
-struct qt_meta_tag_ZN8HomePageE_t {};
+namespace
+{
+struct qt_meta_tag_ZN8HomePageE_t
+{
+};
 } // unnamed namespace
 
 template <> constexpr inline auto HomePage::qt_create_metaobjectdata<qt_meta_tag_ZN8HomePageE_t>()
 {
     namespace QMC = QtMocConstants;
-    QtMocHelpers::StringRefStorage qt_stringData {
-        "HomePage"
-    };
+    QtMocHelpers::StringRefStorage qt_stringData{"HomePage"};
 
-    QtMocHelpers::UintData qt_methods {
-    };
-    QtMocHelpers::UintData qt_properties {
-    };
-    QtMocHelpers::UintData qt_enums {
-    };
+    QtMocHelpers::UintData qt_methods{};
+    QtMocHelpers::UintData qt_properties{};
+    QtMocHelpers::UintData qt_enums{};
     return QtMocHelpers::metaObjectData<HomePage, qt_meta_tag_ZN8HomePageE_t>(QMC::MetaObjectFlag{}, qt_stringData,
-            qt_methods, qt_properties, qt_enums);
+                                                                              qt_methods, qt_properties, qt_enums);
 }
-Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
-    QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN8HomePageE_t>.stringdata,
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN8HomePageE_t>.data,
-    qt_static_metacall,
-    nullptr,
-    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN8HomePageE_t>.metaTypes,
-    nullptr
-} };
+Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = {
+    {QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
+     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN8HomePageE_t>.stringdata,
+     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN8HomePageE_t>.data, qt_static_metacall, nullptr,
+     qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN8HomePageE_t>.metaTypes, nullptr}};
 
 void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
@@ -77,9 +70,10 @@ const QMetaObject *HomePage::metaObject() const
 
 void *HomePage::qt_metacast(const char *_clname)
 {
-    if (!_clname) return nullptr;
+    if (!_clname)
+        return nullptr;
     if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN8HomePageE_t>.strings))
-        return static_cast<void*>(this);
+        return static_cast<void *>(this);
     return QMainWindow::qt_metacast(_clname);
 }
 
