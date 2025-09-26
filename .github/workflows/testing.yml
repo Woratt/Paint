@@ -55,55 +55,59 @@ jobs:
           ctest --output-on-failure --test-dir build
 
   build-windows:
-    runs-on: windows-latest
+    runs-on: windows-2019
+    defaults:
+      run:
+        shell: cmd
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-          choco install cmake ninja -y
-        shell: powershell
+      - name: Get all tags for correct version determination
+        run: git fetch --all --tags -f
 
       - name: Install Qt
-        uses: jurplel/install-qt-action@v3
+        uses: jurplel/install-qt-action@v2
         with:
           version: 6.6.1
+          host: windows
+          target: desktop
           arch: win64_msvc2019_64
+          dir: ${{ runner.temp }}
+          modules: qtcharts qt3d  # Додайте потрібні модулі
+          setup-python: false
 
-      - name: Debug - Show source files
-        run: |
-          Get-ChildItem -Recurse -Include *.cpp,*.h | ForEach-Object { Write-Host "Found: $($_.FullName)" }
-        shell: powershell
+      - name: Download JOM for parallel builds
+        uses: suisei-cn/actions-download-file@v1
+        with:
+          url: http://download.qt.io/official_releases/jom/jom.zip
+          target: ${{ runner.temp }}\
 
-      - name: Configure CMake
-        run: |
-          cmake -B build -S . -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Debug
-        shell: powershell
+      - name: Unzip JOM
+        working-directory: ${{ runner.temp }}
+        run: 7z x jom.zip -ojom
 
-      - name: Debug - Show library contents
-        run: |
-          Write-Host "=== paint_lib source files ==="
-          Get-Content build/CMakeFiles/paint_lib.dir/sources.build | Write-Host
-          Write-Host "=== test_paint source files ==="  
-          Get-Content build/tests/CMakeFiles/test_paint.dir/sources.build | Write-Host
-        shell: powershell
+      - name: Set up Visual Studio shell
+        uses: egor-tensin/vs-shell@v2
+        with:
+          arch: x64
 
-      - name: Build project
+      - name: Configure with qmake (замість CMake)
         run: |
-          cmake --build build --config Debug --verbose
-        shell: powershell
+          qmake -r ${{ github.workspace }}\planets-qml.pro  # Змініть на ваш .pro файл
+        working-directory: ${{ runner.temp }}
 
-      - name: Check if symbols are in library
+      - name: Build with JOM
         run: |
-          dumpbin /SYMBOLS "build/Debug/paint_lib.lib" | findstr "eventPosToImagePoint\|pinchTriggered\|clampOffset\|history"
-        shell: powershell
+          ${{ runner.temp }}\jom\jom -j2
+        working-directory: ${{ runner.temp }}
 
       - name: Run tests
         run: |
-          cd build
-          ctest --output-on-failure -C Debug
-        shell: powershell
+          cd release
+          planets-qml.exe --test  # Або ваша команда для запуску тестів
+        working-directory: ${{ runner.temp }}
 
   slang-format:
     runs-on: macos-latest
