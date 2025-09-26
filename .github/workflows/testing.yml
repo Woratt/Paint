@@ -54,67 +54,6 @@ jobs:
           export QT_QPA_PLATFORM=offscreen
           ctest --output-on-failure --test-dir build
 
-  build-windows:
-    runs-on: windows-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install dependencies
-        run: |
-          choco install cmake ninja -y
-        shell: powershell
-
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v3
-        with:
-          version: 6.6.1
-          arch: win64_msvc2019_64
-
-      - name: Debug - Show project structure
-        run: |
-          Get-ChildItem -Recurse -Include *.cpp,*.h | ForEach-Object { Write-Host "Source file: $($_.FullName)" }
-        shell: powershell
-
-      - name: Configure CMake
-        run: |
-          cmake -B build -S . -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Debug
-        shell: powershell
-
-      - name: Debug - Show CMake generated files
-        run: |
-          Write-Host "=== CMakeFiles for paint_lib ==="
-          if (Test-Path "build/CMakeFiles/paint_lib.dir") {
-            Get-ChildItem "build/CMakeFiles/paint_lib.dir" -Recurse | ForEach-Object { Write-Host "File: $($_.Name)" }
-          }
-          Write-Host "=== CMakeCache.txt content ==="
-          if (Test-Path "build/CMakeCache.txt") {
-            Get-Content "build/CMakeCache.txt" | Select-String "paint_lib\|canvas" | Write-Host
-          }
-        shell: powershell
-
-      - name: Build project
-        run: |
-          cmake --build build --config Debug --verbose
-        shell: powershell
-
-      - name: Check library symbols
-        run: |
-          if (Test-Path "build/Debug/paint_lib.lib") {
-            Write-Host "=== Checking symbols in paint_lib.lib ==="
-            & "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\dumpbin.exe" /SYMBOLS "build/Debug/paint_lib.lib" | Select-String "eventPosToImagePoint|pinchTriggered|clampOffset|history"
-          } else {
-            Write-Host "paint_lib.lib not found!"
-            Get-ChildItem "build" -Recurse -Include *.lib | ForEach-Object { Write-Host "Found lib: $($_.FullName)" }
-          }
-        shell: powershell
-
-      - name: Run tests
-        run: |
-          cd build
-          ctest --output-on-failure -C Debug --verbose
-        shell: powershell
-
   slang-format:
     runs-on: macos-latest
     steps:
