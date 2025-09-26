@@ -83,11 +83,10 @@ jobs:
       - name: Configure CMake
         run: |
           cmake -S . -B build ^
-            -G "Ninja" ^
-            -DCMAKE_BUILD_TYPE=Release ^
-            -DCMAKE_C_COMPILER=clang-cl ^
-            -DCMAKE_CXX_COMPILER=clang-cl ^
-            -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }}"
+          -G "Visual Studio 17 2022" ^
+          -T ClangCL ^
+          -A x64 ^
+          -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }}"
 
       # ⬇️ Збірка
       - name: Build
