@@ -17,7 +17,7 @@ jobs:
           brew update
           brew install cmake qt
 
-      - name: Configure CMake
+      - name: Configure CMake 
         run: |
           cmake -S . -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
 
@@ -41,7 +41,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake build-essential
 
-      - name: Configure CMake
+      - name: Canfigure Cmake
         run: |
           cmake -S . -B build
       
@@ -51,46 +51,37 @@ jobs:
 
       - name: Run tests
         run: |
-          export QT_QPA_PLATFORM=offscreen
-          ctest --output-on-failure --test-dir build
+          cd build
+          ctest --output-on-failure
 
   build-windows:
     runs-on: windows-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # ⬇️ Встановлюємо Ninja, щоб збірка була швидкою
-      - name: Install Ninja
-        uses: seanmiddleditch/gha-setup-ninja@v3
-
-      # ⬇️ Встановлюємо Qt (MSVC-сумісну версію)
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v3
-        with:
-          version: '6.7.*'
-          host: 'windows'
-          target: 'desktop'
-          arch: 'win64_msvc2019_64'   # ⚠️ важливо: MSVC-Qt, не MinGW
-
-      # ⬇️ Налаштовуємо Clang (йде в комплекті з Visual Studio)
-      - name: Setup MSVC + Clang
-        uses: ilammy/msvc-dev-cmd@v1
-        with:
-          toolset: 'ClangCL'          # 💡 Використовуємо ClangCL ABI
-
-      # ⬇️ Конфігурація CMake з Clang
-      - name: Configure CMake
+      - name: Get repository code 
+        uses: actions/checkout@v3
+      
+      - name: Install dependencies
         run: |
-          cmake -S . -B build ^
-          -G "Visual Studio 17 2022" ^
-          -T ClangCL ^
-          -A x64 ^
-          -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }}"
+          choco install cmake -y
+          choco install ninja -y
+          choco install qt6 -y
 
-      # ⬇️ Збірка
-      - name: Build
-        run: cmake --build build --config R
+      - name: Canfigure Cmake
+        run: |
+          cmake -S . -B build
+
+      - name: Build project
+        run: |
+          cmake --build build --config Release
+
+      - name: Run tests
+        run: |
+          cd build
+          ctest --output-on-failure
+
+
+
+
 
   slang-format:
     runs-on: macos-latest
