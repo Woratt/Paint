@@ -17,7 +17,7 @@ jobs:
           brew update
           brew install cmake qt
 
-      - name: Configure CMake 
+      - name: Configure CMake
         run: |
           cmake -S . -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt)
 
@@ -41,7 +41,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake build-essential
 
-      - name: Canfigure Cmake
+      - name: Configure CMake
         run: |
           cmake -S . -B build
       
@@ -51,33 +51,42 @@ jobs:
 
       - name: Run tests
         run: |
-          cd build
-          ctest --output-on-failure
+          export QT_QPA_PLATFORM=offscreen
+          ctest --output-on-failure --test-dir build
 
   build-windows:
-    runs-on: windows-latest
-    steps:
-      - name: Get repository code 
-        uses: actions/checkout@v3
-      
-      - name: Install dependencies
-        run: |
-          choco install cmake -y
-          choco install ninja -y
-          choco install qt6 -y
+  runs-on: windows-latest
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Canfigure Cmake
-        run: |
-          cmake -S . -B build
+    - name: Install dependencies
+      run: |
+        choco install cmake -y
+        choco install ninja -y
+      shell: powershell
 
-      - name: Build project
-        run: |
-          cmake --build build --config Release
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: 6.6.1
+        arch: win64_msvc2019_64
 
-      - name: Run tests
-        run: |
-          cd build
-          ctest --output-on-failure
+    - name: Configure CMake
+      run: |
+        cmake -B build -S . -G "Visual Studio 17 2022" -A x64
+      shell: powershell
+
+    - name: Build project
+      run: |
+        cmake --build build --config Release
+      shell: powershell
+
+    - name: Run tests
+      run: |
+        cd build
+        ctest --output-on-failure
+      shell: powershell
 
 
 
