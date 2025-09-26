@@ -55,7 +55,7 @@ jobs:
           ctest --output-on-failure --test-dir build
 
   build-windows:
-    runs-on: windows-2019
+    runs-on: windows-latest
     defaults:
       run:
         shell: cmd
