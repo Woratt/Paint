@@ -159,7 +159,6 @@ void Canvas::mousePressEvent(QMouseEvent *event)
 
 void Canvas::mouseReleaseEvent(QMouseEvent *event)
 {
-
     if (!draw || event->button() != Qt::LeftButton)
     {
         return;

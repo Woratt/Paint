@@ -723,6 +723,8 @@ tests/paint_lib_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacO
   /Users/admin/Downloads/education/Paint/numberline.h \
   /Users/admin/Downloads/education/Paint/paintwindow.cpp \
   /Users/admin/Downloads/education/Paint/paintwindow.h \
+  /Users/admin/Downloads/education/Paint/resourcepath.cpp \
+  /Users/admin/Downloads/education/Paint/resourcepath.h \
   /Users/admin/Downloads/education/Paint/tests/CMakeLists.txt \
   /Users/admin/Downloads/education/Paint/toolbar.cpp \
   /Users/admin/Downloads/education/Paint/toolbar.h \
@@ -1366,6 +1368,8 @@ tests/paint_lib_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacO
 
 /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qfactoryinterface.h:
 
+/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h:
+
 /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qeventloop.h:
 
 /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qdirlisting.h:
@@ -1451,6 +1455,10 @@ tests/paint_lib_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacO
 /usr/local/Cellar/qt/6.9.2/lib/QtGui.framework/Versions/A/Headers/qpen.h:
 
 /Users/admin/Downloads/education/Paint/tests/CMakeLists.txt:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
+
+/Users/admin/Downloads/education/Paint/resourcepath.h:
 
 /Users/admin/Downloads/education/Paint/paintwindow.cpp:
 
@@ -2150,8 +2158,6 @@ tests/paint_lib_autogen/moc_predefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/addressof.h:
 
-/usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h:
-
 /usr/local/Cellar/qt/6.9.2/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h:
 
 /usr/local/Cellar/qt/6.9.2/lib/QtCore.framework/Versions/A/Headers/qarraydatapointer.h:
@@ -2397,8 +2403,6 @@ tests/paint_lib_autogen/moc_predefs.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__debug:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/swappable.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
 
@@ -2885,6 +2889,8 @@ tests/paint_lib_autogen/moc_predefs.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/common_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_partition_point.h:
+
+/Users/admin/Downloads/education/Paint/resourcepath.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/convertible_to.h:
 

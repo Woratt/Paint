@@ -12,5 +12,9 @@
  /usr/local/Cellar/cmake/4.1.1/bin/cmake
  /usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
  /usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/CMakePackageConfigHelpers.cmake
+ /usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake
+ /usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/FindPackageMessage.cmake
+ /usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/FindPython/Support.cmake
+ /usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/FindPython3.cmake
  /usr/local/Cellar/cmake/4.1.1/share/cmake/Modules/WriteBasicConfigVersionFile.cmake
 
