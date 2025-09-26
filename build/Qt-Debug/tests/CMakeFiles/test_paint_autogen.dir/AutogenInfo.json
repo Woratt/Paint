@@ -76,6 +76,8 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest/include",
+		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest",
 		"/usr/local/lib/QtCore.framework/Headers",
 		"/usr/local/lib/QtCore.framework",
 		"/usr/local/share/qt/mkspecs/macx-clang",
@@ -83,8 +85,6 @@
 		"/usr/local/lib/QtGui.framework",
 		"/usr/local/lib/QtWidgets.framework/Headers",
 		"/usr/local/lib/QtWidgets.framework",
-		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest/include",
-		"/Users/admin/Downloads/education/Paint/build/Qt-Debug/_deps/googletest-src/googletest",
 		"/usr/local/include",
 		"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
 		"/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include",

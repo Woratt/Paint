@@ -127,12 +127,14 @@ tests/test_paint: tests/CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compil
 tests/test_paint: tests/CMakeFiles/test_paint.dir/test_main.cpp.o
 tests/test_paint: tests/CMakeFiles/test_paint.dir/test_canvas.cpp.o
 tests/test_paint: tests/CMakeFiles/test_paint.dir/build.make
+tests/test_paint: lib/libgtest_main.a
+tests/test_paint: tests/libpaint_lib.a
 tests/test_paint: tests/libpaint_lib.a
 tests/test_paint: lib/libgtest_main.a
 tests/test_paint: /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets
+tests/test_paint: lib/libgtest.a
 tests/test_paint: /usr/local/lib/QtGui.framework/Versions/A/QtGui
 tests/test_paint: /usr/local/lib/QtCore.framework/Versions/A/QtCore
-tests/test_paint: lib/libgtest.a
 tests/test_paint: tests/CMakeFiles/test_paint.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Downloads/education/Paint/build/Qt-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable test_paint"
 	cd /Users/admin/Downloads/education/Paint/build/Qt-Debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_paint.dir/link.txt --verbose=$(VERBOSE)
