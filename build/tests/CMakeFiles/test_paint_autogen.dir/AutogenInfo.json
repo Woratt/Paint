@@ -1,0 +1,161 @@
+{
+	"BUILD_DIR" : "/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/admin/Downloads/education/Paint/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/admin/Downloads/education/Paint/build/tests",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/admin/Downloads/education/Paint/tests",
+	"CMAKE_EXECUTABLE" : "/usr/local/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/Users/admin/Downloads/education/Paint/tests/CMakeLists.txt",
+		"/usr/local/opt/qt/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/Qt6Config.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/Qt6ConfigExtras.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/QtInstallPaths.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/Qt6Targets.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtFeature.cmake",
+		"/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtFeatureCommon.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicAppleHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicGitHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicTargetHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicTestHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicToolHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake",
+		"/usr/local/Cellar/qt/6.9.2/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake",
+		"/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/local/opt/qt/lib/cmake/Qt6/Qt6Dependencies.cmake",
+		"/usr/local/share/cmake/Modules/FindGTest.cmake",
+		"/usr/local/share/cmake/Modules/GoogleTest.cmake",
+		"/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/local/share/cmake/Modules/FindPackageMessage.cmake",
+		"/usr/local/lib/cmake/GTest/GTestConfigVersion.cmake",
+		"/usr/local/lib/cmake/GTest/GTestConfig.cmake",
+		"/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/local/share/cmake/Modules/FindThreads.cmake",
+		"/usr/local/share/cmake/Modules/CheckLibraryExists.cmake",
+		"/usr/local/share/cmake/Modules/CheckIncludeFileCXX.cmake",
+		"/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake",
+		"/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/local/share/cmake/Modules/FindPackageMessage.cmake",
+		"/usr/local/lib/cmake/GTest/GTestTargets.cmake",
+		"/usr/local/lib/cmake/GTest/GTestTargets-release.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/Users/admin/Downloads/education/Paint",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "test_paint_autogen/timestamp",
+	"HEADERS" : [],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/usr/local/include",
+		"/usr/local/opt/qt/lib/QtCore.framework/Headers",
+		"/usr/local/opt/qt/lib/QtCore.framework",
+		"/usr/local/opt/qt/share/qt/mkspecs/macx-clang",
+		"/usr/local/opt/qt/include",
+		"/usr/local/opt/qt/lib/QtGui.framework/Headers",
+		"/usr/local/opt/qt/lib/QtGui.framework",
+		"/usr/local/opt/qt/lib/QtWidgets.framework/Headers",
+		"/usr/local/opt/qt/lib/QtWidgets.framework",
+		"/usr/local/Cellar/llvm/21.1.1/include/c++/v1",
+		"/usr/local/Cellar/llvm/21.1.1/lib/clang/21/include",
+		"/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/local/Cellar/llvm/21.1.1/bin/clang++",
+		"-std=gnu++17",
+		"-w",
+		"-dM",
+		"-E",
+		"/usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/Users/admin/Downloads/education/Paint/build/tests/test_paint_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/mocs_compilation.cpp"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 2,
+	"PARSE_CACHE_FILE" : "/Users/admin/Downloads/education/Paint/build/tests/CMakeFiles/test_paint_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/local/opt/qt/share/qt/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/local/opt/qt/share/qt/libexec/uic",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 9,
+	"SETTINGS_FILE" : "/Users/admin/Downloads/education/Paint/build/tests/CMakeFiles/test_paint_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/Users/admin/Downloads/education/Paint/tests/test_canvas.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/admin/Downloads/education/Paint/tests/test_createfilewindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/admin/Downloads/education/Paint/tests/test_main.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : 
+	[
+		"/Users/admin/Downloads/education/Paint/build/tests/paint_lib_autogen/mocs_compilation.cpp"
+	],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

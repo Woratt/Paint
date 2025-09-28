@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+14c5a935d53acf6f10c16a095897ccc6 CMakeFiles/format
+c651359415e0055f2eb099012a17dc39 CMakeFiles/paint_autogen
+def55732b24c156d7e1aa872e52003e1 CMakeFiles/tidy
+d49a4ae46faf8e9d58f86416b6e36c9e paint_autogen/timestamp
+c7fcc7541d87acf4883e539a30380ec2 tests/CMakeFiles/coverage
+37e09676dd2e83a4bc401c8cab8127a6 tests/CMakeFiles/paint_lib_autogen
+37e09676dd2e83a4bc401c8cab8127a6 tests/CMakeFiles/test_paint_autogen
+454bf43f1645af1c9685bc3ae641f10e tests/paint_lib_autogen/timestamp
+4b2602819eb85135dabb39ff5ff431ee tests/test_paint_autogen/timestamp
