@@ -20,6 +20,9 @@ jobs:
         run: |
           brew install cmake qt googletest lcov llvm
 
+      - name: Add LLVM to PATH
+        run: echo "${HOMEBREW_PREFIX}/opt/llvm/bin" >> $GITHUB_PATH
+
       # Конфігурація CMake
       - name: Configure CMake
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCODE_COVERAGE=ON
