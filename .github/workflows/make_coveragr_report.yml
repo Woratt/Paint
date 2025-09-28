@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   coverage:
-    run_on: macos-latest
+    runs-on: macos-latest
     steps:
       - name: Get repository code 
         uses: actions/checkout@v3
