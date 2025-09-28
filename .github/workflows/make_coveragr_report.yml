@@ -38,6 +38,7 @@ jobs:
           make coverage
           # Створюємо кореневу папку для GitHub Pages
           mkdir -p coverage_report_root
+          ls 
           cp -r tests/coverage_report/* coverage_report_root/
 
       # Публікація на GitHub Pages
