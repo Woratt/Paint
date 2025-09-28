@@ -39,7 +39,11 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake build-essential googletest
+          sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake ninja-build build-essential libgtest-dev
+          # зібрати gtest з сирців
+          cd /usr/src/googletest
+          sudo cmake -B build
+          sudo cmake --build build --target install
 
       - name: Configure CMake
         run: |
