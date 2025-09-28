@@ -9,18 +9,21 @@
 #undef private
 #undef protected
 
-class QtAppFixture : public ::testing::Test {
-    protected:
-        static void SetUpTestSuite() {
-            static int argc = 1;
-            static char* argv[] = {(char*)"test", nullptr};
-            if (qApp == nullptr) {
-                new QApplication(argc, argv);
-            }
+class QtAppFixture : public ::testing::Test
+{
+  protected:
+    static void SetUpTestSuite()
+    {
+        static int argc = 1;
+        static char *argv[] = {(char *)"test", nullptr};
+        if (qApp == nullptr)
+        {
+            new QApplication(argc, argv);
         }
-    };
+    }
+};
 
-struct CanvasFixture :  public QtAppFixture
+struct CanvasFixture : public QtAppFixture
 {
     QImage *image;
     Canvas *canvas;
@@ -32,7 +35,8 @@ struct CanvasFixture :  public QtAppFixture
         canvas = new Canvas(*image);
     }
 
-    void TearDown() override {
+    void TearDown() override
+    {
         delete canvas;
         delete image;
     }
@@ -384,6 +388,7 @@ TEST_F(CanvasFixture, EmptyImage)
     EXPECT_EQ(canvas->offset.y(), (canvas->height() - 0) / 2);
 }
 
-TEST_F(CanvasFixture, takeImageWithHistory){
-    //canvas->history.push_back(image);
+TEST_F(CanvasFixture, takeImageWithHistory)
+{
+    // canvas->history.push_back(image);
 }
