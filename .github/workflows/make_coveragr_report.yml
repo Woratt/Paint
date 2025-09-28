@@ -25,12 +25,16 @@ jobs:
 
       - name: Build project
         run: |
-          cmake --build build --target coverage
+          cmake --build build
 
       - name: Make coverage report
         run: |
           cd build
           make coverage
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/tests/coverage_report
 
       - name: Deploy coverage to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
