@@ -1,5 +1,8 @@
 name: Coverage report
 
+permissions:
+  contents: write
+
 on: workflow_dispatch
 
 jobs:
@@ -23,7 +26,7 @@ jobs:
           cmake --build .
 
       - name: Make coverage report
-        run:
+        run: |
           cd build
           make coverage
 
