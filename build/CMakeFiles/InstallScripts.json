@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/admin/Downloads/education/Paint/build/cmake_install.cmake",
-		"/Users/admin/Downloads/education/Paint/build/tests/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
