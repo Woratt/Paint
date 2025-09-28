@@ -24,6 +24,7 @@ jobs:
 
       - name: Make coverage report
         run:
+          cd build
           make coverage
 
       - name: Deploy coverage to GitHub Pages
