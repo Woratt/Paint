@@ -9,7 +9,18 @@
 #undef private
 #undef protected
 
-struct CanvasFixture : public testing::Test
+class QtAppFixture : public ::testing::Test {
+    protected:
+        static void SetUpTestSuite() {
+            static int argc = 1;
+            static char* argv[] = {(char*)"test", nullptr};
+            if (qApp == nullptr) {
+                new QApplication(argc, argv);
+            }
+        }
+    };
+
+struct CanvasFixture :  public QtAppFixture
 {
     QImage *image;
     Canvas *canvas;
@@ -19,6 +30,11 @@ struct CanvasFixture : public testing::Test
         image = new QImage(200, 200, QImage::Format_RGB32);
         image->fill(Qt::white);
         canvas = new Canvas(*image);
+    }
+
+    void TearDown() override {
+        delete canvas;
+        delete image;
     }
 };
 
@@ -366,4 +382,8 @@ TEST_F(CanvasFixture, EmptyImage)
 
     EXPECT_EQ(canvas->offset.x(), (canvas->width() - 0) / 2);
     EXPECT_EQ(canvas->offset.y(), (canvas->height() - 0) / 2);
+}
+
+TEST_F(CanvasFixture, takeImageWithHistory){
+    //canvas->history.push_back(image);
 }

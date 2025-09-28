@@ -1,22 +1,23 @@
 cmake_minimum_required(VERSION 3.19)
-project(tests LANGUAGES CXX)
+project(paint_tests LANGUAGES CXX)
+
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++")
 
-set(gtest_disable_pthreads ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-include(FetchContent)
-FetchContent_Declare(
-    googletest
-    GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG v1.14.0
-)
-FetchContent_MakeAvailable(googletest)
-
+# Qt
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
-enable_testing()
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+find_package(GTest REQUIRED)
+
+# 1. Основна бібліотека - КОМПІЛЮЄМО З COVERAGE
 add_library(paint_lib
     ../canvas.cpp
     ../createfilewindow.cpp
@@ -30,37 +31,35 @@ add_library(paint_lib
     ../toolbar.cpp
 )
 
+# ✅ Coverage флаги для ВАШОЇ бібліотеки
+target_compile_options(paint_lib PRIVATE -fprofile-instr-generate -fcoverage-mapping)
+target_link_libraries(paint_lib PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets)
+
+# 2. Тестовий виконуваний файл - БЕЗ coverage флагів
 add_executable(test_paint 
     test_main.cpp
     test_canvas.cpp
-    #test_createfilewindow.cpp
-    #test_filesmodel.cpp
-    #test_filesystem.cpp
-    #test_homepage.cpp
-    #test_menubar.cpp
-    #test_numberline.cpp
-    #test_paintwindow.cpp
-    #test_recourcepath.cpp
-    #test_toolbar.cpp
 )
 
-target_link_libraries(paint_lib
+# ❌ НЕ додаємо coverage флаги для тестів
+target_link_libraries(test_paint 
+    PRIVATE paint_lib           # ← Ваша бібліотека з coverage
+    PRIVATE GTest::gtest_main       # ← GTest
     PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets
 )
 
-target_link_libraries(test_paint PRIVATE
-    gtest_main
-    paint_lib
-)
-
-target_link_libraries(test_paint
-    PRIVATE paint_lib GTest::gtest_main Qt6::Core Qt6::Gui Qt6::Widgets
-)
-
-add_custom_target(run_tests
-    COMMAND ./test_paint
+# 3. Ціль для coverage
+add_custom_target(coverage
+    COMMAND rm -f default.profraw default.profdata
+    COMMAND echo "Running tests..."
+    COMMAND LLVM_PROFILE_FILE=default.profraw $<TARGET_FILE:test_paint>
+    COMMAND echo "Merging profile data..."
+    COMMAND llvm-profdata merge -sparse default.profraw -o default.profdata
+    COMMAND echo "Generating text report..."
+    COMMAND llvm-cov report $<TARGET_FILE:test_paint> -instr-profile=default.profdata -ignore-filename-regex=".*googletest.*|.*test_.*|.*moc_.*|.*qrc_.*|.*CMakeFiles.*"
+    COMMAND echo "Generating HTML report..."
+    COMMAND llvm-cov show $<TARGET_FILE:test_paint> -instr-profile=default.profdata -ignore-filename-regex=".*googletest.*|.*test_.*|.*moc_.*|.*qrc_.*|.*CMakeFiles.*" --format=html -output-dir=coverage_report
+    COMMAND echo "✅ Coverage report: file://${CMAKE_BINARY_DIR}/coverage_report/index.html"
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     DEPENDS test_paint
-    COMMENT "Running tests..."
 )
-
-add_test(NAME PaintTests COMMAND test_paint)

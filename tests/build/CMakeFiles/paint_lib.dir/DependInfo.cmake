@@ -16,7 +16,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/admin/Downloads/education/Paint/menubar.cpp" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/menubar.cpp.o" "gcc" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/menubar.cpp.o.d"
   "/Users/admin/Downloads/education/Paint/numberline.cpp" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/numberline.cpp.o" "gcc" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/numberline.cpp.o.d"
   "/Users/admin/Downloads/education/Paint/paintwindow.cpp" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/paintwindow.cpp.o" "gcc" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/paintwindow.cpp.o.d"
+  "/Users/admin/Downloads/education/Paint/resourcepath.cpp" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/resourcepath.cpp.o" "gcc" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/resourcepath.cpp.o.d"
   "/Users/admin/Downloads/education/Paint/toolbar.cpp" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/toolbar.cpp.o" "gcc" "CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/toolbar.cpp.o.d"
+  "/Users/admin/Downloads/education/Paint/tests/build/paint_lib_autogen/mocs_compilation.cpp" "CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

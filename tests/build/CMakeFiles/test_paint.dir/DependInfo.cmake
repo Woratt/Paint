@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/admin/Downloads/education/Paint/tests/test_canvas.cpp" "CMakeFiles/test_paint.dir/test_canvas.cpp.o" "gcc" "CMakeFiles/test_paint.dir/test_canvas.cpp.o.d"
   "/Users/admin/Downloads/education/Paint/tests/test_main.cpp" "CMakeFiles/test_paint.dir/test_main.cpp.o" "gcc" "CMakeFiles/test_paint.dir/test_main.cpp.o.d"
+  "/Users/admin/Downloads/education/Paint/tests/build/test_paint_autogen/mocs_compilation.cpp" "CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

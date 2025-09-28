@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies 
         run: |
           brew update
-          brew install cmake qt
+          brew install cmake qt googletests
 
       - name: Configure CMake
         run: |
@@ -39,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake build-essential
+          sudo apt-get install -y qt6-base-dev qt6-tools-dev cmake build-essential googletests
 
       - name: Configure CMake
         run: |

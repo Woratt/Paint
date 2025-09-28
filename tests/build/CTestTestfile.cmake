@@ -4,4 +4,5 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs("_deps/googletest-build")
+add_test([=[PaintTests]=] "/Users/admin/Downloads/education/Paint/tests/build/test_paint")
+set_tests_properties([=[PaintTests]=] PROPERTIES  _BACKTRACE_TRIPLES "/Users/admin/Downloads/education/Paint/tests/CMakeLists.txt;51;add_test;/Users/admin/Downloads/education/Paint/tests/CMakeLists.txt;0;")

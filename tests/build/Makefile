@@ -95,51 +95,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Downloads/education/Paint/tests/build/CMakeFiles /Users/admin/Downloads/education/Paint/tests/build//CMakeFiles/progress.marks
@@ -172,19 +127,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named paint_lib
-
-# Build rule for target.
-paint_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paint_lib
-.PHONY : paint_lib
-
-# fast build rule for target.
-paint_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/build
-.PHONY : paint_lib/fast
-
-#=============================================================================
 # Target rules for targets named test_paint
 
 # Build rule for target.
@@ -198,69 +140,82 @@ test_paint/fast:
 .PHONY : test_paint/fast
 
 #=============================================================================
-# Target rules for targets named run_tests
+# Target rules for targets named paint_lib
 
 # Build rule for target.
-run_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_tests
-.PHONY : run_tests
+paint_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paint_lib
+.PHONY : paint_lib
 
 # fast build rule for target.
-run_tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-.PHONY : run_tests/fast
+paint_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/build
+.PHONY : paint_lib/fast
 
 #=============================================================================
-# Target rules for targets named gmock
+# Target rules for targets named coverage
 
 # Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
+coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 coverage
+.PHONY : coverage
 
 # fast build rule for target.
-gmock/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
+coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/build
+.PHONY : coverage/fast
 
 #=============================================================================
-# Target rules for targets named gmock_main
+# Target rules for targets named test_paint_autogen_timestamp_deps
 
 # Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
+test_paint_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_paint_autogen_timestamp_deps
+.PHONY : test_paint_autogen_timestamp_deps
 
 # fast build rule for target.
-gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
+test_paint_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_paint_autogen_timestamp_deps.dir/build.make CMakeFiles/test_paint_autogen_timestamp_deps.dir/build
+.PHONY : test_paint_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named gtest
+# Target rules for targets named test_paint_autogen
 
 # Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
+test_paint_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_paint_autogen
+.PHONY : test_paint_autogen
 
 # fast build rule for target.
-gtest/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
+test_paint_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_paint_autogen.dir/build.make CMakeFiles/test_paint_autogen.dir/build
+.PHONY : test_paint_autogen/fast
 
 #=============================================================================
-# Target rules for targets named gtest_main
+# Target rules for targets named paint_lib_autogen_timestamp_deps
 
 # Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
+paint_lib_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paint_lib_autogen_timestamp_deps
+.PHONY : paint_lib_autogen_timestamp_deps
 
 # fast build rule for target.
-gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
+paint_lib_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build.make CMakeFiles/paint_lib_autogen_timestamp_deps.dir/build
+.PHONY : paint_lib_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named paint_lib_autogen
+
+# Build rule for target.
+paint_lib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paint_lib_autogen
+.PHONY : paint_lib_autogen
+
+# fast build rule for target.
+paint_lib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib_autogen.dir/build.make CMakeFiles/paint_lib_autogen.dir/build
+.PHONY : paint_lib_autogen/fast
 
 Users/admin/Downloads/education/Paint/canvas.o: Users/admin/Downloads/education/Paint/canvas.cpp.o
 .PHONY : Users/admin/Downloads/education/Paint/canvas.o
@@ -454,6 +409,30 @@ Users/admin/Downloads/education/Paint/paintwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/paintwindow.cpp.s
 .PHONY : Users/admin/Downloads/education/Paint/paintwindow.cpp.s
 
+Users/admin/Downloads/education/Paint/resourcepath.o: Users/admin/Downloads/education/Paint/resourcepath.cpp.o
+.PHONY : Users/admin/Downloads/education/Paint/resourcepath.o
+
+# target to build an object file
+Users/admin/Downloads/education/Paint/resourcepath.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/resourcepath.cpp.o
+.PHONY : Users/admin/Downloads/education/Paint/resourcepath.cpp.o
+
+Users/admin/Downloads/education/Paint/resourcepath.i: Users/admin/Downloads/education/Paint/resourcepath.cpp.i
+.PHONY : Users/admin/Downloads/education/Paint/resourcepath.i
+
+# target to preprocess a source file
+Users/admin/Downloads/education/Paint/resourcepath.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/resourcepath.cpp.i
+.PHONY : Users/admin/Downloads/education/Paint/resourcepath.cpp.i
+
+Users/admin/Downloads/education/Paint/resourcepath.s: Users/admin/Downloads/education/Paint/resourcepath.cpp.s
+.PHONY : Users/admin/Downloads/education/Paint/resourcepath.s
+
+# target to generate assembly for a file
+Users/admin/Downloads/education/Paint/resourcepath.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/resourcepath.cpp.s
+.PHONY : Users/admin/Downloads/education/Paint/resourcepath.cpp.s
+
 Users/admin/Downloads/education/Paint/toolbar.o: Users/admin/Downloads/education/Paint/toolbar.cpp.o
 .PHONY : Users/admin/Downloads/education/Paint/toolbar.o
 
@@ -477,6 +456,30 @@ Users/admin/Downloads/education/Paint/toolbar.s: Users/admin/Downloads/education
 Users/admin/Downloads/education/Paint/toolbar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/Users/admin/Downloads/education/Paint/toolbar.cpp.s
 .PHONY : Users/admin/Downloads/education/Paint/toolbar.cpp.s
+
+paint_lib_autogen/mocs_compilation.o: paint_lib_autogen/mocs_compilation.cpp.o
+.PHONY : paint_lib_autogen/mocs_compilation.o
+
+# target to build an object file
+paint_lib_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.o
+.PHONY : paint_lib_autogen/mocs_compilation.cpp.o
+
+paint_lib_autogen/mocs_compilation.i: paint_lib_autogen/mocs_compilation.cpp.i
+.PHONY : paint_lib_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+paint_lib_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.i
+.PHONY : paint_lib_autogen/mocs_compilation.cpp.i
+
+paint_lib_autogen/mocs_compilation.s: paint_lib_autogen/mocs_compilation.cpp.s
+.PHONY : paint_lib_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+paint_lib_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paint_lib.dir/build.make CMakeFiles/paint_lib.dir/paint_lib_autogen/mocs_compilation.cpp.s
+.PHONY : paint_lib_autogen/mocs_compilation.cpp.s
 
 test_canvas.o: test_canvas.cpp.o
 .PHONY : test_canvas.o
@@ -526,6 +529,30 @@ test_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_paint.dir/build.make CMakeFiles/test_paint.dir/test_main.cpp.s
 .PHONY : test_main.cpp.s
 
+test_paint_autogen/mocs_compilation.o: test_paint_autogen/mocs_compilation.cpp.o
+.PHONY : test_paint_autogen/mocs_compilation.o
+
+# target to build an object file
+test_paint_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_paint.dir/build.make CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o
+.PHONY : test_paint_autogen/mocs_compilation.cpp.o
+
+test_paint_autogen/mocs_compilation.i: test_paint_autogen/mocs_compilation.cpp.i
+.PHONY : test_paint_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_paint_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_paint.dir/build.make CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.i
+.PHONY : test_paint_autogen/mocs_compilation.cpp.i
+
+test_paint_autogen/mocs_compilation.s: test_paint_autogen/mocs_compilation.cpp.s
+.PHONY : test_paint_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_paint_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_paint.dir/build.make CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.s
+.PHONY : test_paint_autogen/mocs_compilation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -533,17 +560,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... run_tests"
-	@echo "... gmock"
-	@echo "... gmock_main"
-	@echo "... gtest"
-	@echo "... gtest_main"
+	@echo "... coverage"
+	@echo "... paint_lib_autogen"
+	@echo "... paint_lib_autogen_timestamp_deps"
+	@echo "... test_paint_autogen"
+	@echo "... test_paint_autogen_timestamp_deps"
 	@echo "... paint_lib"
 	@echo "... test_paint"
 	@echo "... Users/admin/Downloads/education/Paint/canvas.o"
@@ -570,15 +593,24 @@ help:
 	@echo "... Users/admin/Downloads/education/Paint/paintwindow.o"
 	@echo "... Users/admin/Downloads/education/Paint/paintwindow.i"
 	@echo "... Users/admin/Downloads/education/Paint/paintwindow.s"
+	@echo "... Users/admin/Downloads/education/Paint/resourcepath.o"
+	@echo "... Users/admin/Downloads/education/Paint/resourcepath.i"
+	@echo "... Users/admin/Downloads/education/Paint/resourcepath.s"
 	@echo "... Users/admin/Downloads/education/Paint/toolbar.o"
 	@echo "... Users/admin/Downloads/education/Paint/toolbar.i"
 	@echo "... Users/admin/Downloads/education/Paint/toolbar.s"
+	@echo "... paint_lib_autogen/mocs_compilation.o"
+	@echo "... paint_lib_autogen/mocs_compilation.i"
+	@echo "... paint_lib_autogen/mocs_compilation.s"
 	@echo "... test_canvas.o"
 	@echo "... test_canvas.i"
 	@echo "... test_canvas.s"
 	@echo "... test_main.o"
 	@echo "... test_main.i"
 	@echo "... test_main.s"
+	@echo "... test_paint_autogen/mocs_compilation.o"
+	@echo "... test_paint_autogen/mocs_compilation.i"
+	@echo "... test_paint_autogen/mocs_compilation.s"
 .PHONY : help
 
 

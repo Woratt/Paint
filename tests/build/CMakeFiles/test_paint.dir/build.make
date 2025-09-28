@@ -72,55 +72,69 @@ include CMakeFiles/test_paint.dir/flags.make
 CMakeFiles/test_paint.dir/codegen:
 .PHONY : CMakeFiles/test_paint.dir/codegen
 
+CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o: CMakeFiles/test_paint.dir/flags.make
+CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o: test_paint_autogen/mocs_compilation.cpp
+CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o: CMakeFiles/test_paint.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o"
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o -MF CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o -c /Users/admin/Downloads/education/Paint/tests/build/test_paint_autogen/mocs_compilation.cpp
+
+CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.i"
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/tests/build/test_paint_autogen/mocs_compilation.cpp > CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.s"
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/tests/build/test_paint_autogen/mocs_compilation.cpp -o CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/test_paint.dir/test_main.cpp.o: CMakeFiles/test_paint.dir/flags.make
 CMakeFiles/test_paint.dir/test_main.cpp.o: /Users/admin/Downloads/education/Paint/tests/test_main.cpp
 CMakeFiles/test_paint.dir/test_main.cpp.o: CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_paint.dir/test_main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_paint.dir/test_main.cpp.o -MF CMakeFiles/test_paint.dir/test_main.cpp.o.d -o CMakeFiles/test_paint.dir/test_main.cpp.o -c /Users/admin/Downloads/education/Paint/tests/test_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_paint.dir/test_main.cpp.o"
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_paint.dir/test_main.cpp.o -MF CMakeFiles/test_paint.dir/test_main.cpp.o.d -o CMakeFiles/test_paint.dir/test_main.cpp.o -c /Users/admin/Downloads/education/Paint/tests/test_main.cpp
 
 CMakeFiles/test_paint.dir/test_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/test_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/tests/test_main.cpp > CMakeFiles/test_paint.dir/test_main.cpp.i
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/tests/test_main.cpp > CMakeFiles/test_paint.dir/test_main.cpp.i
 
 CMakeFiles/test_paint.dir/test_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/test_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/tests/test_main.cpp -o CMakeFiles/test_paint.dir/test_main.cpp.s
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/tests/test_main.cpp -o CMakeFiles/test_paint.dir/test_main.cpp.s
 
 CMakeFiles/test_paint.dir/test_canvas.cpp.o: CMakeFiles/test_paint.dir/flags.make
 CMakeFiles/test_paint.dir/test_canvas.cpp.o: /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp
 CMakeFiles/test_paint.dir/test_canvas.cpp.o: CMakeFiles/test_paint.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_paint.dir/test_canvas.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_paint.dir/test_canvas.cpp.o -MF CMakeFiles/test_paint.dir/test_canvas.cpp.o.d -o CMakeFiles/test_paint.dir/test_canvas.cpp.o -c /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Downloads/education/Paint/tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_paint.dir/test_canvas.cpp.o"
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_paint.dir/test_canvas.cpp.o -MF CMakeFiles/test_paint.dir/test_canvas.cpp.o.d -o CMakeFiles/test_paint.dir/test_canvas.cpp.o -c /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp
 
 CMakeFiles/test_paint.dir/test_canvas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_paint.dir/test_canvas.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp > CMakeFiles/test_paint.dir/test_canvas.cpp.i
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp > CMakeFiles/test_paint.dir/test_canvas.cpp.i
 
 CMakeFiles/test_paint.dir/test_canvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_paint.dir/test_canvas.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp -o CMakeFiles/test_paint.dir/test_canvas.cpp.s
+	/usr/local/Cellar/llvm/21.1.1/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Downloads/education/Paint/tests/test_canvas.cpp -o CMakeFiles/test_paint.dir/test_canvas.cpp.s
 
 # Object files for target test_paint
 test_paint_OBJECTS = \
+"CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/test_paint.dir/test_main.cpp.o" \
 "CMakeFiles/test_paint.dir/test_canvas.cpp.o"
 
 # External object files for target test_paint
 test_paint_EXTERNAL_OBJECTS =
 
+test_paint: CMakeFiles/test_paint.dir/test_paint_autogen/mocs_compilation.cpp.o
 test_paint: CMakeFiles/test_paint.dir/test_main.cpp.o
 test_paint: CMakeFiles/test_paint.dir/test_canvas.cpp.o
 test_paint: CMakeFiles/test_paint.dir/build.make
-test_paint: lib/libgtest_main.a
 test_paint: libpaint_lib.a
-test_paint: libpaint_lib.a
-test_paint: lib/libgtest_main.a
+test_paint: /usr/local/lib/libgtest_main.a
 test_paint: /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets
-test_paint: lib/libgtest.a
 test_paint: /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui
 test_paint: /usr/local/opt/qt/lib/QtCore.framework/Versions/A/QtCore
+test_paint: /usr/local/lib/libgtest.a
 test_paint: CMakeFiles/test_paint.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Downloads/education/Paint/tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test_paint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Downloads/education/Paint/tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable test_paint"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_paint.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
