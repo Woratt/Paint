@@ -1,40 +1,48 @@
-name: Coverage report
+name: Coverage Report
 
 permissions:
   contents: write
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   coverage:
     runs-on: macos-latest
+
     steps:
-      - name: Get repository code 
+      # Клон репозиторію
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies 
+      # Встановлення залежностей
+      - name: Install dependencies
         run: |
-          brew install cmake qt googletest llvm
+          brew install cmake qt googletest lcov llvm
 
-      - name: Add LLVM to PATH
-        run: echo "${HOMEBREW_PREFIX}/opt/llvm/bin" >> $GITHUB_PATH
+      # Конфігурація CMake
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCODE_COVERAGE=ON
 
-      - name: Cofigure Cmake
-        run: |
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
-
+      # Збірка проекту
       - name: Build project
-        run: |
-          cmake --build build
+        run: cmake --build build
 
-      - name: Make coverage report
+      # Генерація coverage
+      - name: Generate coverage report
         run: |
           cd build
           make coverage
+          # Створюємо кореневу папку для GitHub Pages
+          mkdir -p coverage_report_root
+          cp -r tests/coverage_report/* coverage_report_root/
 
+      # Публікація на GitHub Pages
       - name: Deploy coverage to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/coverage_report
+          publish_branch: gh-pages
+          publish_dir: build/coverage_report_root
+          allow_empty_commit: true
 
