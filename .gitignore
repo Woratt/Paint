@@ -1,1 +1,43 @@
+# --- Qt / C++ build ---
+build*/
+cmake-build*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
 
+tests*/
+build*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+# --- Qt Creator ---
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+
+# --- CMake ---
+CMakeFiles/
+CMakeCache.txt
+Makefile
+install_manifest.txt
+compile_commands.json
+Testing/
+CTestTestfile.cmake
+_deps/
+
+# --- Misc ---
+*.qrc.dep
+*.autosave
+*.swp
+*.DS_Store
