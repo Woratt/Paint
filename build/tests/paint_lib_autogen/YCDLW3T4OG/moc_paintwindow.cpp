@@ -13,7 +13,6 @@
 
 #include <memory>
 
-
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'paintwindow.h' doesn't include <QObject>."
@@ -30,35 +29,29 @@
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 QT_WARNING_DISABLE_GCC("-Wuseless-cast")
-namespace {
-struct qt_meta_tag_ZN11PaintWindowE_t {};
+namespace
+{
+struct qt_meta_tag_ZN11PaintWindowE_t
+{
+};
 } // unnamed namespace
 
 template <> constexpr inline auto PaintWindow::qt_create_metaobjectdata<qt_meta_tag_ZN11PaintWindowE_t>()
 {
     namespace QMC = QtMocConstants;
-    QtMocHelpers::StringRefStorage qt_stringData {
-        "PaintWindow"
-    };
+    QtMocHelpers::StringRefStorage qt_stringData{"PaintWindow"};
 
-    QtMocHelpers::UintData qt_methods {
-    };
-    QtMocHelpers::UintData qt_properties {
-    };
-    QtMocHelpers::UintData qt_enums {
-    };
-    return QtMocHelpers::metaObjectData<PaintWindow, qt_meta_tag_ZN11PaintWindowE_t>(QMC::MetaObjectFlag{}, qt_stringData,
-            qt_methods, qt_properties, qt_enums);
+    QtMocHelpers::UintData qt_methods{};
+    QtMocHelpers::UintData qt_properties{};
+    QtMocHelpers::UintData qt_enums{};
+    return QtMocHelpers::metaObjectData<PaintWindow, qt_meta_tag_ZN11PaintWindowE_t>(
+        QMC::MetaObjectFlag{}, qt_stringData, qt_methods, qt_properties, qt_enums);
 }
-Q_CONSTINIT const QMetaObject PaintWindow::staticMetaObject = { {
-    QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN11PaintWindowE_t>.stringdata,
-    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN11PaintWindowE_t>.data,
-    qt_static_metacall,
-    nullptr,
-    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN11PaintWindowE_t>.metaTypes,
-    nullptr
-} };
+Q_CONSTINIT const QMetaObject PaintWindow::staticMetaObject = {
+    {QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
+     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN11PaintWindowE_t>.stringdata,
+     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN11PaintWindowE_t>.data, qt_static_metacall, nullptr,
+     qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN11PaintWindowE_t>.metaTypes, nullptr}};
 
 void PaintWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
@@ -76,9 +69,10 @@ const QMetaObject *PaintWindow::metaObject() const
 
 void *PaintWindow::qt_metacast(const char *_clname)
 {
-    if (!_clname) return nullptr;
+    if (!_clname)
+        return nullptr;
     if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN11PaintWindowE_t>.strings))
-        return static_cast<void*>(this);
+        return static_cast<void *>(this);
     return QMainWindow::qt_metacast(_clname);
 }
 
