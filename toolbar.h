@@ -8,10 +8,12 @@
 #include <QPushButton>
 #include <QSpinBox>
 #include <QToolBar>
+#include <QWidgetAction>
 
 class PaintWindow;
 class FileSystem;
 class Canvas;
+class MenuPalette;
 
 enum class Tool
 {

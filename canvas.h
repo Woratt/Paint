@@ -54,6 +54,7 @@ class Canvas : public QWidget
     void setTool(Tool);
     void changedWidth(int);
     void takeImageWithHistory(bool);
+    void setColorPen(QColor);
 };
 
 #endif

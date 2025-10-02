@@ -3,6 +3,7 @@
 #include "filesystem.h"
 #include "paintwindow.h"
 #include "resourcepath.h"
+#include "menupalette.h"
 
 ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 {
@@ -44,6 +45,18 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
     qDebug() << resourcePath << "\n";
 
     QPushButton *paletteBt = createButton(resourcePath + "icons/palette.png");
+
+    //QMenu* menu = new QMenu(this);
+    //GradientPalette* gradientPalette = new GradientPalette(menu);
+    //QWidgetAction *gradientAction = new QWidgetAction(menu);
+    //gradientAction->setDefaultWidget(gradientPalette);
+    //menu->addAction(gradientAction);
+
+    MenuPalette* menuPalette = new MenuPalette(this);
+
+    paletteBt->setMenu(menuPalette);
+
+
     QPushButton *bucketBt = createButton(resourcePath + "icons/bucket.png");
     QPushButton *paintBt = createButton(resourcePath + "icons/paint.png");
     QPushButton *lineBt = createButton(resourcePath + "icons/line.png");
@@ -102,6 +115,8 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
                 paintWindow->takeCanvas()->reduceZoom();
                 paintWindow->takeCanvas()->changeOffset(false, QPointF(0, 0));
             });
+
+    connect(menuPalette, &MenuPalette::colorPicked, paintWindow->takeCanvas(), &Canvas::setColorPen);
 }
 
 auto ToolBar::createButton(const QString &path) -> QPushButton *
