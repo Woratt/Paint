@@ -1,9 +1,9 @@
 #include "toolbar.h"
 #include "canvas.h"
 #include "filesystem.h"
+#include "menupalette.h"
 #include "paintwindow.h"
 #include "resourcepath.h"
-#include "menupalette.h"
 
 ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 {
@@ -46,16 +46,15 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 
     QPushButton *paletteBt = createButton(resourcePath + "icons/palette.png");
 
-    //QMenu* menu = new QMenu(this);
-    //GradientPalette* gradientPalette = new GradientPalette(menu);
-    //QWidgetAction *gradientAction = new QWidgetAction(menu);
-    //gradientAction->setDefaultWidget(gradientPalette);
-    //menu->addAction(gradientAction);
+    // QMenu* menu = new QMenu(this);
+    // GradientPalette* gradientPalette = new GradientPalette(menu);
+    // QWidgetAction *gradientAction = new QWidgetAction(menu);
+    // gradientAction->setDefaultWidget(gradientPalette);
+    // menu->addAction(gradientAction);
 
-    MenuPalette* menuPalette = new MenuPalette(this);
+    MenuPalette *menuPalette = new MenuPalette(this);
 
     paletteBt->setMenu(menuPalette);
-
 
     QPushButton *bucketBt = createButton(resourcePath + "icons/bucket.png");
     QPushButton *paintBt = createButton(resourcePath + "icons/paint.png");
