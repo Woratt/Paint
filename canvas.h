@@ -27,8 +27,8 @@ class Canvas : public QWidget
 
   signals:
     void updateZoom(double zoom);
-    void updateCursor(const QPoint&);
-    void updateColor(const QColor&);
+    void updateCursor(const QPoint &);
+    void updateColor(const QColor &);
 
   private:
     static QVector<QImage> history;

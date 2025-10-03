@@ -1,7 +1,7 @@
 #include "canvas.h"
+#include "infobar.h"
 #include "menupalette.h"
 #include "toolbar.h"
-#include "infobar.h"
 
 QVector<QImage> Canvas::history;
 
@@ -404,11 +404,14 @@ void Canvas::changeOffset(bool isFromButton, const QPointF &point)
     {
         // Для зменшення або zoom <= 1 - центруємо
 =======
-    if (isFromButton && zoom > 1) {
+    if (isFromButton && zoom > 1)
+    {
         QPointF imgCoordBefore = (point - offset) / zoom;
         QSize scaledSize = pixMap.size() * zoom;
         offset = point - imgCoordBefore * zoom;
-    } else {
+    }
+    else
+    {
 >>>>>>> f112455 (add inform bar)
         QSize scaledSize = pixMap.size() * zoom;
         offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
@@ -423,7 +426,8 @@ void Canvas::changedWidth(int width) { pen.setWidth(width); }
 <<<<<<< HEAD
 void Canvas::setColorPen(QColor color) { pen.setColor(color); }
 =======
-void Canvas::setColorPen(QColor color){
+void Canvas::setColorPen(QColor color)
+{
     pen.setColor(color);
 
     emit updateColor(color);

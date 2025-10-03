@@ -1,9 +1,9 @@
 #include "paintwindow.h"
 #include "canvas.h"
 #include "createfilewindow.h"
+#include "infobar.h"
 #include "menubar.h"
 #include "toolbar.h"
-#include "infobar.h"
 
 PaintWindow::PaintWindow(const QImage &image, const QString &name, QWidget *parent)
     : QMainWindow(parent), toolBar(new ToolBar(this)), menu(new MenuBar(name, this)), canvas(new Canvas(image))
@@ -26,11 +26,10 @@ PaintWindow::PaintWindow(const QImage &image, const QString &name, QWidget *pare
     scrollArea->setWidget(canvas);
     scrollArea->setAlignment(Qt::AlignCenter);
 
-
-    InfoBar* bar = new InfoBar();
+    InfoBar *bar = new InfoBar();
     bar->setImageSize(image.size());
-    //setStatusBar(bar);
-    QWidget* widgetBar = new QWidget(this);
+    // setStatusBar(bar);
+    QWidget *widgetBar = new QWidget(this);
 
     VCentralLayout->addWidget(scrollArea, 10);
     VCentralLayout->addWidget(bar, 1);

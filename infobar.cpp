@@ -1,6 +1,7 @@
 #include "infobar.h"
 
-InfoBar::InfoBar(QWidget* parent) : QStatusBar(parent) {
+InfoBar::InfoBar(QWidget *parent) : QStatusBar(parent)
+{
 
     QFont font = this->font();
     font.setPointSize(16);
@@ -32,37 +33,41 @@ InfoBar::InfoBar(QWidget* parent) : QStatusBar(parent) {
     textColorLabel->setFont(font);
 }
 
-void InfoBar::updateCursor(const QPoint& point){
-    if(point.x() < 1 || point.y() < 1 || point.x() > imgSize.width() - 2 || point.y() > imgSize.height() - 2){
+void InfoBar::updateCursor(const QPoint &point)
+{
+    if (point.x() < 1 || point.y() < 1 || point.x() > imgSize.width() - 2 || point.y() > imgSize.height() - 2)
+    {
         cursorLabel->setText(" ");
-    }else{
+    }
+    else
+    {
         cursorLabel->setText("X: " + QString::number(point.x()) + " Y: " + QString::number(point.y()));
     }
 }
 
-void InfoBar::updateColor(const QColor& color){
+void InfoBar::updateColor(const QColor &color)
+{
     QPixmap pixmap(30, 30);
-    pixmap.fill(Qt::transparent);  // Прозорий фон
+    pixmap.fill(Qt::transparent); // Прозорий фон
 
     QPainter painter(&pixmap);
     painter.setRenderHint(QPainter::Antialiasing);
 
     // Заокруглений прямокутник
     painter.setBrush(color);
-    painter.setPen(QPen(Qt::gray, 1));  // Сіра рамка
-    painter.drawRoundedRect(1, 1, 28, 28, 6, 6);  // Заокруглення 6px
+    painter.setPen(QPen(Qt::gray, 1));           // Сіра рамка
+    painter.drawRoundedRect(1, 1, 28, 28, 6, 6); // Заокруглення 6px
     colorLabel->setPixmap(pixmap);
     colorLabel->setStyleSheet("background: transparent;");
 }
 
-void InfoBar::setImageSize(const QSize& size){
+void InfoBar::setImageSize(const QSize &size)
+{
     imgSize = size;
     sizeLabel->setText("Image size: " + QString::number(size.width()) + "X" + QString::number(size.height()));
 }
 
-void InfoBar::updateZoom(double zoom){
-    zoomLabel->setText("Zoom: " + QString::number(zoom) + "%");
-}
+void InfoBar::updateZoom(double zoom) { zoomLabel->setText("Zoom: " + QString::number(zoom) + "%"); }
 
 auto InfoBar::createSpacer(int width) -> QWidget *
 {
