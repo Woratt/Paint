@@ -31,7 +31,7 @@ class Canvas : public QWidget
     void updateColor(const QColor &);
 
   private:
-    static QVector<QImage> history;
+    QVector<QImage> history;
     QPixmap pixMap;
     bool draw = false;
     QPoint lastPoint, secondPoint;

@@ -47,8 +47,8 @@ TEST_F(CanvasFixture, constructor)
 {
     ASSERT_EQ(canvas->takePixmap().size(), image->size());
     ASSERT_EQ(canvas->takePixmap().toImage().format(), image->format());
-    ASSERT_EQ(Canvas::history.size(), 1);
-    ASSERT_EQ(Canvas::history[0].size(), image->size());
+    ASSERT_EQ(canvas->history.size(), 1);
+    ASSERT_EQ(canvas->history[0].size(), image->size());
 
     QSize const scaledSize = canvas->pixMap.size() * canvas->zoom;
     ASSERT_EQ(canvas->offset,

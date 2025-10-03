@@ -10,6 +10,7 @@
 #include <QWidgetAction>
 
 class GradientPalette;
+class ColorGradientWidget;
 
 class MenuPalette : public QMenu
 {
@@ -24,8 +25,8 @@ class MenuPalette : public QMenu
 
   private:
     QWidget *createButtons();
-    QWidget *createColorGrid();
     GradientPalette *m_gradientPalette;
+    ColorGradientWidget *m_gradientColor;
     QWidgetAction *toggleAction;
     QWidgetAction *gradientAction;
     QWidgetAction *gridAction;

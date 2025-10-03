@@ -1,10 +1,10 @@
 #include "menupalette.h"
 #include "gradientpalette.h"
+#include "colorgradientwidget.h"
 
 MenuPalette::MenuPalette(QWidget *parent) : QMenu(parent)
 {
     m_gradientPalette = new GradientPalette(this);
-    QWidget *colorGrid = createColorGrid();
     setStyleSheet("QMenu {"
                   "   background-color: rgba(255, 255, 255, 200);"
                   "   border: 1px solid gray;"
@@ -13,7 +13,8 @@ MenuPalette::MenuPalette(QWidget *parent) : QMenu(parent)
                   "}");
 
     gridAction = new QWidgetAction(this);
-    gridAction->setDefaultWidget(colorGrid);
+    m_gradientColor = new ColorGradientWidget(this);
+    gridAction->setDefaultWidget(m_gradientColor);
 
     gradientAction = new QWidgetAction(this);
     gradientAction->setDefaultWidget(m_gradientPalette);
@@ -25,58 +26,9 @@ MenuPalette::MenuPalette(QWidget *parent) : QMenu(parent)
 
     addAction(toggleAction);
     addAction(gridAction);
-}
 
-QWidget *MenuPalette::createColorGrid()
-{
-    QWidget *widget = new QWidget();
-    QGridLayout *gridLayout = new QGridLayout(widget);
-
-    gridLayout->setSpacing(1);
-    gridLayout->setContentsMargins(2, 2, 2, 2);
-
-    QList<QColor> colors;
-    for (int x = 0; x < 12; ++x)
-    {
-        for (int y = 0; y < 12; ++y)
-        {
-            QColor color;
-            if (x < 8)
-            {
-                int hue = (y * 30) % 360;
-                int saturation = 255 - (x * 30);
-                int value = 220;
-                color.setHsv(hue, saturation, value);
-            }
-            else
-            {
-                // Відтінки сірого
-                int grayValue = 255 - (y * 20 + x * 2);
-                color.setRgb(grayValue, grayValue, grayValue);
-            }
-            colors.push_back(color);
-        }
-    }
-
-    for (int i = 0; i < colors.size(); ++i)
-    {
-        QPushButton *bt = new QPushButton(this);
-        bt->setFixedSize(20, 20);
-
-        QString colorName = colors[i].name();
-        bt->setStyleSheet(QString("QPushButton { background-color: %1; border: 1px rgba(255, 255, 255, 200); }"
-                                  "QPushButton:hover { border: 2px solid white; }")
-                              .arg(colorName));
-
-        bt->setProperty("color", colorName);
-        int row = i / 12;
-        int col = i % 12;
-        gridLayout->addWidget(bt, row, col);
-
-        connect(bt, &QPushButton::clicked, this, &MenuPalette::onColorSelected);
-    }
-
-    return widget;
+    connect(m_gradientColor, &ColorGradientWidget::colorSelected, this, &MenuPalette::onColorSelected);
+    connect(m_gradientPalette, &GradientPalette::colorSelected, this, &MenuPalette::onColorSelected);
 }
 
 QWidget *MenuPalette::createButtons()
@@ -128,15 +80,7 @@ QWidget *MenuPalette::createButtons()
 
 void MenuPalette::onColorSelected(const QColor &color)
 {
-    QPushButton *bt = qobject_cast<QPushButton *>(sender());
-    if (bt)
-    {
-        QString colorName = bt->property("color").toString();
-
-        QColor color(colorName);
-
-        emit colorPicked(color);
-    }
+    emit colorPicked(color);
 }
 
 void MenuPalette::showGrid()

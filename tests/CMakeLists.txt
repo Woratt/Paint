@@ -30,6 +30,7 @@ add_library(paint_lib
     ../infobar.cpp
     ../gradientpalette.cpp
     ../menupalette.cpp
+    ../colorgradientwidget.cpp
 )
 
 # ✅ Coverage флаги для ВАШОЇ бібліотеки

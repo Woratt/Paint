@@ -2,6 +2,7 @@
 #include "infobar.h"
 #include "menupalette.h"
 #include "toolbar.h"
+#include "infobar.h"
 
 QVector<QImage> Canvas::history;
 
@@ -37,11 +38,8 @@ Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
     pen.setJoinStyle(Qt::RoundJoin);
 
     grabGesture(Qt::PinchGesture);
-<<<<<<< HEAD
-=======
 
     setMouseTracking(true);
->>>>>>> f112455 (add inform bar)
 }
 
 Canvas &Canvas::operator=(const Canvas &canvas)
@@ -392,27 +390,11 @@ void Canvas::reduceZoom()
 
 void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 {
-<<<<<<< HEAD
-    if (isFromButton && zoom > 1)
-    {
-        // Для кнопок zoom при збільшенні - відносно центру
+    if (isFromButton && zoom > 1) {
         QPointF imgCoordBefore = (point - offset) / zoom;
         QSize scaledSize = pixMap.size() * zoom;
         offset = point - imgCoordBefore * zoom;
-    }
-    else
-    {
-        // Для зменшення або zoom <= 1 - центруємо
-=======
-    if (isFromButton && zoom > 1)
-    {
-        QPointF imgCoordBefore = (point - offset) / zoom;
-        QSize scaledSize = pixMap.size() * zoom;
-        offset = point - imgCoordBefore * zoom;
-    }
-    else
-    {
->>>>>>> f112455 (add inform bar)
+    } else {
         QSize scaledSize = pixMap.size() * zoom;
         offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
     }
@@ -426,12 +408,10 @@ void Canvas::changedWidth(int width) { pen.setWidth(width); }
 <<<<<<< HEAD
 void Canvas::setColorPen(QColor color) { pen.setColor(color); }
 =======
-void Canvas::setColorPen(QColor color)
-{
+void Canvas::setColorPen(QColor color){
     pen.setColor(color);
 
     emit updateColor(color);
 }
->>>>>>> f112455 (add inform bar)
 
 auto Canvas::takePixmap() -> QPixmap & { return pixMap; }
