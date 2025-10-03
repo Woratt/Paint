@@ -13,6 +13,7 @@ class MenuBar;
 class ToolBar;
 class Canvas;
 class createFileWindow;
+class InfoBar;
 
 class PaintWindow : public QMainWindow
 {

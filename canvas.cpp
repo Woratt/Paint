@@ -1,6 +1,7 @@
 #include "canvas.h"
 #include "menupalette.h"
 #include "toolbar.h"
+#include "infobar.h"
 
 QVector<QImage> Canvas::history;
 
@@ -36,6 +37,11 @@ Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
     pen.setJoinStyle(Qt::RoundJoin);
 
     grabGesture(Qt::PinchGesture);
+<<<<<<< HEAD
+=======
+
+    setMouseTracking(true);
+>>>>>>> f112455 (add inform bar)
 }
 
 Canvas &Canvas::operator=(const Canvas &canvas)
@@ -102,10 +108,13 @@ void Canvas::paintEvent(QPaintEvent *event)
 
 void Canvas::mouseMoveEvent(QMouseEvent *event)
 {
+    emit updateCursor(eventPosToImagePoint(event->pos()));
+
     if (!draw)
     {
         return;
     }
+
     QPainter painter(&pixMap);
     painter.setRenderHint(QPainter::Antialiasing, true);
 
@@ -119,7 +128,8 @@ void Canvas::mouseMoveEvent(QMouseEvent *event)
     }
     else if (tool == Tool::Eraser)
     {
-        painter.setPen(pen);
+        painter.setCompositionMode(QPainter::CompositionMode_Clear);
+        painter.setPen(QPen(Qt::black, widthLine));
         painter.drawLine(lastPoint, imgPoint);
         lastPoint = imgPoint;
     }
@@ -368,16 +378,21 @@ void Canvas::increaseZoom()
 {
     zoom *= 1.1;
     zoom = qBound(0.1, zoom, 10.0);
+
+    emit updateZoom(zoom);
 }
 
 void Canvas::reduceZoom()
 {
     zoom *= 0.9;
     zoom = qBound(0.1, zoom, 10.0);
+
+    emit updateZoom(zoom);
 }
 
 void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 {
+<<<<<<< HEAD
     if (isFromButton && zoom > 1)
     {
         // Для кнопок zoom при збільшенні - відносно центру
@@ -388,6 +403,13 @@ void Canvas::changeOffset(bool isFromButton, const QPointF &point)
     else
     {
         // Для зменшення або zoom <= 1 - центруємо
+=======
+    if (isFromButton && zoom > 1) {
+        QPointF imgCoordBefore = (point - offset) / zoom;
+        QSize scaledSize = pixMap.size() * zoom;
+        offset = point - imgCoordBefore * zoom;
+    } else {
+>>>>>>> f112455 (add inform bar)
         QSize scaledSize = pixMap.size() * zoom;
         offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
     }
@@ -398,6 +420,14 @@ void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 
 void Canvas::changedWidth(int width) { pen.setWidth(width); }
 
+<<<<<<< HEAD
 void Canvas::setColorPen(QColor color) { pen.setColor(color); }
+=======
+void Canvas::setColorPen(QColor color){
+    pen.setColor(color);
+
+    emit updateColor(color);
+}
+>>>>>>> f112455 (add inform bar)
 
 auto Canvas::takePixmap() -> QPixmap & { return pixMap; }

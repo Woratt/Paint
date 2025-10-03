@@ -46,12 +46,6 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 
     QPushButton *paletteBt = createButton(resourcePath + "icons/palette.png");
 
-    // QMenu* menu = new QMenu(this);
-    // GradientPalette* gradientPalette = new GradientPalette(menu);
-    // QWidgetAction *gradientAction = new QWidgetAction(menu);
-    // gradientAction->setDefaultWidget(gradientPalette);
-    // menu->addAction(gradientAction);
-
     MenuPalette *menuPalette = new MenuPalette(this);
 
     paletteBt->setMenu(menuPalette);

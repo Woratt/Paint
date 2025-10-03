@@ -8,6 +8,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 qt_standard_project_setup()
 
 add_custom_target(format COMMAND clang-format -i --style=file ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
@@ -44,6 +45,7 @@ qt_add_executable(paint
     resourcepath.h
     gradientpalette.h gradientpalette.cpp
     menupalette.h menupalette.cpp
+    infobar.h infobar.cpp
 )
 
 
@@ -53,6 +55,7 @@ target_link_libraries(paint
     Qt6::Gui
     Qt6::Widgets
 )
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
 target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
 target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
 

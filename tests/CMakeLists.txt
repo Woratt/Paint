@@ -27,6 +27,9 @@ add_library(paint_lib
     ../paintwindow.cpp
     ../resourcepath.cpp
     ../toolbar.cpp
+    ../infobar.cpp
+    ../gradientpalette.cpp
+    ../menupalette.cpp
 )
 
 # ✅ Coverage флаги для ВАШОЇ бібліотеки
