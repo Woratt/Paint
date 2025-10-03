@@ -3,8 +3,6 @@
 #include "menupalette.h"
 #include "toolbar.h"
 
-QVector<QImage> Canvas::history;
-
 Canvas::Canvas(QWidget *parent) : QWidget(parent) {}
 
 Canvas::Canvas(const QImage &image, QWidget *parent) : QWidget(parent)
