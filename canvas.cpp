@@ -405,7 +405,8 @@ void Canvas::changeOffset(bool isFromButton, const QPointF &point)
     update();
 }
 
-void Canvas::setColorPen(QColor color){
+void Canvas::setColorPen(QColor color)
+{
     pen.setColor(color);
 
     emit updateColor(color);
