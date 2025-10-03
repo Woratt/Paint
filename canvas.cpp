@@ -403,6 +403,8 @@ void Canvas::changeOffset(bool isFromButton, const QPointF &point)
     update();
 }
 
+void Canvas::changedWidth(int width) { pen.setWidth(width); }
+
 void Canvas::setColorPen(QColor color)
 {
     pen.setColor(color);
