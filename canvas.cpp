@@ -2,7 +2,6 @@
 #include "infobar.h"
 #include "menupalette.h"
 #include "toolbar.h"
-#include "infobar.h"
 
 QVector<QImage> Canvas::history;
 
@@ -390,11 +389,14 @@ void Canvas::reduceZoom()
 
 void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 {
-    if (isFromButton && zoom > 1) {
+    if (isFromButton && zoom > 1)
+    {
         QPointF imgCoordBefore = (point - offset) / zoom;
         QSize scaledSize = pixMap.size() * zoom;
         offset = point - imgCoordBefore * zoom;
-    } else {
+    }
+    else
+    {
         QSize scaledSize = pixMap.size() * zoom;
         offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
     }

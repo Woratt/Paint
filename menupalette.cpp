@@ -1,6 +1,6 @@
 #include "menupalette.h"
-#include "gradientpalette.h"
 #include "colorgradientwidget.h"
+#include "gradientpalette.h"
 
 MenuPalette::MenuPalette(QWidget *parent) : QMenu(parent)
 {
@@ -78,10 +78,7 @@ QWidget *MenuPalette::createButtons()
     return buttonWidget;
 }
 
-void MenuPalette::onColorSelected(const QColor &color)
-{
-    emit colorPicked(color);
-}
+void MenuPalette::onColorSelected(const QColor &color) { emit colorPicked(color); }
 
 void MenuPalette::showGrid()
 {

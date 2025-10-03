@@ -1,18 +1,24 @@
 #include "colorgradientwidget.h"
 
-ColorGradientWidget::ColorGradientWidget(QWidget* parent) : QWidget(parent) {
+ColorGradientWidget::ColorGradientWidget(QWidget *parent) : QWidget(parent)
+{
     setFixedSize(m_cols * m_cellSize, m_rows * m_cellSize);
     setMouseTracking(true);
 
-    for(int row = 0; row < m_rows; ++row){
-        for(int col = 0; col < m_cols; ++col){
+    for (int row = 0; row < m_rows; ++row)
+    {
+        for (int col = 0; col < m_cols; ++col)
+        {
             QColor color;
-            if(row < 8){
+            if (row < 8)
+            {
                 int hue = (col * 30) % 360;
                 int saturation = 255 - (row * 30);
                 int value = 220;
                 color.setHsv(hue, saturation, value);
-            } else {
+            }
+            else
+            {
                 int grayValue = 255 - (col * 20 + row * 2);
                 color.setRgb(grayValue, grayValue, grayValue);
             }
@@ -21,15 +27,15 @@ ColorGradientWidget::ColorGradientWidget(QWidget* parent) : QWidget(parent) {
     }
 }
 
-QSize ColorGradientWidget::sizeHint() const{
-    return QSize(m_cols * m_cellSize, m_rows * m_cellSize);
-}
+QSize ColorGradientWidget::sizeHint() const { return QSize(m_cols * m_cellSize, m_rows * m_cellSize); }
 
-void ColorGradientWidget::paintEvent(QPaintEvent* event){
+void ColorGradientWidget::paintEvent(QPaintEvent *event)
+{
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    for(int i = 0; i < m_colors.size(); ++i){
+    for (int i = 0; i < m_colors.size(); ++i)
+    {
         int row = i / m_cols;
         int col = i % m_cols;
 
@@ -40,26 +46,30 @@ void ColorGradientWidget::paintEvent(QPaintEvent* event){
     }
 }
 
-void ColorGradientWidget::mousePressEvent(QMouseEvent* event){
-    if(event->button() == Qt::LeftButton){
+void ColorGradientWidget::mousePressEvent(QMouseEvent *event)
+{
+    if (event->button() == Qt::LeftButton)
+    {
         QColor color = getColorAtPos(event->pos());
-        if(color.isValid()){
+        if (color.isValid())
+        {
             emit colorSelected(color);
         }
     }
 }
 
-void ColorGradientWidget::mouseMoveEvent(QMouseEvent* event){
-    update();
-}
+void ColorGradientWidget::mouseMoveEvent(QMouseEvent *event) { update(); }
 
-QColor ColorGradientWidget::getColorAtPos(const QPoint& point){
+QColor ColorGradientWidget::getColorAtPos(const QPoint &point)
+{
     int col = point.x() / m_cellSize;
     int row = point.y() / m_cellSize;
 
-    if(row >= 0 && row < m_rows && col >= 0 && col < m_cols){
+    if (row >= 0 && row < m_rows && col >= 0 && col < m_cols)
+    {
         int index = row * m_cols + col;
-        if(index < m_colors.size()){
+        if (index < m_colors.size())
+        {
             return m_colors[index];
         }
     }
