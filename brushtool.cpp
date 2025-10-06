@@ -1,13 +1,15 @@
 #include "brushtool.h"
 
-void BrushTool::onMousePress(const QPoint& point){
+void BrushTool::onMousePress(const QPoint &point)
+{
     m_lastPoint = point;
     m_isDrawing = true;
-
 }
 
-void BrushTool::onMouseMove(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void BrushTool::onMouseMove(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
 
         QPen pen(ToolSettings::getColor(), ToolSettings::getWidth(), ToolSettings::getPenStyle());
         painter.setPen(pen);
@@ -18,8 +20,10 @@ void BrushTool::onMouseMove(QPainter& painter, const QPoint& point){
     }
 }
 
-void BrushTool::onMouseRelease(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void BrushTool::onMouseRelease(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
 
         m_isDrawing = false;
         QPen pen(ToolSettings::getColor(), ToolSettings::getWidth(), ToolSettings::getPenStyle());
@@ -31,10 +35,6 @@ void BrushTool::onMouseRelease(QPainter& painter, const QPoint& point){
     }
 }
 
-bool BrushTool::needsPreview() const{
-    return false;
-}
+bool BrushTool::needsPreview() const { return false; }
 
-QString BrushTool::getName() const{
-    return "Brush";
-}
+QString BrushTool::getName() const { return "Brush"; }

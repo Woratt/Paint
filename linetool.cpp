@@ -1,13 +1,16 @@
 #include "linetool.h"
 
-void LineTool::onMousePress(const QPoint& point){
+void LineTool::onMousePress(const QPoint &point)
+{
     m_startPoint = point;
     m_endPoint = point;
     m_isDrawing = true;
 }
 
-void LineTool::onMouseMove(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void LineTool::onMouseMove(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_endPoint = point;
 
         QPen pen(ToolSettings::getColor(), ToolSettings::getWidth(), ToolSettings::getPenStyle());
@@ -18,8 +21,10 @@ void LineTool::onMouseMove(QPainter& painter, const QPoint& point){
     }
 }
 
-void LineTool::onMouseRelease(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void LineTool::onMouseRelease(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_endPoint = point;
         m_isDrawing = false;
 
@@ -31,10 +36,6 @@ void LineTool::onMouseRelease(QPainter& painter, const QPoint& point){
     }
 }
 
-QString LineTool::getName() const{
-    return "Line";
-}
+QString LineTool::getName() const { return "Line"; }
 
-bool LineTool::needsPreview() const{
-    return true;
-}
+bool LineTool::needsPreview() const { return true; }

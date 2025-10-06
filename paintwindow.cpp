@@ -33,18 +33,17 @@ PaintWindow::PaintWindow(const QImage &image, const QString &name, QWidget *pare
     VCentralLayout->addWidget(scrollArea, 10);
     VCentralLayout->addWidget(bar, 1);
 
-
-    //connect(toolBar, &ToolBar::changedWidth, canvas, &Canvas::changedWidth);
+    // connect(toolBar, &ToolBar::changedWidth, canvas, &Canvas::changedWidth);
 
     connect(canvas, &Canvas::updateZoom, bar, &InfoBar::updateZoom);
-    //connect(canvas, &Canvas::updateColor, bar, &InfoBar::updateColor);
+    // connect(canvas, &Canvas::updateColor, bar, &InfoBar::updateColor);
     connect(canvas, &Canvas::updateCursor, bar, &InfoBar::updateCursor);
     connect(toolBar, &ToolBar::changeColor, this, &ToolSettings::setColor);
     connect(toolBar, &ToolBar::changedWidth, this, &ToolSettings::setWidth);
 
     connect(toolBar, &ToolBar::changeColor, bar, &InfoBar::updateColor);
 
-    //connect(toolBar, &ToolBar::changedWidth)
+    // connect(toolBar, &ToolBar::changedWidth)
 }
 
 void PaintWindow::paintEvent(QPaintEvent *event) {}

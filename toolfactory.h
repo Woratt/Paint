@@ -1,22 +1,24 @@
 #ifndef TOOLFACTORY_H
 #define TOOLFACTORY_H
 
-#include "idrawingtool.h"
-#include "tooltypes.h"
-#include "brushtool.h"
-#include "circletool.h"
-#include "rectangletool.h"
-#include "erasertool.h"
-#include "linetool.h"
-#include "buckettool.h"
 #include "brokenlinetool.h"
+#include "brushtool.h"
+#include "buckettool.h"
+#include "circletool.h"
+#include "erasertool.h"
+#include "idrawingtool.h"
+#include "linetool.h"
+#include "rectangletool.h"
+#include "tooltypes.h"
 #include <memory>
 
 class ToolFactory
 {
   public:
-    static std::unique_ptr<IDrawingTool> createTool(ToolType type){
-        switch (type) {
+    static std::unique_ptr<IDrawingTool> createTool(ToolType type)
+    {
+        switch (type)
+        {
             case ToolType::Brush:
                 return std::make_unique<BrushTool>();
             case ToolType::Circle:

@@ -1,12 +1,15 @@
 #include "erasertool.h"
 
-void EraserTool::onMousePress(const QPoint& point){
+void EraserTool::onMousePress(const QPoint &point)
+{
     m_lastPoint = point;
     m_isDrawing = true;
 }
 
-void EraserTool::onMouseMove(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void EraserTool::onMouseMove(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
 
         QPen pen(Qt::white, ToolSettings::getWidth());
         painter.setPen(pen);
@@ -17,8 +20,10 @@ void EraserTool::onMouseMove(QPainter& painter, const QPoint& point){
     }
 }
 
-void EraserTool::onMouseRelease(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void EraserTool::onMouseRelease(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_isDrawing = false;
 
         QPen pen(Qt::white, ToolSettings::getWidth());
@@ -30,10 +35,6 @@ void EraserTool::onMouseRelease(QPainter& painter, const QPoint& point){
     }
 }
 
-QString EraserTool::getName() const{
-    return "Eraser";
-}
+QString EraserTool::getName() const { return "Eraser"; }
 
-bool EraserTool::needsPreview() const{
-    return false;
-}
+bool EraserTool::needsPreview() const { return false; }

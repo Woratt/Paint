@@ -65,7 +65,7 @@ class Canvas : public QWidget
   public slots:
     void increaseZoom();
     void reduceZoom();
-    //void setTool(Tool);
+    // void setTool(Tool);
     void changedWidth(int);
     void takeImageWithHistory(bool);
     void setColorPen(QColor);

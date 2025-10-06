@@ -16,7 +16,6 @@ class Canvas;
 class MenuPalette;
 class ToolSettings;
 
-
 class ToolBar : public QToolBar
 {
     Q_OBJECT

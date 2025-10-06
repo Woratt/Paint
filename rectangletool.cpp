@@ -1,14 +1,17 @@
 #include "rectangletool.h"
 #include <QPainter>
 
-void RectangleTool::onMousePress(const QPoint& point){
+void RectangleTool::onMousePress(const QPoint &point)
+{
     m_startPoint = point;
     m_endPoint = point;
     m_isDrawing = true;
 }
 
-void RectangleTool::onMouseMove(QPainter& painter, const QPoint& point){
-    if (m_isDrawing) {
+void RectangleTool::onMouseMove(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_endPoint = point;
 
         QPen pen(ToolSettings::getColor(), ToolSettings::getWidth(), ToolSettings::getPenStyle());
@@ -20,8 +23,10 @@ void RectangleTool::onMouseMove(QPainter& painter, const QPoint& point){
     }
 }
 
-void RectangleTool::onMouseRelease(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void RectangleTool::onMouseRelease(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_endPoint = point;
         m_isDrawing = false;
 
@@ -34,10 +39,6 @@ void RectangleTool::onMouseRelease(QPainter& painter, const QPoint& point){
     }
 }
 
-bool RectangleTool::needsPreview() const{
-    return true;
-}
+bool RectangleTool::needsPreview() const { return true; }
 
-QString RectangleTool::getName() const {
-    return "Rectangle";
-}
+QString RectangleTool::getName() const { return "Rectangle"; }

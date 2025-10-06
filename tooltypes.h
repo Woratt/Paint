@@ -1,7 +1,8 @@
 #ifndef TOOLTYPES_H
 #define TOOLTYPES_H
 
-enum class ToolType{
+enum class ToolType
+{
     Brush,
     Rectangle,
     Circle,

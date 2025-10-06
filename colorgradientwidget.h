@@ -1,25 +1,27 @@
 #ifndef COLORGRADIENTWIDGET_H
 #define COLORGRADIENTWIDGET_H
 
-#include <QObject>
-#include <QWidget>
-#include <QPainter>
 #include <QMouseEvent>
+#include <QObject>
+#include <QPainter>
+#include <QWidget>
 
 class ColorGradientWidget : public QWidget
 {
     Q_OBJECT
   public:
-    ColorGradientWidget(QWidget* parent = nullptr);
+    ColorGradientWidget(QWidget *parent = nullptr);
     QSize sizeHint() const override;
   signals:
-    void colorSelected(const QColor&);
+    void colorSelected(const QColor &);
+
   protected:
-    void paintEvent(QPaintEvent*) override;
-    void mousePressEvent(QMouseEvent*) override;
-    void mouseMoveEvent(QMouseEvent*) override;
+    void paintEvent(QPaintEvent *) override;
+    void mousePressEvent(QMouseEvent *) override;
+    void mouseMoveEvent(QMouseEvent *) override;
+
   private:
-    QColor getColorAtPos(const QPoint&);
+    QColor getColorAtPos(const QPoint &);
     QVector<QColor> m_colors;
     int m_rows{12};
     int m_cols{12};

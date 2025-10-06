@@ -1,13 +1,16 @@
 #include "circletool.h"
 
-void CircleTool::onMousePress(const QPoint& point){
+void CircleTool::onMousePress(const QPoint &point)
+{
     m_startPoint = point;
     m_endPoint = point;
     m_isDrawing = true;
 }
 
-void CircleTool::onMouseMove(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void CircleTool::onMouseMove(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_endPoint = point;
 
         QPen pen(ToolSettings::getColor(), ToolSettings::getWidth(), ToolSettings::getPenStyle());
@@ -19,8 +22,10 @@ void CircleTool::onMouseMove(QPainter& painter, const QPoint& point){
     }
 }
 
-void CircleTool::onMouseRelease(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void CircleTool::onMouseRelease(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_endPoint = point;
         m_isDrawing = false;
 
@@ -33,10 +38,6 @@ void CircleTool::onMouseRelease(QPainter& painter, const QPoint& point){
     }
 }
 
-bool CircleTool::needsPreview() const{
-    return true;
-}
+bool CircleTool::needsPreview() const { return true; }
 
-QString CircleTool::getName() const{
-    return "Circle";
-}
+QString CircleTool::getName() const { return "Circle"; }

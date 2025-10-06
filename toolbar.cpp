@@ -85,20 +85,19 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 
     addWidget(createSpacer(20));
 
-    connect(paintBt, &QPushButton::clicked, this, [=]() -> void {
-        paintWindow->takeCanvas()->setTool(ToolType::Brush);});
-    connect(rectangleBt, &QPushButton::clicked, this, [=]() -> void {
-        paintWindow->takeCanvas()->setTool(ToolType::Rectangle);});
-    connect(circleBt, &QPushButton::clicked, this, [=]() -> void {
-        paintWindow->takeCanvas()->setTool(ToolType::Circle);});
-    connect(eraserBt, &QPushButton::clicked, this, [=]() -> void {
-        paintWindow->takeCanvas()->setTool(ToolType::Eraser);});
-    connect(lineBt, &QPushButton::clicked, this, [=]() -> void {
-        paintWindow->takeCanvas()->setTool(ToolType::Line);});
-    connect(brokenLine, &QPushButton::clicked, this, [=]() -> void {
-        paintWindow->takeCanvas()->setTool(ToolType::BrokenLine); });
-    connect(bucketBt, &QPushButton::clicked, this, [=]() -> void {
-        paintWindow->takeCanvas()->setTool(ToolType::Bucket);});
+    connect(paintBt, &QPushButton::clicked, this,
+            [=]() -> void { paintWindow->takeCanvas()->setTool(ToolType::Brush); });
+    connect(rectangleBt, &QPushButton::clicked, this,
+            [=]() -> void { paintWindow->takeCanvas()->setTool(ToolType::Rectangle); });
+    connect(circleBt, &QPushButton::clicked, this,
+            [=]() -> void { paintWindow->takeCanvas()->setTool(ToolType::Circle); });
+    connect(eraserBt, &QPushButton::clicked, this,
+            [=]() -> void { paintWindow->takeCanvas()->setTool(ToolType::Eraser); });
+    connect(lineBt, &QPushButton::clicked, this, [=]() -> void { paintWindow->takeCanvas()->setTool(ToolType::Line); });
+    connect(brokenLine, &QPushButton::clicked, this,
+            [=]() -> void { paintWindow->takeCanvas()->setTool(ToolType::BrokenLine); });
+    connect(bucketBt, &QPushButton::clicked, this,
+            [=]() -> void { paintWindow->takeCanvas()->setTool(ToolType::Bucket); });
 
     connect(returntBt, &QPushButton::clicked, this, [=]() -> void { FileSystem::undo(paintWindow->takeCanvas()); });
 
@@ -119,7 +118,7 @@ ToolBar::ToolBar(PaintWindow *paintWindow, QWidget *parent) : QToolBar(parent)
 
     connect(menuPalette, &MenuPalette::colorPicked, this, &ToolBar::changeColor);
     connect(spin, qOverload<int>(&QSpinBox::valueChanged), this, &ToolBar::changedWidth);
-    //connect(menuPalette, &MenuPalette::colorPicked, , );
+    // connect(menuPalette, &MenuPalette::colorPicked, , );
 }
 
 auto ToolBar::createButton(const QString &path) -> QPushButton *

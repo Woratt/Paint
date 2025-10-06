@@ -12,8 +12,8 @@ class ToolSettings : public QWidget
     static int getWidth() { return s_width; };
     static Qt::PenStyle getPenStyle() { return s_penStyle; };
 
-public slots:
-    static void setColor(const QColor& color) {s_color = color; };
+  public slots:
+    static void setColor(const QColor &color) { s_color = color; };
     static void setWidth(int width) { s_width = width; };
     static void setPenQStyle(Qt::PenStyle penStyle) { s_penStyle = penStyle; };
 

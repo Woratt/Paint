@@ -1,15 +1,19 @@
 #include "brokenlinetool.h"
 
-void BrokenLineTool::onMousePress(const QPoint& point){
+void BrokenLineTool::onMousePress(const QPoint &point)
+{
     m_isDrawing = true;
-    if(m_isFirstClick){
+    if (m_isFirstClick)
+    {
         m_lastPoint = point;
         m_isFirstClick = false;
     }
 }
 
-void BrokenLineTool::onMouseMove(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void BrokenLineTool::onMouseMove(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
 
         QPen pen(ToolSettings::getColor(), ToolSettings::getWidth(), ToolSettings::getPenStyle());
         painter.setPen(pen);
@@ -17,12 +21,14 @@ void BrokenLineTool::onMouseMove(QPainter& painter, const QPoint& point){
 
         painter.drawLine(m_lastPoint, point);
 
-        //m_lastPoint = point;
+        // m_lastPoint = point;
     }
 }
 
-void BrokenLineTool::onMouseRelease(QPainter& painter, const QPoint& point){
-    if(m_isDrawing){
+void BrokenLineTool::onMouseRelease(QPainter &painter, const QPoint &point)
+{
+    if (m_isDrawing)
+    {
         m_isDrawing = false;
 
         QPen pen(ToolSettings::getColor(), ToolSettings::getWidth(), ToolSettings::getPenStyle());
@@ -35,10 +41,6 @@ void BrokenLineTool::onMouseRelease(QPainter& painter, const QPoint& point){
     }
 }
 
-QString BrokenLineTool::getName() const {
-    return "BrokenLine";
-}
+QString BrokenLineTool::getName() const { return "BrokenLine"; }
 
-bool BrokenLineTool::needsPreview() const {
-    return true;
-}
+bool BrokenLineTool::needsPreview() const { return true; }

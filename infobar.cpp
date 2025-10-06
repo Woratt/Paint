@@ -66,7 +66,10 @@ void InfoBar::setImageSize(const QSize &size)
     sizeLabel->setText("Image size: " + QString::number(size.width()) + "X" + QString::number(size.height()));
 }
 
-void InfoBar::updateZoom(double zoom) { zoomLabel->setText("Zoom: " + QString::number(static_cast<int>(zoom * 100)) + "%"); }
+void InfoBar::updateZoom(double zoom)
+{
+    zoomLabel->setText("Zoom: " + QString::number(static_cast<int>(zoom * 100)) + "%");
+}
 
 auto InfoBar::createSpacer(int width) -> QWidget *
 {

@@ -2,7 +2,6 @@
 #include "infobar.h"
 #include "menupalette.h"
 #include "toolbar.h"
-#include "infobar.h"
 
 Canvas::Canvas(QWidget *parent) : QWidget(parent) {}
 
@@ -67,7 +66,8 @@ void Canvas::paintEvent(QPaintEvent *event)
     QRect targetRect(m_offset.x(), m_offset.y(), scaledSize.width(), scaledSize.height());
     painter.drawPixmap(targetRect, m_pixMap);
 
-    if(!m_previewPixmap.isNull()) {
+    if (!m_previewPixmap.isNull())
+    {
         painter.drawPixmap(targetRect, m_previewPixmap);
     }
 }
@@ -76,13 +76,17 @@ void Canvas::mouseMoveEvent(QMouseEvent *event)
 {
     emit updateCursor(eventPosToImagePoint(event->pos()));
 
-    if(m_currentTool && (event->buttons() & Qt::LeftButton)) {
+    if (m_currentTool && (event->buttons() & Qt::LeftButton))
+    {
         QPoint point = eventPosToImagePoint(event->pos());
-        if(m_currentTool->needsPreview()){
+        if (m_currentTool->needsPreview())
+        {
             m_previewPixmap.fill(Qt::transparent);
             QPainter painter(&m_previewPixmap);
             m_currentTool->onMouseMove(painter, point);
-        }else{
+        }
+        else
+        {
             QPainter painter(&m_pixMap);
             m_currentTool->onMouseMove(painter, point);
         }
@@ -91,10 +95,10 @@ void Canvas::mouseMoveEvent(QMouseEvent *event)
     }
 }
 
-
 void Canvas::mousePressEvent(QMouseEvent *event)
 {
-    if(m_currentTool && (event->button() == Qt::LeftButton)){
+    if (m_currentTool && (event->button() == Qt::LeftButton))
+    {
         QPoint point = eventPosToImagePoint(event->pos());
 
         m_previewPixmap = QPixmap(m_pixMap.size());
@@ -107,7 +111,8 @@ void Canvas::mousePressEvent(QMouseEvent *event)
 
 void Canvas::mouseReleaseEvent(QMouseEvent *event)
 {
-    if(m_currentTool && event->button() == Qt::LeftButton){
+    if (m_currentTool && event->button() == Qt::LeftButton)
+    {
         QPoint point = eventPosToImagePoint(event->pos());
 
         QPainter painter(&m_pixMap);
@@ -120,7 +125,7 @@ void Canvas::mouseReleaseEvent(QMouseEvent *event)
     }
 }
 
-//void Canvas::setTool(Tool tool) { this->tool = tool; }
+// void Canvas::setTool(Tool tool) { this->tool = tool; }
 
 void Canvas::wheelEvent(QWheelEvent *event)
 {
@@ -307,11 +312,14 @@ void Canvas::reduceZoom()
 
 void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 {
-    if (isFromButton && m_zoom > 1) {
+    if (isFromButton && m_zoom > 1)
+    {
         QPointF imgCoordBefore = (point - m_offset) / m_zoom;
         QSize scaledSize = m_pixMap.size() * m_zoom;
         m_offset = point - imgCoordBefore * m_zoom;
-    } else {
+    }
+    else
+    {
         QSize scaledSize = m_pixMap.size() * m_zoom;
         m_offset = QPointF((width() - scaledSize.width()) / 2, (height() - scaledSize.height()) / 2);
     }
@@ -322,19 +330,19 @@ void Canvas::changeOffset(bool isFromButton, const QPointF &point)
 
 void Canvas::changedWidth(int width) { pen.setWidth(width); }
 
-void Canvas::setColorPen(QColor color){
+void Canvas::setColorPen(QColor color)
+{
     pen.setColor(color);
 
     emit updateColor(color);
 }
 
-void Canvas::setTool(ToolType type){
+void Canvas::setTool(ToolType type)
+{
     m_currentToolType = type;
     m_currentTool = ToolFactory::createTool(type);
 }
 
-ToolType Canvas::getToolType(){
-    return m_currentToolType;
-}
+ToolType Canvas::getToolType() { return m_currentToolType; }
 
 auto Canvas::takePixmap() -> QPixmap & { return m_pixMap; }
