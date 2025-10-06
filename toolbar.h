@@ -14,17 +14,8 @@ class PaintWindow;
 class FileSystem;
 class Canvas;
 class MenuPalette;
+class ToolSettings;
 
-enum class Tool
-{
-    Brush,
-    Rectangle,
-    Circle,
-    Eraser,
-    Bucket,
-    Line,
-    BrokenLine,
-};
 
 class ToolBar : public QToolBar
 {
@@ -38,7 +29,8 @@ class ToolBar : public QToolBar
     static QWidget *createSpacer(int);
     static QWidget *createExpandingSpacer();
   signals:
-    void toolSelected(Tool tool);
+    void changeColor(QColor color);
+    void changeZoom(int zoom);
     void changedWidth(int Width);
 };
 

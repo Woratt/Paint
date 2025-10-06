@@ -10,6 +10,8 @@ find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+
 qt_standard_project_setup()
 
 add_custom_target(format COMMAND clang-format -i --style=file ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
@@ -48,6 +50,18 @@ qt_add_executable(paint
     menupalette.h menupalette.cpp
     infobar.h infobar.cpp
     colorgradientwidget.h colorgradientwidget.cpp
+    tooltypes.h
+    brushtool.h brushtool.cpp
+    rectangletool.h rectangletool.cpp
+    circletool.h circletool.cpp
+    toolfactory.h
+    idrawingtool.h
+    erasertool.h erasertool.cpp
+    linetool.h linetool.cpp
+    buckettool.h buckettool.cpp
+    toolsettings.h toolsettings.cpp
+    brokenlinetool.h brokenlinetool.cpp
+
 )
 
 
@@ -57,6 +71,15 @@ target_link_libraries(paint
     Qt6::Gui
     Qt6::Widgets
 )
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
 target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
 target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)
 target_link_libraries(paint PRIVATE Qt6::Core Qt6::Widgets)

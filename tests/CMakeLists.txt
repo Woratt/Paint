@@ -31,6 +31,9 @@ add_library(paint_lib
     ../gradientpalette.cpp
     ../menupalette.cpp
     ../colorgradientwidget.cpp
+    ../brushtool.cpp
+    ../circletool.cpp
+    ../rectangletool.cpp
 )
 
 # ✅ Coverage флаги для ВАШОЇ бібліотеки

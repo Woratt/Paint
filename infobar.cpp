@@ -53,10 +53,9 @@ void InfoBar::updateColor(const QColor &color)
     QPainter painter(&pixmap);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    // Заокруглений прямокутник
     painter.setBrush(color);
-    painter.setPen(QPen(Qt::gray, 1));           // Сіра рамка
-    painter.drawRoundedRect(1, 1, 28, 28, 6, 6); // Заокруглення 6px
+    painter.setPen(QPen(Qt::gray, 1));
+    painter.drawRoundedRect(1, 1, 28, 28, 6, 6);
     colorLabel->setPixmap(pixmap);
     colorLabel->setStyleSheet("background: transparent;");
 }
@@ -67,7 +66,7 @@ void InfoBar::setImageSize(const QSize &size)
     sizeLabel->setText("Image size: " + QString::number(size.width()) + "X" + QString::number(size.height()));
 }
 
-void InfoBar::updateZoom(double zoom) { zoomLabel->setText("Zoom: " + QString::number(zoom) + "%"); }
+void InfoBar::updateZoom(double zoom) { zoomLabel->setText("Zoom: " + QString::number(static_cast<int>(zoom * 100)) + "%"); }
 
 auto InfoBar::createSpacer(int width) -> QWidget *
 {

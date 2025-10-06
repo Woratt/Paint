@@ -11,6 +11,10 @@
 #include <QWidget>
 #include <QtGlobal>
 
+#include "idrawingtool.h"
+#include "toolfactory.h"
+#include "tooltypes.h"
+
 class ToolBar;
 class InfoBar;
 enum class Tool;
@@ -24,6 +28,8 @@ class Canvas : public QWidget
     auto takePixmap() -> QPixmap &;
     void changeOffset(bool, const QPointF &);
     Canvas &operator=(const Canvas &);
+    void setTool(ToolType);
+    ToolType getToolType();
 
   signals:
     void updateZoom(double zoom);
@@ -31,14 +37,15 @@ class Canvas : public QWidget
     void updateColor(const QColor &);
 
   private:
+    std::unique_ptr<IDrawingTool> m_currentTool;
+    ToolType m_currentToolType;
     QVector<QImage> history;
-    QPixmap pixMap;
-    bool draw = false;
-    QPoint lastPoint, secondPoint;
-    Tool tool;
+    QPixmap m_pixMap;
+    QPixmap m_previewPixmap;
+    bool m_isDraw = false;
     int numClik = 0;
-    double zoom = 1.0;
-    QPointF offset;
+    double m_zoom = 1.0;
+    QPointF m_offset;
     [[nodiscard]] auto eventPosToImagePoint(const QPoint &) const -> QPoint;
     auto gestureEvent(QGestureEvent *) -> bool;
     void pinchTriggered(QPinchGesture *);
@@ -58,7 +65,7 @@ class Canvas : public QWidget
   public slots:
     void increaseZoom();
     void reduceZoom();
-    void setTool(Tool);
+    //void setTool(Tool);
     void changedWidth(int);
     void takeImageWithHistory(bool);
     void setColorPen(QColor);
